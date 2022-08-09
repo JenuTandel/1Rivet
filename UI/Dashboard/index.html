@@ -49,17 +49,17 @@
                         <div class="profile-wrap">
                             <img src="./assets/images/mine.jpeg" alt="profile pic">
                         </div>
-                        <span class="fa-solid fa-caret-down"></span>
+                        <span class="caret fa-solid fa-caret-down"></span>
                     </a>
                 </div>
             </div>
         </header>
         <!-- End : Header -->
         <!-- Wrapper -->
-        <div class="d-flex overflow-hidden h-100 main-wrapper">
+        <div class="d-flex overflow-hidden h-100 main-wrapper flex-grow-1">
             <!-- Start : Aside -->
             <input type="checkbox" id="toggleSidebar">
-            <aside class="sidebar flex-grow-1">
+            <aside class="sidebar">
                 <div class="d-flex flex-column justify-content-between h-100">
                     <ul>
                         <li>
@@ -70,25 +70,25 @@
                         </li>
                         <li>
                             <a href="" class="nav-link">
-                                <span class="fa fa-bell icon"></span>
+                                <span class="icon fa fa-bell"></span>
                                 <span class="nav-text">Alert</span>
                             </a>
                         </li>
                         <li>
                             <a href="" class="nav-link">
-                                <span class="fa fa-tag icon"></span>
+                                <span class="icon fa fa-tag"></span>
                                 <span class="nav-text">Tag</span>
                             </a>
                         </li>
                         <li>
                             <a href="" class="nav-link">
-                                <span class="fa fa-gear icon"></span>
+                                <span class="icon fa fa-gear"></span>
                                 <span class="nav-text">Setting</span>
                             </a>
                         </li>
                         <li>
                             <a href="" class="nav-link">
-                                <span class="fa fa-address-book icon"></span>
+                                <span class="icon fa fa-address-book"></span>
                                 <span class="nav-text">Tips</span>
                             </a>
                         </li>
@@ -119,7 +119,7 @@
                     <div class="card-wrapper">
                         <!-- Card 1 -->
                         <div class="card">
-                            <div class="icon-wrapper">
+                            <div class="icon-wrapper icon-bg1">
                                 <span class="icon fa-solid fa-eye"></span>
                             </div>
                             <h4>Total views</h4>
@@ -131,20 +131,20 @@
                     <div class="card-wrapper">
                         <!-- Card 2 -->
                         <div class="card">
-                            <div class="icon-wrapper">
-                                <span class="icon fa-solid fa-eye"></span>
+                            <div class="icon-wrapper icon-bg2">
+                                <span class="icon fa-solid fa-bag-shopping"></span>
                             </div>
                             <h4>Total views</h4>
                             <h2>302.402</h2>
-                            <p><small>Start from 1 Jan 2021</small></p>
+                            <a href="" class="text-primary">+ Add New Product </a>
                         </div>
                     </div>
                     <!-- Card Wrapper -->
                     <div class="card-wrapper">
                         <!-- Card 3 -->
                         <div class="card">
-                            <div class="icon-wrapper">
-                                <span class="icon fa-solid fa-eye"></span>
+                            <div class="icon-wrapper icon-bg3">
+                                <span class="icon fa-solid fa-user-group"></span>
                             </div>
                             <h4>Total views</h4>
                             <h2>302.402</h2>
@@ -155,8 +155,8 @@
                     <div class="card-wrapper">
                         <!-- Card 4 -->
                         <div class="card">
-                            <div class="icon-wrapper">
-                                <span class="icon fa-solid fa-eye"></span>
+                            <div class="icon-wrapper icon-bg4">
+                                <span class="icon fa-solid fa-basket-shopping"></span>
                             </div>
                             <h4>Total views</h4>
                             <h2>302.402</h2>
@@ -167,26 +167,26 @@
 
                 <!-- Table and Grpah -->
                 <div class="row1">
-                    <!-- table -->
+                    <!-- Table -->
                     <div class="table-wrapper">
                         <table>
                             <thead>
                                 <tr>
-                                    <td>
+                                    <th>
                                         No
-                                    </td>
-                                    <td>
+                                    </th>
+                                    <th>
                                         Product Name
-                                    </td>
-                                    <td>
+                                    </th>
+                                    <th>
                                         Status
-                                    </td>
-                                    <td>
+                                    </th>
+                                    <th>
                                         Sold
-                                    </td>
-                                    <td>
+                                    </th>
+                                    <th>
                                         View
-                                    </td>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -201,12 +201,10 @@
                                                 title="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur enim explicabo ducimus doloribus reiciendis vero culpa? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam quo dolores dolore consequatur obcaecati id in beatae porro quisquam animi dolor vel ab doloremque eligendi, delectus dolorum perferendis ipsum rerum?">
                                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur enim
                                                 explicabo ducimus doloribus reiciendis vero culpa? Lorem ipsum dolor sit
-                                                amet consectetur, adipisicing elit. Ullam quo dolores dolore consequatur
-                                                obcaecati id in beatae porro quisquam animi dolor vel ab doloremque
-                                                eligendi, delectus dolorum perferendis ipsum rerum?</p>
+                                                amet consectetur, adipisicing elit.</p>
                                         </div>
                                     </td>
-                                    <td class="color-primary">
+                                    <td class="text-primary">
                                         Active
                                     </td>
                                     <td>
@@ -223,10 +221,14 @@
                                     <td>
                                         <div class="d-flex product-wrapper align-items-center">
                                             <img src="./assets/images/mine.jpeg" height="40px" width="40px">
-                                            <p>Lorem ipsum dolor sit amet.</p>
+                                            <p
+                                                title="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur enim explicabo ducimus doloribus reiciendis vero culpa? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam quo dolores dolore consequatur obcaecati id in beatae porro quisquam animi dolor vel ab doloremque eligendi, delectus dolorum perferendis ipsum rerum?">
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur enim
+                                                explicabo ducimus doloribus reiciendis vero culpa? Lorem ipsum dolor sit
+                                                amet consectetur, adipisicing elit.</p>
                                         </div>
                                     </td>
-                                    <td class="color-primary">
+                                    <td class="text-primary">
                                         Active
                                     </td>
                                     <td>
@@ -243,10 +245,14 @@
                                     <td>
                                         <div class="d-flex product-wrapper align-items-center">
                                             <img src="./assets/images/mine.jpeg" height="40px" width="40px">
-                                            <p>Lorem ipsum dolor sit amet.</p>
+                                            <p
+                                                title="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur enim explicabo ducimus doloribus reiciendis vero culpa? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam quo dolores dolore consequatur obcaecati id in beatae porro quisquam animi dolor vel ab doloremque eligendi, delectus dolorum perferendis ipsum rerum?">
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur enim
+                                                explicabo ducimus doloribus reiciendis vero culpa? Lorem ipsum dolor sit
+                                                amet consectetur, adipisicing elit.</p>
                                         </div>
                                     </td>
-                                    <td class="color-primary">
+                                    <td class="text-primary">
                                         Active
                                     </td>
                                     <td>
@@ -263,10 +269,14 @@
                                     <td>
                                         <div class="d-flex product-wrapper align-items-center">
                                             <img src="./assets/images/mine.jpeg" height="40px" width="40px">
-                                            <p>Lorem ipsum dolor sit amet.</p>
+                                            <p
+                                                title="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur enim explicabo ducimus doloribus reiciendis vero culpa? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam quo dolores dolore consequatur obcaecati id in beatae porro quisquam animi dolor vel ab doloremque eligendi, delectus dolorum perferendis ipsum rerum?">
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur enim
+                                                explicabo ducimus doloribus reiciendis vero culpa? Lorem ipsum dolor sit
+                                                amet consectetur, adipisicing elit.</p>
                                         </div>
                                     </td>
-                                    <td class="color-primary">
+                                    <td class="text-primary">
                                         Active
                                     </td>
                                     <td>
@@ -279,16 +289,33 @@
                             </tbody>
                         </table>
                     </div>
-                    <!-- table: end -->
-                    <!-- graph -->
+                    <!-- Table: end -->
+                    <!-- Graph -->
                     <div class="graph-wrapper">
-                        <h3>Views & Sells</h3>
-                        <div class="graph">
-                            <span class="square"></span>
-                            <span>Total Sells</span>
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <h4>Views & Sells</h4>
+                            <a class="d-flex align-items-center">
+                                <p>This Week</p>
+                                <span class="ml-2 caret fa-solid fa-caret-down"></span>
+                            </a>
                         </div>
-
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex sqt align-items-center">
+                                <div class="square-g">
+                                </div>
+                                <h5 class="ml-2">Total Views</h5>
+                            </div>
+                            <div class="d-flex sqt align-items-center">
+                                <div class="square-o">
+                                </div>
+                                <h5 class="ml-2">Total Sells</h5>
+                            </div>
+                        </div>
+                        <div class="image-graph-wrapper">
+                            <img src="./assets/images/graph.PNG" alt="graph">
+                        </div>
                     </div>
+                    <!-- Graph-end -->
                 </div>
             </main>
             <!-- End : Main Content -->

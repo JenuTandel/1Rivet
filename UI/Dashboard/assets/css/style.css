@@ -48,6 +48,10 @@ ul {
     margin-bottom: 24px;
 }
 
+.ml-2 {
+    margin-left: 12px;
+}
+
 .overflow-hidden {
     overflow: hidden;
 }
@@ -155,6 +159,10 @@ ul {
     overflow: hidden;
 }
 
+.dropdown {
+    cursor: pointer;
+}
+
 /* End :Header */
 
 /* Sidebar */
@@ -228,9 +236,11 @@ main h2 {
     margin-right: -15px;
     margin-bottom: 30px;
 }
-.card{
+
+.card {
     transition: .5s ease-in-out;
 }
+
 .card-wrapper {
     flex: 0 0 25%;
     max-width: 25%;
@@ -248,10 +258,14 @@ main h2 {
 }
 
 .card .icon-wrapper {
-    padding: 16px;
     background-color: #f8f8f8;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width:60px;
+    justify-content: center;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .card h4 {
@@ -271,10 +285,41 @@ main h2 {
     transition: .5s ease-in-out;
 }
 
-.card-wrapper .card:hover .icon {
-    color: #4492fa;
+.card-wrapper :hover .icon-wrapper {
+    background-color:#ebebeb;
 }
 
+.fa-eye{
+    color:#4492fa;
+}
+
+.fa-bag-shopping{
+    color:#8bc38a;
+}
+
+.fa-user-group{
+    color:#4492fa;
+}
+
+.fa-basket-shopping{
+    color:#82bbbc;
+}
+
+/* .icon-bg1{
+    
+}
+
+.icon-bg2{
+
+}
+
+.icon-bg3{
+
+}
+
+.icon-bg4{
+    
+} */
 /* Table: start */
 .row1 {
     display: flex;
@@ -297,15 +342,10 @@ table {
 
 thead {
     font-weight: 600px;
-    text-align: center;
 }
 
 tbody {
     text-align: center;
-}
-
-thead td {
-    font-weight: 600;
 }
 
 tbody td {
@@ -326,12 +366,6 @@ tbody td {
     max-width: 200px
 }
 
-.tr-space {
-    display: inline-block;
-    margin-bottom: 10px;
-}
-
-
 /* Table: end */
 
 /* Graph section */
@@ -339,19 +373,32 @@ tbody td {
     background-color: white;
     margin-left: 20px;
     width: 30%;
-}
-.graph{
-    position: relative;
-    padding: 6px;
+    padding: 10px;
 }
 
-.graph .square{
-    position: absolute;
-    top:0;
-    left:0;
-    height: 20px;
-    width: 20px;
+.sqt {
+    width: 240px;
+}
+
+.graph-wrapper a,
+.graph-wrapper p {
+    font-size: 12px;
+}
+
+.square-g {
+    height: 16px;
+    width: 16px;
     background-color: #83bcbd;
+}
+
+.square-o {
+    height: 16px;
+    width: 16px;
+    background-color: #fe764b;
+}
+
+.image-graph-wrapper {
+    width: 100%;
 }
 
 .main-wrapper {
@@ -369,7 +416,24 @@ tbody td {
     .card-wrapper {
         flex: 0 0 33.33%;
         max-width: 33.33%;
+    }
 
+    .table-wrapper {
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        overflow: auto;
+    }
+
+    .graph-wrapper {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+    .row1 {
+        flex-wrap: wrap;
+        width: 100%;
     }
 }
 
@@ -378,6 +442,24 @@ tbody td {
     .card-wrapper {
         flex: 0 0 50%;
         max-width: 50%;
+    }
+
+    .table-wrapper {
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        overflow: auto;
+    }
+
+    .graph-wrapper {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+    .row1 {
+        flex-wrap: wrap;
+        width: 100%;
     }
 }
 
@@ -393,7 +475,42 @@ tbody td {
         top: 0;
         left: 0;
         bottom: 0;
-        z-index: 1;
+        z-index: 2;
         background-color: #4492fa;
+    }
+
+    .table-wrapper {
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        overflow: auto;
+    }
+
+    .graph-wrapper {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+    .row1 {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .search-bar-wrapper {
+        margin-left: 30px;
+    }
+
+    .nav-link.active,
+    .nav-link:hover {
+        color: #f5f7f9;
+        background-color: #f5f7f9;
+    }
+
+    .nav-link:hover .icon,
+    .nav-link:hover .nav-text,
+    .nav-link.active .icon,
+    .nav-link.active .nav-text {
+        color: #4492fa;
     }
 }
