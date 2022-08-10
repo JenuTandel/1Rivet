@@ -30,9 +30,9 @@
     <h1>Date:</h1>
     <p id="date"></p>
 
-    <label for="birthday">Birthdate</label>
+    <!-- <label for="birthday">Birthdate</label>
     <input type="datetime-local" id="birthday" name="birthday">
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit"> -->
 
     <script>
         /*Array Methods*/
@@ -152,32 +152,37 @@
 
         var tb = document.getElementById("table-data");
 
-        // for (var i = 0; i < person_details.length; i++) {
-        //     var r = `<tr>
-        // <td>${person_details[i].firstname}</td>
-        // <td>${person_details[i].lastname}</td>
-        // <td>${person_details[i].age}</td>
-        // <td>${person_details[i].dob}</td>
-        // </tr>`
-        //     tb.innerHTML += r;
-        // }
-
-
-        person_details.forEach(element => {
-
-            console.log(element);
+        var start = window.performance.now();
+        for (var i = 0; i < person_details.length; i++) {
             var r = `<tr>
-        <td>${element.firstname}</td>
-        <td>${element.lastname}</td>
-        <td>${element.age}</td>
-        <td>${element.dob}</td>
+        <td>${person_details[i].firstname}</td>
+        <td>${person_details[i].lastname}</td>
+        <td>${person_details[i].age}</td>
+        <td>${person_details[i].dob}</td>
         </tr>`
             tb.innerHTML += r;
-        });
+        }
+
+        // person_details.forEach(element => {
+
+        //     console.log(element);
+        //     var r = `<tr>
+        // <td>${element.firstname}</td>
+        // <td>${element.lastname}</td>
+        // <td>${element.age}</td>
+        // <td>${element.dob}</td>
+        // </tr>`
+        //     tb.innerHTML += r;
+        // });
+
+        var end = window.performance.now();
+        console.log(`Execution time: ${end - start} ms`);
 
         // Date Format
         const d = new Date();
         document.getElementById("date").innerHTML = d;
+
+        
 
     </script>
 </body>

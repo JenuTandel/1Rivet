@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Object & Object Methods */
+
+        //Create an object
+        const obj = {firstname:'Jinal', lastname:'Tandel'};
+        console.log(obj);
+
+        //Create an object method 2 (constructor)
+        const obj1 = new Object({a:1, b:2});
+        console.log(obj1);
+
+        //create method
+        const parent = {name:'Jinal', gender:'f', age:26}
+        console.log(parent);
+
+        const child = Object.create(parent);
+        console.log(child);
+
+        child.name = 'Hetal';
+        console.log(child);
+
+        console.log(child.age);
+
+        child.dob = '6/6/96';
+        console.log(child);
+
+        //assign method
+        const obj2 = {a:1, b:2};
+        const obj3 = {c:3, d:4};
+        Object.assign(obj2,obj3);
+
+        console.log(obj2);
+
+        //keys & values method
+        const key = Object.keys(obj2);
+        console.log(key);
+
+        const values = Object.values(obj3);
+        console.log(values);
+
+        //entries method
+        const e = Object.entries(obj);
+        console.log(e);
+
+        //hasOwn method
+        console.log(Object.hasOwn(obj,'firstname'));
+
+        //Freeze method
+        Object.freeze(obj);
+        obj.firstname='Hetal';
+        console.log(obj);
+
+        //isFrozen method
+        console.log(Object.isFrozen(obj));
+
+        //Delete object property
+        delete obj.firstname;
+        console.log(obj);
+
+        //Seal method (We can change the)
+        const obj4 = {a:1,b:2,c:3,d:4};
+        Object.seal(obj4);
+        obj4.a=5;
+        console.log(obj4);
+        delete obj4.a;
+        console.log(obj4);
+
+        //defineProperty method
+        const obj5 = {firstname:'Jinal', lastname:'Tandel'};
+        Object.defineProperty(obj5,'age',{value:26});
+        console.log(obj5);
+
+        Object.defineProperty(obj5,'gender',{value:'f',writable:false});
+        console.log(obj5);
+
+        obj5.gender='m';
+        console.log(obj5);
+
+        //defineProperties method
+        const obj6 = {firstname:'Jinal', lastname:'Tandel'};
+        Object.defineProperties(obj6,{'gender':{value:'f',writable:false},'age':{value:'20'}});
+        console.log(obj6);
+
+        obj6.gender='m';
+        console.log(obj6);
+
+        /* Object Methods: end */
+
+        /* JSON Object */
+        
+        //simple object
+        const ob = {firstname:'ABC', lastname:'XYZ'};
+        console.log(ob);
+
+        //JSON object
+        const job = {"firstname":"ABC","lastname":"XYZ"};
+        console.log(job);
+
+        //JSON stringyfy method
+        const a = JSON.stringify(job);
+        console.log(a);
+        console.log(typeof a);
+
+        //JSON parse method
+        console.log(JSON.parse(a));
+
+        /* JSON Object: end */
+        
+        /* tostring & parseInt method */
+        var x = 1;
+        console.log(typeof x);
+        y = x.toString();
+        console.log(typeof y);
+
+        z = parseInt(y);
+        console.log(typeof z);
+
+    </script>
+</body>
+</html>
