@@ -6,9 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
+    <!-- Table: start -->
+    <table class="table-format">
+        <thead>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Age</th>
+                <th>BirthDate</th>
+            </tr>
+        </thead>
+        <tbody id="table-data">
+
+        </tbody>
+    </table>
+    <!-- Table: end -->
+
+    <!-- Date -->
+    <h1>Date:</h1>
+    <p id="date"></p>
+
+    <label for="birthday">Birthdate</label>
+    <input type="datetime-local" id="birthday" name="birthday">
+    <input type="submit" value="Submit">
+
     <script>
         /*Array Methods*/
 
@@ -97,24 +122,62 @@
         console.log(veg.some(x => x.length < 6));
 
         //map
-        const a5 = [1,2,3,4,5];
+        const a5 = [1, 2, 3, 4, 5];
         const a6 = a5.map(value => value * 2);
         console.log(a6);
 
         //flat
-        const a7 = [1,2,3,[4,5],6,7];
+        const a7 = [1, 2, 3, [4, 5], 6, 7];
         const flatary = a7.flat();
         console.log(flatary);
 
-        const a8 = [1,2,3,[[4,5]],6,7];
+        const a8 = [1, 2, 3, [[4, 5]], 6, 7];
         const flatary1 = a8.flat(2);
         console.log(flatary1);
 
         //reduce
-        const a9 = [1,2,3,4,5];
+        const a9 = [1, 2, 3, 4, 5];
         const a = 6;
-        const sum = a9.reduce((pv,cv)=>pv + cv, a);
+        const sum = a9.reduce((pv, cv) => pv + cv, a);
         console.log(sum);
+
+        /* Bind data into a table using for loop */
+
+        const person_details = [
+            { firstname: "Jinal", lastname: "Tandel", age: 26, dob: "6-6-1996" },
+            { firstname: "Hetal", lastname: "Tandel", age: 32, dob: "30-10-1991" },
+            { firstname: "Arpan", lastname: "Tandel", age: 20, dob: "14-4-2002" },
+            { firstname: "Dvs", lastname: "Tandel", age: 33, dob: "28-2-1990" }
+        ]
+
+        var tb = document.getElementById("table-data");
+
+        // for (var i = 0; i < person_details.length; i++) {
+        //     var r = `<tr>
+        // <td>${person_details[i].firstname}</td>
+        // <td>${person_details[i].lastname}</td>
+        // <td>${person_details[i].age}</td>
+        // <td>${person_details[i].dob}</td>
+        // </tr>`
+        //     tb.innerHTML += r;
+        // }
+
+
+        person_details.forEach(element => {
+
+            console.log(element);
+            var r = `<tr>
+        <td>${element.firstname}</td>
+        <td>${element.lastname}</td>
+        <td>${element.age}</td>
+        <td>${element.dob}</td>
+        </tr>`
+            tb.innerHTML += r;
+        });
+
+        // Date Format
+        const d = new Date();
+        document.getElementById("date").innerHTML = d;
 
     </script>
 </body>
