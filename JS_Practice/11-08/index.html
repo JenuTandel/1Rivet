@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="header1">Hello World</h1>
+    <p> Paragraph </p>
+    <p class="para"> My Para </p>
+    <p class="para">My World</p>
+    <p> P1 Tag </p>
+    <img src="./assets/images/mine.jpeg" alt="My Profile" height="200px" width="200px">
+    <p id="p1"> Mopdify the style</p>
+    <p id="p2"> Set Attribute </p>
+    <a id="a1">Google</a>
+    <p id="p3"></p>
+
+    <ul id="mylist">
+        <li>Apple</li>
+        <li>Kiwi</li>
+        <li>Banana</li>
+    </ul>
+
+    <!-- DOM Methods -->
+
+    <script>
+        /* Methods of Accessing Nodes */
+
+        //getElementById() method
+        document.getElementById("header1").innerHTML = "Hello JavaScript";
+        document.getElementById("p1").style.color = "red";
+        document.getElementById("p2").setAttribute("style", "color:blue");
+        document.getElementById("a1").setAttribute("href", "https://www.google.com");
+
+        //getElementsByTagName() method
+        document.getElementsByTagName("p")[0].innerHTML = "JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive (e.g., having complex animations, clickable buttons, popup menus, etc.).";
+        document.getElementsByTagName("img")[0].src = "./assets/images/graph.png";
+
+        //getElementsByClassName() method
+        document.getElementsByClassName("para")[0].innerHTML = "Hello JavaScript, I am Para";
+        var a = document.getElementsByClassName("para");
+        for (var i = 0; i < a.length; i++) {
+            a[i].innerHTML = "Namaste";
+        }
+
+        //querySelector and querySelectorAll() method
+        document.querySelector(".para").style.backgroundColor = "red";
+        const p1 = document.querySelectorAll(".para");
+        for (var i = 0; i < p1.length; i++) {
+            p1[i].style.backgroundColor = "pink";
+        }
+
+        //getAttribute() method
+        const h = document.getElementById("a1").getAttribute("href");
+        document.getElementById("p3").innerHTML = h;
+
+        /* Methods of Adding and Removing Elements */
+
+        //createElement() method
+        const para = document.createElement("p");
+        para.innerText = "This is a paragraph";
+        document.body.appendChild(para);
+
+        //createTextNode() & appendChild() method
+        const h1 = document.createElement("h1");
+        const textNode = document.createTextNode("Hello World");
+        h1.appendChild(textNode);
+        document.body.appendChild(h1);
+
+        const ulst = document.createElement("ul");
+        const data = document.createElement("li");
+        const tn = document.createTextNode("Jinal");
+        const tn1 = document.createTextNode("Vini");
+        data.appendChild(tn);
+        data.appendChild(tn1);
+        ulst.appendChild(data);
+        document.body.appendChild(ulst);
+
+        //removeChild() method
+        const l = document.getElementById("mylist");
+        l.removeChild(l.children[0]);
+
+        //replaceChild() method
+        const l1 = document.getElementById("mylist").children[0];
+        const ad = document.createTextNode("Cherry");
+        l1.replaceChild(ad,l1.childNodes[0]);
+
+        /* Events */
+        
+
+    </script>
+</body>
+
+</html>
