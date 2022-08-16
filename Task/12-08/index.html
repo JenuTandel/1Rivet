@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/08549fad8c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <h1>Person Details</h1>
+
+    <div class="search-wrapper">
+        <input type="text" id="username" placeholder="Search Here" onkeyup="searchData()">
+        <button id="searchbtn">Search</button>
+    </div>
+
+    <table class="table-format">
+        <thead>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Age</th>
+                <th>BirthDate</th>
+            </tr>
+        </thead>
+        <tbody id="tb">
+
+        </tbody>
+    </table>
+
+    <button id="btn" onclick="pwindow()">Click Here</button>
+
+    <div class="pop-up-wrapper">
+        <div class="popup d-none">
+            
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <a href="javascript:void(0)"><span class="fa-solid fa-circle-xmark" onclick="pwindow()"></span></a>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
