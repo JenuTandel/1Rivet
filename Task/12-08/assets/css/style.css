@@ -27,11 +27,13 @@ h1 {
 
 #searchbtn {
     margin-left: 20px;
-    background-color: pink;
+    background-color: palevioletred;
     border: none;
     padding: 10px;
     display: flex;
+    color: white;
     align-items: center;
+    cursor: pointer;
 }
 
 .table-format {
@@ -39,7 +41,6 @@ h1 {
     margin-top: 30px;
     width: 70%;
     margin: 20px auto auto auto;
-
 }
 
 td {
@@ -67,11 +68,25 @@ th {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+.pop-up-wrapper{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    height: 100px;
+    margin: auto;
+    width: 100px;
+    transform: translate(-200px,0px);
 }
 
 .popup {
     margin-top: 20px;
-    background-color: bisque;
+    background-color: pink;
     border: 1px solid black;
     height: 70px;
     width: 500px;
@@ -79,7 +94,6 @@ th {
 }
 
 .popup>a {
-    margin-top: 10px;
     position: absolute;
     right: 10px;
     font-size: 20px;
