@@ -62,7 +62,7 @@ th {
 #btn {
     background-color: palevioletred;
     color: white;
-    height: 50px;
+    padding: 10px;
     width: 100px;
     margin: 20px auto;
     display: flex;
@@ -81,19 +81,35 @@ th {
     height: 100px;
     margin: auto;
     width: 100px;
-    transform: translate(-200px,0px);
+    transform: translate(-70px,0px);
 }
 
 .popup {
     margin-top: 20px;
     background-color: pink;
     border: 1px solid black;
-    height: 70px;
-    width: 500px;
-    position: relative;
+    height: auto;
+    width: 250px;
+    padding: 10px;
 }
 
-.popup>a {
+.popup > input{
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.popup > button{
+    margin-top: 10px;
+    padding: 10px;
+    width: 50%;
+    margin-left: 25%;
+    background-color: palevioletred;
+    border: none;
+    color: white;
+}
+
+/* .popup>a {
     position: absolute;
     right: 10px;
     font-size: 20px;
@@ -103,7 +119,7 @@ th {
 
 .popup>p {
     text-align: center;
-}
+} */
 
 .blur {
     filter: blur(5px);
