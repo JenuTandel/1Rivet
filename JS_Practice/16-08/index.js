@@ -26,7 +26,3 @@ function getData() {
 const data = { firstname: "Vishwani", lastname: "Patel", age: 26, dob: "28-2-1996" }
 addData(data);
 getData();
-
-
-
-
