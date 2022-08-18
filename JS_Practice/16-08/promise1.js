@@ -8,14 +8,20 @@ const person_details = [
 
 var ul = document.getElementById("person_list");
 
-/* Asynchronous Function */
-
-function addData(person,callback) {
-    setTimeout(() => {
-        person_details.push(person);
-        console.log("person added");
-        callback();
-    }, 5000)
+function addData(person) {
+    return new Promise(function(resolve,reject){
+        setTimeout(() => {
+            person_details.push(person);
+            console.log("person added");
+            const error=false;
+            if(!error){
+                resolve();
+            }
+            else{
+                reject();
+            }
+        }, 5000)
+    })
 }
 
 function getData() {
@@ -29,6 +35,10 @@ function getData() {
 }
 
 const pdata = { firstname: "Vishwani", lastname: "Patel", age: 26, dob: "28-2-1996" }
-addData(pdata,getData);
-//console.log("Performed");
+addData(pdata).then(function(){
+    getData();
+}
+).catch(function(){
+    console.log("Error");
+});
 //getData();

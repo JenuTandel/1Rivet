@@ -1,3 +1,5 @@
+// Promises
+
 function addData(){
     return new Promise(function(resolve,reject){
         const error = false;
