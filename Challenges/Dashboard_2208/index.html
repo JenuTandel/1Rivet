@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/08549fad8c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Wrapper -->
+    <div class="d-flex flex-column h-100">
+        <!-- Header: start -->
+        <header>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="company-name d-flex align-items-center ">
+                    <label for="toggle"><span class="icon fa-solid fa-bars"></span></label>
+                    <h1 class="ml-10">TallyScan</h1>
+                </div>
+                <div class="d-flex w-100 justify-content-between ml-10 align-items-center">
+                    <h3>Dashboard</h3>
+                    <div class="d-flex action-bar justify-content-between align-items-center">
+                        <label for="notification"><span class="icon fa-solid fa-bell"></span></label>
+                        <div class="profile-wrapper">
+                            <img src="./assets/images/mine.jpeg">
+                        </div>
+                        <a href="mailto:jinaltandel06@gmail.com"><span>Jinal Tandel</span></a>
+                        <label for=""><span class="icon fa-solid fa-angle-down"></span></label>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header: end -->
+
+        <!-- Aside and Main Wrapper -->
+        <section class="d-flex flex-grow-1 overflow-hidden">
+            <input type="checkbox" id="toggle">
+            <!-- Aside: start -->
+            <aside class="sidebar">
+                <div class="d-flex flex-column justify-content-between">
+                    <ul class="general">
+                        <li class="ml-15"><label>GENERAL</label></li>
+                        <li>
+                            <a href="" class="nav-link active">
+                                <label><span class="icon fa-solid fa-magnifying-glass"></span></label>
+                                <span class="nav-text">Search</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav-link">
+                                <label><span class="icon fa-solid fa-bell"></span></label>
+                                <span class="nav-text">Alerts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav-link">
+                                <label><span class="icon fa-solid fa-tag"></span></label>
+                                <span class="nav-text">Tags</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="ml-15"><label>OTHERS</label></li>
+                        <li>
+                            <a href="" class="nav-link">
+                                <label><span class="icon fa-solid fa-gear"></span></label>
+                                <span class="nav-text">Settings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav-link">
+                                <label><span class="icon fa-solid fa-tag"></span></label>
+                                <span class="nav-text">Tips</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav-link">
+                                <label><span class="icon fa-solid fa-trash"></span></label>
+                                <span class="nav-text">Trash</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav-link">
+                                <label><span class="icon fa-solid fa-arrow-right-from-bracket"></span></label>
+                                <span class="nav-text">Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+            </aside>
+            <!-- Aside: end -->
+
+            <!-- Main: start -->
+            <main class="d-flex flex-column overflow-auto flex-grow-1">
+
+                <!-- SearchBar: start -->
+                <div class="row1 d-flex justify-content-between align-items-center">
+                    <div></div>
+                    <div class="searchbar-wrapper">
+                        <input type="text" id="searchbar" placeholder="Search Here" onkeyup="searchItem()">
+                        <button class="btn btn-primary" onclick="searchItem()">Search</button>
+                    </div>
+                </div>
+                <!-- Searchbar: end -->
+
+                <!-- Card: start -->
+                <div class="row2 d-flex">
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="content">
+                                <p>Scans</p>
+                                <h3>350</h3>
+                            </div>
+                            <div class="icon-wrapper">
+                                <span class="fa-solid fa-barcode"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="content">
+                                <p>Scans</p>
+                                <h3>350</h3>
+                            </div>
+                            <div class="icon-wrapper">
+                                <span class="fa-solid fa-barcode"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="content">
+                                <p>Scans</p>
+                                <h3>350</h3>
+                            </div>
+                            <div class="icon-wrapper">
+                                <span class="fa-solid fa-barcode"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="content">
+                                <p>Scans</p>
+                                <h3>350</h3>
+                            </div>
+                            <div class="icon-wrapper">
+                                <span class="fa-solid fa-barcode"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="content">
+                                <p>Scans</p>
+                                <h3>350</h3>
+                            </div>
+                            <div class="icon-wrapper">
+                                <span class="fa-solid fa-barcode"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="content">
+                                <p>Scans</p>
+                                <h3>350</h3>
+                            </div>
+                            <div class="icon-wrapper">
+                                <span class="fa-solid fa-barcode"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card: end -->
+                <div class="extra-space">
+                    <h3>Recent Activity</h3>
+                </div>
+                <!-- Table: start -->
+                <div class="row3">
+                    <div class="no-record d-none">No Record Found</div>
+                    <div class="table-format">
+                        <table>
+                            <thead>
+                                <th>Item</th>
+                                <th>Date</th>
+                                <th>Type</th>
+                                <th>Est. Cost</th>
+                                <th>Last</th>
+                                <th>List</th>
+                                <th>Auto</th>
+                            </thead>
+                            <tbody id="tb">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Table: end -->
+            </main>
+            <!-- Main: end -->
+    </div>
+    </section>
+    </div>
+
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
