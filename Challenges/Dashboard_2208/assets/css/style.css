@@ -254,6 +254,25 @@ section {
     position: relative;
 }
 
+.badge{
+    border-radius: 10px;
+    background-color: #e5e5e9;
+    padding: 4px;
+}
+.badge-danger{
+    background-color: #ffeeed;
+    color: red;
+}
+.badge-success{
+    background-color: #f1fef3;
+    color: #00b11c;
+}
+.badge-warning{
+    background-color: #fff7e3;
+    color: #f0b047;
+}
+
+
 
 /* Extra large desktop */
 @media (max-width: 1200px) {}

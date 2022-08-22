@@ -28,7 +28,28 @@ function getData(arr) {
             const tr = document.createElement('tr');
             for (i in item) {
                 const td = document.createElement('td');
-                td.textContent = item[i];
+                if(i === "type"){
+                    let span = document.createElement('span');
+                    span.classList.add('badge')
+                    span.textContent = item[i];
+                    if(item[i]=="Discarded")
+                    {
+                        span.classList.add('badge-danger');
+                    }
+                    if(item[i]=="Want")
+                    {
+                        span.classList.add('badge-success');
+                    }
+                    if(item[i]=="Waiting")
+                    {
+                        span.classList.add('badge-warning');
+                    }
+                    td.appendChild(span)
+                }
+                else{
+                    td.textContent = item[i];
+                }
+                // console.log(i);
                 tr.appendChild(td);
             }
             tbody.appendChild(tr);
