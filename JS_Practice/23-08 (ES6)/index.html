@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* Features of ES6 */
+
+        // 1. Concept of let and cost
+        console.log(a);
+        var a = 10;
+
+        // console.log(b); //Reference Error
+        // let b = 20;
+
+        // console.log(c); //Reference Error
+        // const c = 30;
+
+        printName();
+        function printName() {
+            console.log(d);
+            var d = 12;
+            console.log(d);
+        }
+
+        // 2. Arrow function
+        // single line
+        let sum = (a, b) => a + b;
+        console.log(sum(10, 20));
+
+        //single line and no parentheses
+        let value = m => m * m;
+        console.log(value(2));
+
+        //multi line
+        let multiplication = (a, b) => {
+            return a * b;
+        }
+        console.log(multiplication(2, 4));
+
+
+        //3. Multiline String (back tick)
+        let str = `Hello!
+Good Morning
+How are you?`;
+        console.log(str);
+
+        //4. Template Literal
+        let name = "Jinal";
+        let str1 = `Hello ${name}, How r u?`;
+        console.log(str1);
+
+        //5. Parameters in functions
+        //default parameters
+        function addition(m = 20, n = 10) {
+            let add = m + n;
+            console.log(add);
+        }
+
+        console.log(addition());
+        console.log(addition(5, 5));
+        console.log(addition(10));
+
+        //Rest Operator
+        function multiply(i, j, ...args) {
+            console.log("i:", i);
+            console.log("j:", j);
+            console.log("args:", args);
+        }
+        console.log(multiply(1, 2, 3, 4, 5, 6));
+        console.log(multiply(1, 2, 3, 4));
+
+        //Named parameters via destructuring
+        function printData({ a = 10, b = "Jinal", c = true }) {
+            console.log("a:", a);
+            console.log("b:", b);
+            console.log("c:", c);
+        }
+        console.log(printData({ a: 20, b: "Kiran" }));
+
+        //Spread Operator
+        function add1(x, y, z) {
+            return x + y + z;
+        }
+        const numbers = [1, 2, 3];
+        console.log(add1(...numbers));
+
+        const n = [...numbers];
+        console.log(n);
+
+        n[0] = 22;
+        console.log("n:",n);
+        console.log("numbers:",numbers); // Spread operator create new object or array, reference id is different
+
+        //6. Distructuring
+        //Array
+        let arr = [1,2,3,4,5,6];
+        let [s,p] = arr;
+        console.log("s:",s);
+        console.log("p:",p);
+
+        //Object
+        let obj = {firstname:"Jinal", lastname:"Tandel"};
+        let {firstname,lastname} = obj;
+        console.log(`${firstname} ${lastname}`);
+
+        //7. String Methods
+        let s1 = "Hello Jinal";
+        console.log(s1.startsWith("Hel"));
+        console.log(s1.startsWith("el"));
+        console.log(s1.endsWith("Jinal"));
+        console.log(s1.includes(" "));
+        console.log(s1.includes("al"));
+        console.log("Hello ".repeat(2)); 
+
+        
+    </script>
+</body>
+
+</html>

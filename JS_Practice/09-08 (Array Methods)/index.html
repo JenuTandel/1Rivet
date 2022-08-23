@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <!-- Table: start -->
+    <table class="table-format">
+        <thead>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Age</th>
+                <th>BirthDate</th>
+            </tr>
+        </thead>
+        <tbody id="table-data">
+
+        </tbody>
+    </table>
+    <!-- Table: end -->
+
+    <!-- Date -->
+    <h1>Date:</h1>
+    <p id="date"></p>
+
+    <!-- <label for="birthday">Birthdate</label>
+    <input type="datetime-local" id="birthday" name="birthday">
+    <input type="submit" value="Submit"> -->
+
+    <script>
+        /*Array Methods*/
+
+        // Create an array
+        const arr = [1, 2, 3, "Jinal", "Tandel", 1996];
+        console.log(arr);
+        console.log(arr[2]);
+
+        //create an array method-2
+        const arr1 = new Array();
+        arr1[0] = "Jinal";
+        arr1[1] = "Tandel";
+        console.log(arr1);
+
+        //length of array
+        var l = arr1.length;
+        console.log(l);
+
+        //pop method
+        a1 = [1, 2, 3, 4];
+        a1.pop();
+        console.log(a1);
+
+        //push method
+        a1.push(4);
+        console.log(a1);
+
+        //contact method
+        a2 = [5, 6, 7];
+        const a3 = a1.concat(a2);
+        console.log(a3);
+
+        //slice method
+        const a4 = a3.slice(2, 5);
+        console.log(a4);
+
+        //splice method
+        a4.splice(0, 0, 1, 2);
+        console.log(a4);
+
+        //includes method
+        console.log(a4.includes(1));
+
+        //indexof method
+        console.log(a4.indexOf(1));
+
+        //shift method
+        a4.shift();
+        console.log(a4);
+
+        //unshift method
+        a4.unshift(1);
+        console.log(a4);
+
+        //filter method
+        const veg = ['potato', 'tomato', 'onion', 'cabbage', 'cauli-flower', 'peas', 'beans'];
+        console.log(veg);
+        console.log(veg.filter(v => v.length < 6));
+
+        //find method
+        console.log(veg);
+        console.log(veg.find(v => v.length < 6));
+
+        //findIndex method
+        console.log(veg.findIndex(v => v.length < 6));
+
+        //delete
+        const obj = [{ a: 1, b: 2, c: 3 }, { a: 1, b: 2, c: 3 }, { a: 1, b: 2, c: 3 }];
+        console.log(delete obj[0]);
+        console.log(obj);
+        console.log(obj.length);
+
+        //entries method
+        const person_name = ["Jinal", "Hetal", "Arpan"];
+        console.log(person_name.entries());
+        var e = person_name.entries();
+
+        for (const ele of e) {
+            console.log(ele);
+        }
+
+        //every method
+        console.log(veg.every(x => x.length < 6));
+
+        //some method
+        console.log(veg.some(x => x.length < 6));
+
+        //map
+        const a5 = [1, 2, 3, 4, 5];
+        const a6 = a5.map(value => value * 2);
+        console.log(a6);
+
+        //flat
+        const a7 = [1, 2, 3, [4, 5], 6, 7];
+        const flatary = a7.flat();
+        console.log(flatary);
+
+        const a8 = [1, 2, 3, [[4, 5]], 6, 7];
+        const flatary1 = a8.flat(2);
+        console.log(flatary1);
+
+        //reduce
+        const a9 = [1, 2, 3, 4, 5];
+        const a = 6;
+        const sum = a9.reduce((pv, cv) => pv + cv, a);
+        console.log(sum);
+
+        /* Bind data into a table using for loop */
+
+        const person_details = [
+            { firstname: "Jinal", lastname: "Tandel", age: 26, dob: "6-6-1996" },
+            { firstname: "Hetal", lastname: "Tandel", age: 32, dob: "30-10-1991" },
+            { firstname: "Arpan", lastname: "Tandel", age: 20, dob: "14-4-2002" },
+            { firstname: "Dvs", lastname: "Tandel", age: 33, dob: "28-2-1990" }
+        ]
+
+        var tb = document.getElementById("table-data");
+
+        var start = window.performance.now();
+        for (var i = 0; i < person_details.length; i++) {
+            var r = `<tr>
+        <td>${person_details[i].firstname}</td>
+        <td>${person_details[i].lastname}</td>
+        <td>${person_details[i].age}</td>
+        <td>${person_details[i].dob}</td>
+        </tr>`
+            tb.innerHTML += r;
+        }
+
+        // person_details.forEach(element => {
+
+        //     console.log(element);
+        //     var r = `<tr>
+        // <td>${element.firstname}</td>
+        // <td>${element.lastname}</td>
+        // <td>${element.age}</td>
+        // <td>${element.dob}</td>
+        // </tr>`
+        //     tb.innerHTML += r;
+        // });
+
+        var end = window.performance.now();
+        console.log(`Execution time: ${end - start} ms`);
+
+        // Date Format
+        const d = new Date();
+        document.getElementById("date").innerHTML = d;
+
+        
+
+    </script>
+</body>
+
+</html>
