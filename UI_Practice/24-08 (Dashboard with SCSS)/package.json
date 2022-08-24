@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "saas": "^1.0.0",
+    "sass": "^1.54.5"
+  },
+  "scripts": {
+    "build": "sass assets/scss/styles.scss assets/css/styles.css --watch"
+  }
+}
+
