@@ -95,31 +95,125 @@ How are you?`;
         console.log(n);
 
         n[0] = 22;
-        console.log("n:",n);
-        console.log("numbers:",numbers); // Spread operator create new object or array, reference id is different
+        console.log("n:", n);
+        console.log("numbers:", numbers); // Spread operator create new object or array, reference id is different
 
         //6. Distructuring
         //Array
-        let arr = [1,2,3,4,5,6];
-        let [s,p] = arr;
-        console.log("s:",s);
-        console.log("p:",p);
+        let arr = [1, 2, 3, 4, 5, 6];
+        let [s, p] = arr;
+        console.log("s:", s);
+        console.log("p:", p);
 
         //Object
-        let obj = {firstname:"Jinal", lastname:"Tandel"};
-        let {firstname,lastname} = obj;
+        let obj = { firstname: "Jinal", lastname: "Tandel" };
+        let { firstname, lastname } = obj;
         console.log(`${firstname} ${lastname}`);
 
-        //7. String Methods
+        //7. New ES6 String Methods
         let s1 = "Hello Jinal";
         console.log(s1.startsWith("Hel"));
         console.log(s1.startsWith("el"));
         console.log(s1.endsWith("Jinal"));
         console.log(s1.includes(" "));
         console.log(s1.includes("al"));
-        console.log("Hello ".repeat(2)); 
+        console.log("Hello ".repeat(2));
 
-        
+        //8. New ES6 Number Methods
+        const v = 100;
+        console.log(Number.isInteger(v));
+        console.log(Number.isSafeInteger(9007199254740992)); //Range is specified already
+        console.log(Number.isSafeInteger(11114740991));
+        console.log(Number.MIN_SAFE_INTEGER);
+        console.log(Number.MAX_SAFE_INTEGER);
+        // ** Doubt here
+        console.log(isNaN('10'));
+        console.log(Number.isNaN('10'));
+        console.log(isNaN('J'));
+        console.log(Number.isNaN('J'));
+
+        //9. New ES6 Math methods
+        //sign method return only -1 , 1 and 0 value for negative, positive and zero value respectively.
+        console.log(Math.sign(-10));
+        console.log(Math.sign(10));
+        console.log(Math.sign(0));
+
+        //trunc remove all decimal parts. Only returns integer value
+        console.log(Math.trunc(4.435));
+        console.log(Math.trunc(-4.435));
+
+        //10. Promise
+        //first promise
+        let mypromise = new Promise((resolve, reject) => {
+            resolve("p1: success");
+            reject("p1: error");
+        })
+
+        mypromise.then(
+            (msg) => console.log(msg)
+        ).catch(
+            (msg) => console.log(msg)
+        )
+
+        //second promise with setTimeout()
+        let mypromise1 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("p2: success");
+            }, 3000);
+            setTimeout(() => {
+                reject("p2: error");
+            }, 5000)
+
+        })
+
+        mypromise1.then(
+            (msg) => console.log(msg)
+        ).catch(
+            (msg) => console.log(msg)
+        )
+
+        //third promise with chaining then()
+        let mypromise2 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("p3: success");
+            }, 2000)
+            reject("p3: error");
+        })
+
+        mypromise2
+            .then(
+                (msg) => console.log(msg)
+            )
+            .then(
+                (msg) => console.log(msg)
+            )
+            .catch(
+                (msg) => console.log(msg)
+            )
+
+        //11. for...in & for...of loop
+        const myarr = [1,2,"Jinal","Kiran",3,5];
+        const myarr1 = {1:"Jinal",2:"Kiran"};
+        const p1 = Object.values(myarr1);
+        console.log("for...of loop")
+        for(let i of myarr){
+            console.log(i);
+        }
+        console.log("for...in loop")
+        for(let i in myarr){
+            console.log(i);
+        }
+        console.log("forEach loop")
+        p1.forEach((i)=>{
+            console.log(i);
+        });
+
+        //12. Classes
+
+        //13.Modules
+
+        //14. Enhanced Object Literals
+
     </script>
 </body>
 
