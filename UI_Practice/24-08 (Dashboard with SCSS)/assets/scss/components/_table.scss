@@ -1,0 +1,41 @@
+/* Table: start */
+.row1 {
+    display: flex;
+    margin-bottom: 30px;
+    width: 100%
+}
+
+.table-wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 70%;
+    background-color: white;
+}
+
+table {
+    font-family: 'Poppins', sans-serif;
+    border-spacing: 0px 10px;
+    width: 100%;
+}
+
+thead {
+    font-weight: 600px;
+}
+
+tbody {
+    text-align: center;
+    td {
+        padding: 10px;
+        background-color: #ebebeb;
+    }
+}
+
+.product-wrapper>p {
+    margin-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px
+}
+
+/* Table: end */

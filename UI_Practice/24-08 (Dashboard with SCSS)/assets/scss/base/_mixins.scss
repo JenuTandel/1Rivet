@@ -1,0 +1,7 @@
+@mixin transition($second) {
+    transition: $second ease-in-out;
+}
+
+@mixin card-bg-color($bg-color) {
+    background-color: $bg-color;
+}

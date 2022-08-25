@@ -1,0 +1,50 @@
+/* Sidebar */
+
+.sidebar {
+    width: 240px;
+    flex: 0 0 240px;
+    transform: translateX(0);
+    @include transition(.35s);
+    border-right: 1px solid $border-color;
+    background-color: #fff;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    @include transition(.25s);
+
+    &:hover,
+    .active {
+        background-color: rgba(68, 146, 250, .1);
+
+        .icon,
+        .nav-text {
+            color: $primary;
+        }
+    }
+
+    .icon {
+        @include transition(.25s);
+        cursor: pointer;
+    }
+
+    .nav-text {
+        margin-left: 1.25rem;
+    }
+}
+
+#toggleSidebar {
+    display: none;
+
+    &:checked {
+        +.sidebar {
+            width: 0;
+            flex: 0 0 0;
+            transform: translateX(-300px);
+        }
+    }
+}
+
+/* End :Sidebar */

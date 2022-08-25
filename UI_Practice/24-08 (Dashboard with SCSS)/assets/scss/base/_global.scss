@@ -1,0 +1,49 @@
+/* Global */
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+.icon {
+    font-size: 20px;
+    color: #abb1be;
+    transition: color .25s;
+
+    &:hover {
+        color: $primary;
+    }
+}
+
+.text-primary {
+    color: $primary;
+}
+
+a {
+    color: #abb1be;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.mb-4 {
+    margin-bottom: 24px;
+}
+
+.ml-2 {
+    margin-left: 12px;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+.w-100 {
+    width: 100%;
+}
+
