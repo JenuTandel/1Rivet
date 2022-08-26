@@ -1,12 +1,40 @@
+
 $font-family: 'Poppins', sans-serif;
+
+$font-size:16px;
+
+$font-weight-light: 300;
+$font-weight-normal:400;
+$font-weight-medium:500;
+$font-weight-semibold:600;
+$font-weight-bold:700;
 
 //colors
 $primary: #4492fa;
 $border-color: #ebebeb;
+$white: #ffffff;
 
+//Map
 $theme-color: (
     "primary": $primary,
     "warning": #FFC107,
     "success": #4CAF50,
     "error": #FF5722,
 );
+
+//Header variables
+$header-height:80px;
+$header-icon-color:#ffffff;
+$header-margin-x: 20px;
+$search-bar-bgcolor: #f5f7f9; 
+
+// Sidebar Variables
+$sidebar-expand-width:240px;
+$sidebar-margin-x: $header-margin-x;
+
+//Card Variables
+
+
+//Media query
+
+

@@ -13,7 +13,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom css -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -22,37 +22,36 @@
     <!-- Wrapper -->
     <div class="d-flex flex-column h-100">
         <!-- Start : Header -->
-        <header id="header">
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="d-flex align-items-center">
-                    <!-- Company Logo -->
-                    <label for="toggleSidebar" class="toggle-button cursor-pointer"><span
-                            class="icon text-primary fa-solid fa-bars"></span></label>
-                    <!-- Search Bar -->
-                    <div class="search-bar-wrapper">
-                        <label for="searchBar"><span class="icon fa-solid fa-magnifying-glass"></span></label>
-                        <input type="text" id="searchBar" name="search" placeholder="Search Here">
-                        <button class="btn btn-primary">
-                            Search
-                        </button>
-                    </div>
-                </div>
-                <!-- Actions -->
-                <div class="action-bar d-flex align-items-center justify-content-between">
-                    <a href="" class="notification">
-                        <span class="icon fa-solid fa-message"></span>
-                    </a>
-                    <a href="" class="notification">
-                        <span class="icon fa-solid fa-bell"></span>
-                    </a>
-                    <a class="dropdown d-flex align-items-center">
-                        <div class="profile-wrap">
-                            <img src="./assets/images/mine.jpeg" alt="profile pic">
-                        </div>
-                        <span class="caret fa-solid fa-caret-down"></span>
-                    </a>
+        <header class=" d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <!-- Company Logo -->
+                <label for="toggleSidebar" class="toggle-button cursor-pointer"><span
+                        class="icon text-primary fa-solid fa-bars"></span></label>
+                <!-- Search Bar -->
+                <div class="search-bar-wrapper">
+                    <label for="searchBar"><span class="icon fa-solid fa-magnifying-glass"></span></label>
+                    <input type="text" id="searchBar" name="search" placeholder="Search Here">
+                    <button class="btn btn-primary">
+                        Search
+                    </button>
                 </div>
             </div>
+            <!-- Actions -->
+            <div class="action-bar d-flex align-items-center justify-content-between">
+                <a href="" class="notification">
+                    <span class="icon fa-solid fa-message"></span>
+                </a>
+                <a href="" class="notification">
+                    <span class="icon fa-solid fa-bell"></span>
+                </a>
+                <a class="dropdown d-flex align-items-center">
+                    <div class="profile-wrap">
+                        <img src="./assets/images/mine.jpeg" alt="profile pic">
+                    </div>
+                    <span class="icon caret fa-solid fa-caret-down"></span>
+                </a>
+            </div>
+
         </header>
         <!-- End : Header -->
         <!-- Wrapper -->
@@ -116,7 +115,7 @@
                 <h2>Dashboard</h2>
                 <div class="row">
                     <!-- Card Wrapper -->
-                    <div class="card-wrapper">
+                    <div class="card-wrapper primary">
                         <!-- Card 1 -->
                         <div class="card card-primary">
                             <div class="icon-wrapper icon-bg1">
@@ -128,7 +127,7 @@
                         </div>
                     </div>
                     <!-- Card Wrapper -->
-                    <div class="card-wrapper">
+                    <div class="card-wrapper warning">
                         <!-- Card 2 -->
                         <div class="card card-warning">
                             <div class="icon-wrapper icon-bg2">
@@ -140,7 +139,7 @@
                         </div>
                     </div>
                     <!-- Card Wrapper -->
-                    <div class="card-wrapper">
+                    <div class="card-wrapper success">
                         <!-- Card 3 -->
                         <div class="card card-success">
                             <div class="icon-wrapper icon-bg3">
@@ -152,7 +151,7 @@
                         </div>
                     </div>
                     <!-- Card Wrapper -->
-                    <div class="card-wrapper">
+                    <div class="card-wrapper error">
                         <!-- Card 4 -->
                         <div class="card card-error">
                             <div class="icon-wrapper icon-bg4">
