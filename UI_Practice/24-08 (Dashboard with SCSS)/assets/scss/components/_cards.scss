@@ -11,26 +11,26 @@
 }
 
 .card-wrapper {
-    @include flex(0,0,25%);
+    @include flex(0, 0, 25%);
     max-width: 25%;
 
     padding: {
-        left: 15px;
-        right: 15px;
+        left: $card-margin-x;
+        right: $card-margin-x;
     }
 
     @media (max-width: 992px) {
-        @include flex(0,0,33.33%);
+        @include flex(0, 0, 33.33%);
         max-width: 33.33%;
     }
 
     @media (max-width: 768px) {
-        @include flex(0,0,50%);
+        @include flex(0, 0, 50%);
         max-width: 50%;
     }
 
     @media (max-width: 600px) {
-        @include flex(0,0,100%);
+        @include flex(0, 0, 100%);
         max-width: 100%;
     }
 
@@ -45,31 +45,46 @@
                 background-color: darken($color: $value, $amount: 10%);
             }
         }
-
-        .icon-wrapper {
-            background-color: #ebebeb;
+        h4 {
+            color: color-yiq(#fff);
+            font-weight: 400;
+        }
+        h2 {
+            color: color-yiq(#fff);
+            padding-bottom: 12px;
+            border-bottom: 1px solid $border-color;
+            margin-bottom: 10px;
+        }
+        p, a{
+            color: color-yiq(#fff);
         }
     }
 }
 
 .card {
     padding: 16px;
-    // background-color: #fff;
+    border-radius: $border-radius-10;
     @include transition(.5s);
 
     .icon-wrapper {
-        background-color: #f8f8f8;
-        display: flex;
-        align-items: center;
+        @include flex-center;
+        border-radius: 10px;
         height: 60px;
         width: 60px;
         justify-content: center;
         margin-bottom: 16px;
         text-align: center;
+
+        @each $color,
+        $value in $theme-color {
+            &.#{$color}{
+                background-color: lighten($value, 35%);
+            }
+        }
     }
 
     h4 {
-        color: #abb1be;
+        color: $white;
         font-weight: 400;
     }
 
@@ -80,22 +95,6 @@
     }
 }
 
-.fa-eye {
-    color: #4492fa;
-}
-
-.fa-bag-shopping {
-    color: #8bc38a;
-}
-
-.fa-user-group {
-    color: #4492fa;
-}
-
-.fa-basket-shopping {
-    color: #82bbbc;
-}
-
 /* Cards: end */
 
 @each $color,
@@ -103,5 +102,12 @@ $value in $theme-color {
     .card-#{$color} {
         background-color: $value;
         color: color-yiq($value);
+    }
+}
+
+@each $color,
+$value in $theme-color {
+    .icon-#{$color} {
+        color: $value;
     }
 }

@@ -9,6 +9,8 @@ $font-weight-medium:500;
 $font-weight-semibold:600;
 $font-weight-bold:700;
 
+$border-radius-10:10px;
+
 //colors
 $primary: #4492fa;
 $border-color: #ebebeb;
@@ -33,8 +35,10 @@ $sidebar-expand-width:240px;
 $sidebar-margin-x: $header-margin-x;
 
 //Card Variables
+$card-margin-x: 15px;
 
-
+//Table variables
+$table-margin-x: $card-margin-x;
 //Media query
 
 

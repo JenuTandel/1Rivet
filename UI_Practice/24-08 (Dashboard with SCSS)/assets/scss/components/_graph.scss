@@ -1,12 +1,17 @@
 /* Graph section */
 .graph-wrapper {
-    background-color: white;
+    background-color: $white;
     margin-left: 20px;
     width: 30%;
     padding: 10px;
+    border-radius: $border-radius-10;
 
     a,p{
         font-size: 12px;
+    }
+
+    h4,a{
+        padding-top: 15px;
     }
 }
 
