@@ -1,0 +1,66 @@
+// Fonts
+$font-family: 'Poppins', sans-serif;
+$font-size: 16px;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Body
+$body-bg: #ffffff;
+$body-color: #000000;
+
+// Map
+
+$spacer: (
+  0: 0,
+  1: 5,
+  2: 10,
+  3: 15,
+  4: 20,
+  5: 30,
+  auto: 'auto'
+);
+
+$space-values: (
+  "top": t,
+  "bottom": b,
+  "left": l,
+  "right": r
+);
+
+// Sidebar
+$sidebar-expand-width: 250px;
+
+$header-height: 60px;
+
+$sidebar-padding-x: 20px;
+$sidebar-padding-y: 20px;
+
+$border-color: #f9f9f9;
+$primary: #0072ea;
+
+// Nav
+$nav-padding-x: $sidebar-padding-x;
+$nav-padding-y: 10px;
+
+$nav-icon-color: #b3b3b3;
+
+$black: #000000;
+
+$theme-colors: (
+  "orange": #ff9909,
+  "purple": #8138ff,
+  "pink": #ff00bf
+);
+
+//Topbar
+$topbar-icon-color:$nav-icon-color;
+
+//Main
+$progress-value-color:#8c8c8c;
+$progressbar-height: 5px;
+$progress-bg-color: #ebebeb;
+$card-border-radius: 12px;

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCSS Dashboard Demo</title>
+
+    <!-- Font-Awesome -->
+    <script src="https://kit.fontawesome.com/e1b18a8fad.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <section class="page-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Logo -->
+            <header class="logo">
+                <span class="logo-icon fa-solid fa-c"></span>
+                <h3 class="logo-text mt-0 mb-0 ml-3">Courses</h3>
+            </header>
+            <!-- End: Logo -->
+
+            <!-- Navigation -->
+            <nav class="nav-wrapper" aria-label="Navigation">
+                <div class="mb-4">
+                    <span class="nav-title">Menu</span>
+                    <ul class="nav-list">
+                        <li class="nav-item active">
+                            <a href="#" class="nav-link">
+                                <span class="nav-icon fa-solid fa-book-bookmark"></span>
+                                <span class="nav-text">My Courses</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="nav-icon fa-solid fa-table-list"></span>
+                                <span class="nav-text">Browse Courses</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="nav-icon fa-solid fa-list-check"></span>
+                                <span class="nav-text">My Categories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="nav-icon fa-solid fa-envelope"></span>
+                                <span class="nav-text">My Messages</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <span class="nav-title">Groups</span>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="nav-icon text-orange fa-regular fa-circle"></span>
+                                <span class="nav-text">UI/UX</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="nav-icon text-purple fa-regular fa-circle"></span>
+                                <span class="nav-text">Industrial Design</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="nav-icon text-pink fa-regular fa-circle"></span>
+                                <span class="nav-text">Architecture</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="nav-link link-add-more">
+                    <span class="nav-icon fa-solid fa-plus"></span>
+                    <span class="nav-text">Add group</span>
+                </a>
+            </nav>
+
+            <a href="#" class="nav-link link-theme">
+                <span class="nav-icon fa-solid fa-moon"></span>
+                <span class="nav-text">Dark Mode</span>
+            </a>
+            <!-- End: Navigation -->
+        </aside>
+        <!-- End: Sidebar -->
+
+        <!-- Main Content -->
+        <section class="main-content">
+            <!-- Topbar -->
+            <header class="topbar flex-center">
+                <!-- Search -->
+                <div class="search-wrapper flex-center">
+                    <label for="search">
+                        <span class="icon fa-solid fa-magnifying-glass"></span>
+                    </label>
+                    <input type="text" name="search" class="search" id="search" placeholder="Search..." />
+                </div>
+                <!-- End: Search -->
+
+                <!-- Header Action -->
+                <ul class="action-list flex-center ml-auto">
+                    <li class="action-item">
+                        <a href="#" class="notification action-link">
+                            <span class="icon fa-regular fa-bell"></span>
+                        </a>
+                    </li>
+                    <li class="action-item">
+                        <a href="#" class="user-profile action-link">
+                            <span class="user-name">N</span>
+                            <span class="icon fa-solid fa-angle-down"></span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- End: Header Action -->
+            </header>
+            <!-- End: Topbar -->
+
+            <!-- Main Content Area -->
+            <main class="main-wrapper">
+                <header class="flex-center justify-content-between">
+                    <!-- Page Title -->
+                    <h2 class="page-title">My Courses</h2>
+                    <!-- End: Page Title -->
+
+                    <!-- Category Dropdown -->
+                    <button type="button" class="category-dropdown">
+                        All courses
+                        <span class="icon fa-solid fa-angle-down ml-2"></span>
+                    </button>
+                    <!-- End: Category Dropdown -->
+                </header>
+
+                <!-- Course Listing -->
+                <ul class="course-list mt-4">
+                    <li class="course-item">
+                        <div class="card">
+                            <div class="card-header">
+                                <figure>
+                                    <img src="assets/images/abstract-design.jpg" alt="Card Image" />
+                                </figure>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Abstract Design</h3>
+                                <p class="card-desc">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Alias ut dolorum odit, officia hic corporis nostrum facere
+                                    illum? Placeat, atque!
+                                </p>
+                                <ul class="user-list">
+                                    <li class="user-item">
+                                        <img src="assets/images/users/user1.jpg" alt="user-img" />
+                                    </li>
+                                    <li class="user-item">
+                                        <img src="assets/images/users/user2.jpg" alt="user-img" />
+                                    </li>
+                                    <li class="user-item">
+                                        <img src="assets/images/users/user1.jpg" alt="user-img" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card p-5 mt-3">
+                            <div class="card-body flex-center">
+                                <div class="progress-wrapper high">
+                                    <div class="progress-bar"></div>
+                                </div>
+                                <span class="progress-value">76%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="course-item">
+                        <div class="card">
+                            <div class="card-header">
+                                <figure>
+                                    <img src="assets/images/industrial-design.jpg" alt="Card Image" />
+                                </figure>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Industrial Design</h3>
+                                <p class="card-desc">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Alias ut dolorum odit, officia hic corporis nostrum facere
+                                    illum? Placeat, atque!
+                                </p>
+                                <ul class="user-list">
+                                    <li class="user-item">
+                                        <img src="assets/images/users/user1.jpg" alt="user-img" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card p-5 mt-3">
+                            <div class="card-body flex-center">
+                                <div class="progress-wrapper low">
+                                    <div class="progress-bar"></div>
+                                </div>
+                                <span class="progress-value">32%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="course-item">
+                        <div class="card">
+                            <div class="card-header">
+                                <figure>
+                                    <img src="assets/images/photography.jpg" alt="Card Image" />
+                                </figure>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Abstract Design</h3>
+                                <p class="card-desc">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Alias ut dolorum odit, officia hic corporis nostrum facere
+                                    illum? Placeat, atque!
+                                </p>
+                                <ul class="user-list">
+                                    <li class="user-item">
+                                        <img src="assets/images/users/user2.jpg" alt="user-img" />
+                                    </li>
+                                    <li class="user-item">
+                                        <img src="assets/images/users/user1.jpg" alt="user-img" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card p-5 mt-3">
+                            <div class="card-body flex-center">
+                                <div class="progress-wrapper medium">
+                                    <div class="progress-bar"></div>
+                                </div>
+                                <span class="progress-value">46%</span>
+                            </div>
+                        </div>
+                    </li>
+                    
+                </ul>
+                <ul class="course-list mt-4">
+                    <li class="course-item">
+                        <div class="card">
+                            <div class="card-header">
+                                <figure>
+                                    <img src="assets/images/abstract-design.jpg" alt="Card Image" />
+                                </figure>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Abstract Design</h3>
+                                <p class="card-desc">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Alias ut dolorum odit, officia hic corporis nostrum facere
+                                    illum? Placeat, atque!
+                                </p>
+                                <ul class="user-list">
+                                    <li class="user-item">
+                                        <img src="assets/images/users/user1.jpg" alt="user-img" />
+                                    </li>
+                                    <li class="user-item">
+                                        <img src="assets/images/users/user2.jpg" alt="user-img" />
+                                    </li>
+                                    <li class="user-item">
+                                        <img src="assets/images/users/user1.jpg" alt="user-img" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card p-5 mt-3">
+                            <div class="card-body flex-center">
+                                <div class="progress-wrapper high">
+                                    <div class="progress-bar"></div>
+                                </div>
+                                <span class="progress-value">76%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="course-item">
+                        <div class="card">
+                            <div class="card-header">
+                                <figure>
+                                    <img src="assets/images/industrial-design.jpg" alt="Card Image" />
+                                </figure>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Industrial Design</h3>
+                                <p class="card-desc">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Alias ut dolorum odit, officia hic corporis nostrum facere
+                                    illum? Placeat, atque!
+                                </p>
+                                <ul class="user-list">
+                                    <li class="user-item">
+                                        <img src="assets/images/users/user1.jpg" alt="user-img" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card p-5 mt-3">
+                            <div class="card-body flex-center">
+                                <div class="progress-wrapper low">
+                                    <div class="progress-bar"></div>
+                                </div>
+                                <span class="progress-value">32%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="course-item">
+                        <div class="card">
+                            <div class="card-header">
+                                <figure>
+                                    <img src="assets/images/photography.jpg" alt="Card Image" />
+                                </figure>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Abstract Design</h3>
+                                <p class="card-desc">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Alias ut dolorum odit, officia hic corporis nostrum facere
+                                    illum? Placeat, atque!
+                                </p>
+                                <ul class="user-list">
+                                    <li class="user-item">
+                                        <img src="assets/images/users/user2.jpg" alt="user-img" />
+                                    </li>
+                                    <li class="user-item">
+                                        <img src="assets/images/users/user1.jpg" alt="user-img" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card p-5 mt-3">
+                            <div class="card-body flex-center">
+                                <div class="progress-wrapper medium">
+                                    <div class="progress-bar"></div>
+                                </div>
+                                <span class="progress-value">46%</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    
+                </ul>
+                <!-- End: Course Listing -->
+            </main>
+            <!-- End: Main Content Area -->
+        </section>
+        <!-- End: Main Content -->
+    </section>
+</body>
+
+</html>
