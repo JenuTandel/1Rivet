@@ -369,6 +369,7 @@ img {
 .course-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .course-list .card {
   background-color: #ffffff;
@@ -384,12 +385,11 @@ img {
   display: flex;
   flex-direction: column;
   width: 280px;
-}
-.course-item + .course-item {
-  margin-left: 38px;
+  margin-bottom: 20px;
 }
 .course-item .card-body {
   padding: 15px 20px;
+  width: 100%;
 }
 .course-item .card-body .card-title {
   margin-top: 0;
