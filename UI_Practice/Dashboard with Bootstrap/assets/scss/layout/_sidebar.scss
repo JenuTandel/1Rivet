@@ -1,3 +1,28 @@
 .sidebar{
-    width:$sidebar-width-expand;
+    flex     : 0 0 220px;
+    max-width: 220px;
+
+    @include media-breakpoint-down(sm) {
+        flex     : 0 0 80px;
+        max-width: 80px;
+    }
+
+    .nav {
+        &-item {
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            .nav-link {
+                border-radius: $nav-link-border-radius;
+
+                &.active,
+                &:hover {
+                    background-color: rgba($nav-link-active-bg, 0.15);
+                    color           : $nav-link-active-color;
+                }
+            }
+        }
+    }
 }
+

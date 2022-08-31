@@ -7161,7 +7161,24 @@ body {
 }
 
 .sidebar {
-  width: 220px;
+  flex: 0 0 220px;
+  max-width: 220px;
+}
+@media (max-width: 575.98px) {
+  .sidebar {
+    flex: 0 0 80px;
+    max-width: 80px;
+  }
+}
+.sidebar .nav-item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.sidebar .nav-item .nav-link {
+  border-radius: 6px;
+}
+.sidebar .nav-item .nav-link.active, .sidebar .nav-item .nav-link:hover {
+  background-color: rgba(13, 110, 253, 0.15);
+  color: #0d6efd;
 }
 
 /*# sourceMappingURL=styles.css.map */

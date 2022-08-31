@@ -1,4 +1,11 @@
-//Sidebar variables
+// BOdy variables
 $font-family-base: 'Open Sans', sans-serif;
+$font-size-base: 1rem;
 
-$sidebar-width-expand: 220px;
+// Common
+$border-radius: 6px;
+$wrapper-border-radius: 12px;
+
+// NAv
+$nav-link-border-radius: $border-radius;
+$nav-link-padding-y: 0.75rem;

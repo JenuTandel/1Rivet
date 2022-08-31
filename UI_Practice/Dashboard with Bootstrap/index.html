@@ -17,25 +17,73 @@
 </head>
 
 <body>
-    <div class="page-wrapper">
-        <aside class="sidebar">
-            <span class="bi bi-star-fill text-primary me-1"></span>
-            <span class="text-primary">Star</span><span class="text-white">Mall</span>
-            <ul class="nav flex-column">
+    <div class="page-wrapper h-100">
+        <!-- Aside -->
+        <aside class="sidebar d-flex flex-column h-100">
+
+            <!-- brand logo -->
+            <figure class="d-flex align-items-center justify-content-center py-3 px-4">
+                <span class="bi bi-stars text-primary pe-3"></span>
+                <h6 class="mb-0 d-flex">
+                    <span class="text-primary">Star</span>
+                    <span>Mall</span>
+                </h6>
+                <!-- <img src="assets/images/brand-logo.png" class="img-fluid" alt=""> -->
+            </figure>
+            <!-- End: brand logo -->
+
+            <!-- Nav list -->
+            <ul class="nav flex-column flex-nowrap flex-grow-1 overflow-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Active</a>
+                    <a class="nav-link d-flex d-lg-block active" href="#">
+                        <span class="nav-icon bi bi-bricks pe-3"></span>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">
+                        <span class="nav-icon bi bi-bricks pe-3"></span>
+                        <span class="nav-text">Stuff</span>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">
+                        <span class="nav-icon bi bi-bricks pe-3"></span>
+                        <span class="nav-text">Shops</span>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
+                    <a class="nav-link" href="#">
+                        <span class="nav-icon bi bi-bricks pe-3"></span>
+                        <span class="nav-text">Branches</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span class="nav-icon bi bi-bricks pe-3"></span>
+                        <span class="nav-text">Events</span>
+                    </a>
                 </li>
             </ul>
+            <!-- End: Nav list -->
+            <!-- Nav list -->
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span class="nav-icon bi bi-bricks pe-3"></span>
+                        <span class="nav-text">Settings</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span class="nav-icon bi bi-bricks pe-3"></span>
+                        <span class="nav-text">Log Out</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- End: Nav list -->
         </aside>
+
         <section>
             <header>
 
