@@ -10,64 +10,73 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
     <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
-    <div class="page-wrapper h-100">
+    <div class="d-flex page-wrapper h-100">
         <!-- Aside -->
         <aside class="sidebar d-flex flex-column h-100">
 
-            <!-- brand logo -->
+            <!-- Brand logo -->
             <figure class="d-flex align-items-center justify-content-center py-3 px-4">
-                <span class="bi bi-stars text-primary pe-3"></span>
+                <span class="bi bi-star-fill text-primary pe-3"></span>
                 <h6 class="mb-0 d-flex">
                     <span class="text-primary">Star</span>
-                    <span>Mall</span>
+                    <span class="text-white">Mall</span>
                 </h6>
-                <!-- <img src="assets/images/brand-logo.png" class="img-fluid" alt=""> -->
             </figure>
-            <!-- End: brand logo -->
+            <!-- Brand logo: End -->
 
-            <!-- Nav list -->
-            <ul class="nav flex-column flex-nowrap flex-grow-1 overflow-auto">
+            <!-- Nav list: Start -->
+            <ul class="nav flex-column flex-grow-1 overflow-auto">
                 <li class="nav-item">
-                    <a class="nav-link d-flex d-lg-block active" href="#">
+                    <a class="nav-link active" href="#">
                         <span class="nav-icon bi bi-bricks pe-3"></span>
                         <span class="nav-text">Dashboard</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <span class="nav-icon bi bi-bricks pe-3"></span>
-                        <span class="nav-text">Stuff</span>
+                        <span class="nav-icon bi bi-people-fill pe-3"></span>
+                        <span class="nav-text">Staff</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <span class="nav-icon bi bi-bricks pe-3"></span>
+                        <span class="nav-icon bi bi-bag-fill pe-3"></span>
                         <span class="nav-text">Shops</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <span class="nav-icon bi bi-bricks pe-3"></span>
+                        <span class="nav-icon bi bi-geo-alt-fill pe-3"></span>
                         <span class="nav-text">Branches</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <span class="nav-icon bi bi-bricks pe-3"></span>
+                        <span class="nav-icon bi bi-calendar-event-fill pe-3"></span>
                         <span class="nav-text">Events</span>
                     </a>
                 </li>
             </ul>
-            <!-- End: Nav list -->
-            <!-- Nav list -->
-            <ul class="nav flex-column">
+            <!-- Nav list: End -->
+
+            <!-- Events: Start -->
+            <div class="event-wrapper">
+                <div class="event text-center">
+                    <img src="./assets/images/calendar.png" height="80px" width="80px" class=""></img><br>
+                    <p class="text-center text-light mt-5">You can easily manage your events</p>
+                    <button type="button" class="btn btn-light text-center my-3 w-100">Manage events</button>
+                </div>
+            </div>
+            <!-- Events: End -->
+
+            <!-- Nav list: Start -->
+            <ul class="nav flex-column mt-5">
                 <li class="nav-item">
                     <a class="nav-link" href="#">
                         <span class="nav-icon bi bi-bricks pe-3"></span>
@@ -81,19 +90,135 @@
                     </a>
                 </li>
             </ul>
-            <!-- End: Nav list -->
+            <!-- Nav list: End -->
         </aside>
 
-        <section>
-            <header>
+        <section class="wrapper flex-grow-1">
+            <header class="w-100">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="d-flex container-fluid">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <form class="search w-100" role="search">
+                                <input type="text" class="form-control px-5 flex-grow-1" id="searchbar"
+                                    placeholder="Serach brands, staff etc.">
+                                <label class="search-logo"><span class="bi bi-search"></span></label>
+                                <label class="search-slider"><span class="bi bi-sliders"></span></label>
+                            </form>
+                        </div>
+                        <div>
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <div class="icon-wrapper">
+                                            <span class="nav-icon bi bi-bricks"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <div class="icon-wrapper">
+                                            <span class="nav-icon bi bi-bricks"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <div class="icon-wrapper">
+                                            <span class="nav-icon bi bi-bricks"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
+                </nav>
             </header>
-            <main>
-                <div class="main-content">
 
+            <main class="d-flex flex-grow-1 h-100">
+                <div class="main-content flex-grow-1 p-3">
+                    <div class="row g-4">
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="card active card1">
+                                <div class="d-flex card-body">
+                                    <div class="icon-wrapper me-3">
+                                        <span class="nav-icon bi bi-bricks"></span>
+                                    </div>
+                                    <div class="card-content">
+                                        <h6 class="card-title">Total Brands</h6>
+                                        <p class="card-text">18 Brands</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="card card2">
+                                <div class="d-flex card-body">
+                                    <div class="icon-wrapper me-3">
+                                        <span class="nav-icon bi bi-bricks"></span>
+                                    </div>
+                                    <div class="card-content">
+                                        <h6 class="card-title">Total Brands</h6>
+                                        <p class="card-text">18 Brands</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="card card3">
+                                <div class="d-flex card-body">
+                                    <div class="icon-wrapper me-3">
+                                        <span class="nav-icon bi bi-bricks"></span>
+                                    </div>
+                                    <div class="card-content">
+                                        <h6 class="card-title">Total Brands</h6>
+                                        <p class="card-text">18 Brands</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-4 mt-3">
+                        <div class="col-6">
+                            <div class="table-wrapper">
+                            <table class="table">
+                                <thead class="border-bottom">
+                                    <tr>
+                                        <th>Staff Salary</th>
+                                        <th class="text-primary">Show All <span class="bi bi-caret-right"></span></thss=>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        
+                                        <td>Larry the Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        </div>
+                        <div class="col-6">
+                            <div>
+                                1
+                            </div>
+                            <div>
+                                2
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <aside class="right-sidebar">
-
+                    Right Sidebar
                 </aside>
             </main>
         </section>

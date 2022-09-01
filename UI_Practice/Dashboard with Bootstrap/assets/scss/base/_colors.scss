@@ -1,13 +1,35 @@
+$white:#fff;
+$primary: #0f8bfe;
+$success: #67a366;
+$danger: #895068;
+
+//Map
+$mycard-color:(
+    "card1":$primary,
+    "card2":$success,
+    "card3":$danger
+);
 
 //Body color
 $body-color: $white;
 $body-bg: #1a1c28;
 
-// Link color
-$link-color: $white;
-$link-hover-color: $primary;
-
 // Sidebar
 $nav-link-color: #7c7f88;
 $nav-link-active-color: $primary;
 $nav-link-active-bg: $primary;
+
+// Link color
+$link-color: $nav-link-color;
+$link-hover-color: $primary;
+
+$navbar-color: $nav-link-color;
+
+//Header
+$wrapper-bg-color: #222433;
+$header-bg-color: #1b1e2a;
+
+//Card
+$card-bg-color: #292b3c
+
+

@@ -1,0 +1,30 @@
+header {
+    .search {
+        border-radius: $wrapper-border-radius;
+        position: relative;
+
+
+        &-logo {
+            top: 10px;
+            position: absolute;
+            left: 0;
+            padding: 0px 0px 0px 10px;
+        }
+
+        &-slider {
+            position: absolute;
+            right: 0;
+            top: 10px;
+            padding: 0px 10px 0px 10px;
+            border-left: 1px solid white;
+        }
+    }
+
+    .icon-wrapper {
+        height: 45px;
+        width: 45px;
+        border: 1px solid gray;
+        border-radius: 50%;
+        @include flex-center;
+    }
+}

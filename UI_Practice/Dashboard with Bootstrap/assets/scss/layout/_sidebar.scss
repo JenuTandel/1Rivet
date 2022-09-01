@@ -1,11 +1,6 @@
-.sidebar{
-    flex     : 0 0 220px;
+.sidebar {
+    flex: 0 0 220px;
     max-width: 220px;
-
-    @include media-breakpoint-down(sm) {
-        flex     : 0 0 80px;
-        max-width: 80px;
-    }
 
     .nav {
         &-item {
@@ -19,10 +14,26 @@
                 &.active,
                 &:hover {
                     background-color: rgba($nav-link-active-bg, 0.15);
-                    color           : $nav-link-active-color;
+                    color: $nav-link-active-color;
                 }
             }
         }
     }
-}
 
+
+    .event-wrapper {
+        padding: $nav-link-padding-y;
+
+        .event {
+            padding:1rem;
+            background-color: #2a2e3f;
+            border-radius: $border-radius;
+
+            img{
+                margin-top: -50px;
+                transform: rotate(-20deg);
+            }
+        }
+
+    }
+}
