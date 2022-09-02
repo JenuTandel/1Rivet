@@ -1,0 +1,15 @@
+.main-wrapper{
+    .fa-circle-exclamation{
+        font-size: 30px;
+    }
+
+    .btn{
+        @each $color,
+        $value in $custom-btn-color {
+            &.#{$color} {
+                background-color: $value;
+                color: $primary;
+            }
+        } 
+    }
+}

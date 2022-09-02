@@ -1,0 +1,26 @@
+header{
+    background-color: $header-bg-color;
+    
+    .search{
+        position: relative;
+
+        &-logo {
+            color: $secondary;
+            top: 8px;
+            position: absolute;
+            left: 0;
+            padding: 0px 0px 0px 10px;
+        }
+    }
+
+    .profile-wrap{
+        height:40px;
+        width:40px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img{
+            max-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.sidebar {
+    flex: 0 0 160px;
+    max-width: 160px;
+
+    .nav-link {
+        position: relative;
+        &.active,
+        &:hover {
+            background-color: $nav-link-active-bg;
+            color: $nav-link-active-color;
+
+            .triangle {
+                border-right: 10px solid $primary;
+                border-bottom: 10px solid $primary;
+                border-left: 10px solid transparent;
+                border-top: 10px solid transparent;
+                width: 0px;
+                height: 0px;
+            }
+        }
+        
+    }
+
+    .nav-icon {
+        font-size: 20px;
+    }
+
+    // .badge-size{
+    //     height: 20px;
+    //     width:20px;
+
+    //     transform: rotate(-40deg);
+    // }
+
+
+}

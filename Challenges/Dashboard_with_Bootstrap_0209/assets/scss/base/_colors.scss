@@ -1,0 +1,27 @@
+//Light and dark color
+$white: #fff;
+$black: #000;
+
+// Theme Colors
+$primary: #46a4a1;
+$secondary: #8a9497;
+
+//Body Colors
+$body-color: $secondary;
+
+// Sidebar
+$nav-link-color: $secondary;
+$nav-link-active-color: $primary;
+$nav-link-active-bg: #f6fafd;
+
+//Header
+$header-bg-color: #fbfdfc;
+$input-bg: $header-bg-color;
+
+// Wrapper
+$wrapper-bg: #f8f9fb;
+$btn-color:$white;
+
+$custom-btn-color:(
+    "custom-color": #f6fafd,
+);
