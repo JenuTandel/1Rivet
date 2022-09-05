@@ -1,0 +1,76 @@
+1.  Angular:
+    Angular is an open source front end framework.
+    A component-based framework.
+    Built on TypeScript
+    Create Single Page Application
+    A collection of well-integrated libraries that cover a wide variety of features, including routing, forms management, client-server communication, and more
+
+
+2.  Installation Steps:
+    Install node
+    npm install -g @angular/cli (we can also use yarn instead of npm)
+    ng v
+
+    For run the code:
+    ng serve/s
+
+3.  Difference between npm and yarn
+    npm and yarn both are package manager. 
+    With the help of a package manager we can install, uninstall, update, and upgrade packages, configure project settings, run scripts, and so on.
+    in npm we have used keywords like install, uninstall and update for install, uninstall and update the packages respectively. 
+    In yarn we use add, remove and upgrade for install, uninstall and update the packages respectively.
+
+4.  Difference between Workspace and Project:
+    Workspace is a collection of projects.
+    Projects contain files (code/resouces), settings, and targets that build products from those files and settings.
+
+    Command for Creating a Workspace:
+    ng new Workspace_name --create-application=false 
+
+    Command for Creating a Project or an application:
+    ng generate application Project_name
+
+5.  Command to create the new library:
+    ng generate library lib_name
+
+6.  What is dependency? Write a difference between dev dependency and peer dependency.
+    
+    Dependencies are modules which are required at runtime. 
+    Whenever we install any library that is required in our project that library we can find it in the dependencies object. 
+    If a package doesn’t already exist in the node_modules directory, then it is automatically added. 
+    Dependencies can be addedby : npm install <package_name>
+    
+    devDependencies:  devDependencies are modules which are only required during development. 
+    It means whenever we want to install any library that is required only in our development phase then we can find it in the dev Dependencies object.
+    As we install a package, npm will automatically install the dev dependencies.
+    Dev dependencies can be added by: npm install <package_name> --save-dev
+
+    peerDependencies: A peer dependency specifies that our package is compatible with a particular version of an npm package.
+    Peer dependencies are only encountered when we publish our own package, that is, when we develop code that will be used by other programs.
+    peerDependencies are not automatically installed. We need to manually modify our package.json file in order to add a Peer Dependency.
+    We have to add Peer dependencies manually. (Add in a package.json file)
+
+7.  Versioning (version identifiers in dependencies)
+    For npm there are many opportunities to manage the accepted version of packages.
+
+    The caret operator (^) allows to specify values depending on their leftmost non-zero number. It allows everything except major updates.
+    Example:
+    ^1.2.3 -> Everything up to Version 2.0.0 (exclusive)
+    ^0.0.3 -> Everything up to Version 0.0.4 (exclusive)
+
+    The tilde operator (~) allows to specify minor level changes on patch level and is depending on the given version.
+    Example:
+    ~1 -> Between Version 1.0.0 and 2.0.0 (exclusive). or 1.x
+    ~1.2.3 -> Between Version 1.2.3 and 1.3.0 (exclusive)
+
+    Simple version: It supports all the versions till the given version.
+    Example:
+    14.0.0 -> It supports all the versions till 14.0.0.
+    2.1.0 -> It supports all the versions till 2.1.0.
+
+8.  What is Linting?
+    Linting is the process of checking the source code for Programmatic as well as Stylistic errors. A linter tool/program is a basic static code analyzer.
+    Example and command: https://www.samarpaninfotech.com/blog/linting-in-angular/
+
+9.  Differece between Angular 13 and 14
+    Have doubts in this. Don't understand the exact difference between them.
