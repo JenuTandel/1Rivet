@@ -103,6 +103,7 @@
         }
       }
     },
+
     "second-app": {
       "projectType": "application",
       "schematics": {
@@ -204,6 +205,8 @@
       }
     }
   },
+  "defaultProject": "first-app",
+
   "cli": {
     "analytics": "4da2a190-e592-4388-88ab-91f310733c8e"
   }
