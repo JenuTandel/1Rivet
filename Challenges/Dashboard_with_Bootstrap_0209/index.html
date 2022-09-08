@@ -21,9 +21,12 @@
 
         <aside class="d-flex flex-column sidebar h-100">
 
-            <figure class="d-flex align-items-center justify-content-center py-4 px-4">
-                <span class="text-primary fa-regular fa-heart pe-2"></span>
-                <span>FITTLE</span>
+            <figure class="brand-logo d-flex align-items-center justify-content-center px-3">
+                <a href="">
+                    <img src="./assets/images/logo.PNG" height="30px" width="100px">
+                </a>
+                <!-- <span class="text-primary fa-regular fa-heart pe-2"></span>
+                <span>FITTLE</span> -->
             </figure>
 
             <ul class="nav list-style-type-none flex-column flex-grow-1 overflow-auto">
@@ -85,14 +88,14 @@
         <section class="d-flex flex-column wrapper flex-grow-1">
 
             <!-- Header: Start -->
-            <header class="w-100">
+            <header class="header-height w-100 ">
                 <nav class="navbar navbar-expand-sm">
                     <div class="d-flex container-fluid">
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <form class="search w-100" role="search">
-                                <input type="text" class="form-control px-5 flex-grow-1" id="searchbar"
+                            <form class="w-100 position-relative" role="search">
+                                <input type="text" class="form-control px-5 flex-grow-1 bg-white" id="searchbar"
                                     placeholder="Serach">
-                                <label class="search-logo"><span class="fa-solid fa-search"></span></label>
+                                <label class="search-logo position-absolute"><span class="fa-solid fa-search"></span></label>
                             </form>
                             <ul class="navbar-nav align-items-center me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
@@ -106,7 +109,7 @@
                                 <span class="mx-3 text-secondary text-nowrap">Jinal Tandel</span>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">
-                                        <div class="profile-wrap">
+                                        <div class="profile-wrap overflow-hidden">
                                             <img src="./assets/images/mine.jpeg" alt="profile pic">
                                         </div>
                                     </a>
@@ -119,16 +122,15 @@
             <!-- Header: End -->
 
             <!-- Main Section: Start -->
-            <main class="main-wrapper p-4 flex-grow-1 overflow-auto">
-                <h4 class="text-dark">
+            <main class="main-wrapper flex-grow-1 overflow-auto">
+                <h5>
                     Dashboard
-                </h4>
+                </h5>
                 <p class="my-3">Hello, Jinal! Check out what's happening today!</p>
 
                 <!-- Row 1: Start -->
 
-                <div class="row shadow g-2">
-                    <div class="col-12 d-flex align-items-center justify-content-between bg-white p-3">
+                    <div class="d-flex shadow-sm align-items-center justify-content-between bg-white p-3">
                         <div class="d-flex align-items-center">
                             <span class="fa-solid fa-circle-exclamation"></span>
                             <p class="mx-3">Thanks for joining YPC! Go ahead and</p>
@@ -136,11 +138,11 @@
                         </div>
                         <button type="button" class="btn-close"></button>
                     </div>
-                </div>
+                
                 <!-- Row 1: End -->
                 <!-- Row 2: Start -->
-                <div class="row shadow mt-3 g-2">
-                    <div class="col-12 d-flex align-items-center justify-content-between bg-white p-3">
+                
+                    <div class="mt-3 shadow-sm d-flex align-items-center justify-content-between bg-white p-3">
                         <div class="d-flex align-items-center">
                             <span class="fa-solid fa-circle-exclamation"></span>
                             <p class="mx-3">You have <span class="text-dark">2</span> unread notifications.</p>
@@ -148,15 +150,14 @@
                         </div>
                         <button type="button" class="btn-close"></button>
                     </div>
-                </div>
                 <!-- Row 2: End -->
                 <!-- Row 3: Start -->
-                <div>
-                    <div class="row3 position-relative row g-2 mt-3">
+                    <div class="row g-2 mt-3">
                         <!-- Column 1: Start -->
-                        <div class="column col-lg-6 col-sm-12 shadow position-sticky top-0">
-                            <div class="p-3 bg-white d-flex align-items-center justify-content-between">
-                                <h5 class="text-dark">New Brisbane Instructors - 02</h5>
+                        <div class="col-lg-6 col-sm-12 shadow-sm top-0">
+
+                            <div class="p-3 bg-white d-flex align-items-center shadow-sm justify-content-between">
+                                <h5>New Brisbane Instructors - 02</h5>
                                 <div class="d-flex align-items-center">
                                     <span class="fa-solid fa-eye"></span>
                                     <p class="mx-2">View All</p>
@@ -164,11 +165,11 @@
                                 </div>
                             </div>
 
-                            <div class="card-wrapper mt-2 overflow-auto">
+                            <div class="card-wrapper overflow-auto">
                                 <!-- Card 1 -->
-                                <div class="d-flex flex-column p-3 mt-1 bg-white">
+                                <div class="d-flex flex-column p-3 bg-white">
                                     <div class="d-flex justify-content-between">
-                                        <h6 class="text-dark">Thomas Budiman</h6>
+                                        <h6>Thomas Budiman</h6>
                                         <div class="d-flex align-items-center">
                                             <span class="me-2 fa-solid fa-clock"></span>
                                             <p>5min</p>
@@ -187,9 +188,9 @@
                                 </div>
                                 <!-- Card 1: End -->
                                 <!-- Card 2 -->
-                                <div class="d-flex flex-column p-3 mt-1 bg-white">
+                                <div class="d-flex flex-column p-3 bg-white">
                                     <div class="d-flex justify-content-between">
-                                        <h6 class="text-dark">Thomas Budiman</h6>
+                                        <h6>Thomas Budiman</h6>
                                         <div class="d-flex align-items-center">
                                             <span class="me-2 fa-solid fa-clock"></span>
                                             <p>5min</p>
@@ -208,9 +209,9 @@
                                 </div>
                                 <!-- Card 2: End -->
                                 <!-- Card 3 -->
-                                <div class="d-flex flex-column p-3 mt-1 bg-white">
+                                <div class="d-flex flex-column p-3 bg-white">
                                     <div class="d-flex justify-content-between">
-                                        <h6 class="text-dark">Thomas Budiman</h6>
+                                        <h6>Thomas Budiman</h6>
                                         <div class="d-flex align-items-center">
                                             <span class="me-2 fa-solid fa-clock"></span>
                                             <p>5min</p>
@@ -229,9 +230,9 @@
                                 </div>
                                 <!-- Card 3: End -->
                                 <!-- Card 4 -->
-                                <div class="d-flex flex-column p-3 mt-1 bg-white">
+                                <div class="d-flex flex-column p-3 bg-white">
                                     <div class="d-flex justify-content-between">
-                                        <h6 class="text-dark">Thomas Budiman</h6>
+                                        <h6>Thomas Budiman</h6>
                                         <div class="d-flex align-items-center">
                                             <span class="me-2 fa-solid fa-clock"></span>
                                             <p>5min</p>
@@ -253,9 +254,9 @@
                         </div>
                         <!-- Column 1: End -->
                         <!-- Column 2: Start -->
-                        <div class="column col-lg-6 col-sm-12 shadow position-sticky top-0">
+                        <div class="col-lg-6 col-sm-12 shadow top-0">
                             <div class="p-3 bg-white d-flex align-items-center justify-content-between">
-                                <h5 class="text-dark">Most Popular Brisbane Classes + 02</h5>
+                                <h5>Most Popular Brisbane Classes + 02</h5>
                                 <div class="d-flex align-items-center">
                                     <span class="fa-solid fa-eye"></span>
                                     <p class="mx-2">View All</p>
@@ -263,11 +264,11 @@
                                 </div>
                             </div>
 
-                            <div class="card-wrapper mt-2 overflow-auto">
+                            <div class="card-wrapper overflow-auto">
                                 <!-- Card 1 -->
-                                <div class="d-flex flex-column p-3 mt-1 bg-white">
+                                <div class="d-flex flex-column p-3 bg-white">
                                     <div class="d-flex justify-content-between">
-                                        <h6 class="text-dark">Yoga Master Class</h6>
+                                        <h6>Yoga Master Class</h6>
                                         <div class="d-flex align-items-center">
                                             <span class="me-2 fa-solid fa-clock"></span>
                                             <p>5min</p>
@@ -281,9 +282,9 @@
                                 </div>
                                 <!-- Card 1: End -->
                                 <!-- Card 2 -->
-                                <div class="d-flex flex-column p-3 mt-1 bg-white">
+                                <div class="d-flex flex-column p-3 bg-white">
                                     <div class="d-flex justify-content-between">
-                                        <h6 class="text-dark">Thomas Budiman</h6>
+                                        <h6>Thomas Budiman</h6>
                                         <div class="d-flex align-items-center">
                                             <span class="me-2 fa-solid fa-clock"></span>
                                             <p>5min</p>
@@ -298,9 +299,9 @@
                                 </div>
                                 <!-- Card 2: End -->
                                 <!-- Card 3 -->
-                                <div class="d-flex flex-column p-3 mt-1 bg-white">
+                                <div class="d-flex flex-column p-3 bg-white">
                                     <div class="d-flex justify-content-between">
-                                        <h6 class="text-dark">Thomas Budiman</h6>
+                                        <h6>Thomas Budiman</h6>
                                         <div class="d-flex align-items-center">
                                             <span class="me-2 fa-solid fa-clock"></span>
                                             <p>5min</p>
@@ -314,9 +315,9 @@
                                 </div>
                                 <!-- Card 3: End -->
                                 <!-- Card 4: Start -->
-                                <div class="d-flex flex-column p-3 mt-1 bg-white">
+                                <div class="d-flex flex-column p-3 bg-white">
                                     <div class="d-flex justify-content-between">
-                                        <h6 class="text-dark">Thomas Budiman</h6>
+                                        <h6>Thomas Budiman</h6>
                                         <div class="d-flex align-items-center">
                                             <span class="me-2 fa-solid fa-clock"></span>
                                             <p>5min</p>
@@ -330,9 +331,9 @@
                                     <!-- Card 4: End -->
                                 </div>
                                 <!-- Card 5: Start -->
-                                <div class="d-flex flex-column p-3 mt-1 bg-white">
+                                <div class="d-flex flex-column p-3 bg-white">
                                     <div class="d-flex justify-content-between">
-                                        <h6 class="text-dark">Thomas Budiman</h6>
+                                        <h6>Thomas Budiman</h6>
                                         <div class="d-flex align-items-center">
                                             <span class="me-2 fa-solid fa-clock"></span>
                                             <p>5min</p>
@@ -350,7 +351,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                
                 <!-- Row 3: End -->
             </main>
             <!-- Main Section: End -->

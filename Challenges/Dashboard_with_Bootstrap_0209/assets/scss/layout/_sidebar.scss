@@ -1,13 +1,24 @@
 .sidebar {
-    flex: 0 0 160px;
-    max-width: 160px;
+    flex: 0 0 150px;
+    max-width: 150px;
+    z-index: 1;
+
+    -webkit-box-shadow: 79px -40px 20px -68px rgba(240, 244, 247, 1);
+    -moz-box-shadow: 79px -40px 20px -68px rgba(240, 244, 247, 1);
+    box-shadow: 79px -40px 20px -68px rgba(240, 244, 247, 1);
+
+    .brand-logo {
+        height: $header-height;
+    }
 
     .nav-link {
         position: relative;
+
         &.active,
         &:hover {
             background-color: $nav-link-active-bg;
             color: $nav-link-active-color;
+            font-weight: 500;
 
             .triangle {
                 border-right: 10px solid $primary;
@@ -18,7 +29,7 @@
                 height: 0px;
             }
         }
-        
+
     }
 
     .nav-icon {
