@@ -1,0 +1,14 @@
+<h1>List</h1>
+<div *ngFor="let item of childdata">
+    <p>{{item}}</p>
+</div>
+
+<div>
+    <h3>Add Data</h3>
+    <div>
+        <label for="">Enter Name:</label>
+        <input type="text" name="uname" #username>
+    </div>
+    <br>
+    <button (click)="onSubmit()">Submit</button>
+</div>
