@@ -17,7 +17,7 @@ export class ParentComponent implements OnInit {
     this.parentData = ["Jinal"];
   }
 
-  onAddToDo(data: string) {
+  onAddUser(data: string) {
     console.log(data);
     this.parentData.push(data);
   }

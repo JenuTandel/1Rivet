@@ -7,13 +7,15 @@ import { Component, OnInit , Input, Output, EventEmitter, ViewChild, ElementRef}
 })
 export class ChildComponent implements OnInit {
 
- @ViewChild('username') username!: ElementRef<HTMLInputElement>;
+//  @ViewChild('username') username!: ElementRef<HTMLInputElement>;
 
+  usname:string;
   @Input() childdata: string[];
 
   @Output() addData: EventEmitter<string>
   
   constructor() { 
+    this.usname="";
     this.childdata = [];
     console.log(this.childdata);
     this.addData = new EventEmitter();
@@ -25,7 +27,8 @@ export class ChildComponent implements OnInit {
 
   onSubmit() {
     //console.log(this.username.nativeElement.value);
-    this.addData.emit(this.username.nativeElement.value);
-    this.username.nativeElement.value = "";
+   // this.addData.emit(this.username.nativeElement.value);
+    this.addData.emit(this.usname);
+    this.usname = "";
   }
 }
