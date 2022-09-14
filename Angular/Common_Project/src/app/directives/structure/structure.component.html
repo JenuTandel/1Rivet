@@ -1,0 +1,35 @@
+<h3>Structure Directives</h3>
+
+<button class="btn btn-primary" (click)="onBtnClick()">Click Here</button>
+
+<!-- ngIf -->
+<p *ngIf="isAvailable; then datashow else data"></p>
+
+<ng-template #datashow>
+    <p>This Data is open using condition</p>
+</ng-template>
+
+<ng-template #data>
+    <p>No Data</p>
+</ng-template>
+
+<!-- ngFor -->
+<div>
+    <div *ngFor="let i of mydata">
+        <label>
+            <input type="radio" name="data" [(ngModel)]="selectItem" [value]="i.name"> {{i.name}}
+        </label>
+        <br>
+    </div>
+    <br>
+</div>
+
+<!-- ngSwitch -->
+<div [ngSwitch]="selectItem">
+    <span class="text-success" *ngSwitchCase="'Success'">Success</span>
+    <span class="text-info" *ngSwitchCase="'Info'">Info</span>
+    <span class="text-warning" *ngSwitchCase="'Warning'">Warning</span>
+    <span class="text-danger" *ngSwitchCase="'Danger'">Danger</span>
+    <span class="other" *ngSwitchCase="'Other'">Other</span>
+    <span class="text-white bg-primary" *ngSwitchDefault="'Other'"> Default Text</span>
+</div>

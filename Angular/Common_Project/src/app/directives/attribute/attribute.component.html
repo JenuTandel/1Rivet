@@ -1,0 +1,33 @@
+<h3>Attribute Directive</h3>
+
+<p [class.paragraph]="flag">This is Paragraph.</p>
+
+<p [style.color]="'red'">This is inline style .</p>
+
+<p [ngStyle]="{ 'font-weight': applyStyle ? 'bold' : 'normal' }">
+    Condition based Inline style
+</p>
+<button (click)="applyStyle=!applyStyle">Click here to add style</button>
+
+<p [ngClass]="setTextClass ? 'text-primary' : 'text-danger'">
+    Condition based Class Binding.
+</p>
+<button (click)="setTextClass = !setTextClass">Click here to add class</button>
+
+<p [ngClass]="getClass()">Function based Class Binding.</p>
+<button (click)="setClassFlag = !setClassFlag">Click Me</button>
+
+
+<h4>NgClass with multiple conditions</h4>
+
+<ul *ngFor="let person of people">
+
+    <li [ngClass]="{
+        'text-success': person.country === 'UK',
+        'text-primary': person.country === 'USA',
+        'text-danger': person.country === 'HK' || person.country === 'UAE'
+    }">
+        {{ person.name }} ({{ person.country }})
+    </li>
+
+</ul>
