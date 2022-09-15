@@ -1,0 +1,45 @@
+<h3 class="text-dark">Custom-pipes</h3>
+
+<p class="text-danger">Currency Pipe</p>
+<table class="border">
+    <thead class="border">
+        <tr>
+            <th>Country Name</th>
+            <th>Currency</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>US</td>
+            <td>{{123 | currencyPipe:'US'}}</td>
+        </tr>
+        <tr>
+            <td>INDIA</td>
+            <td>{{123 | currencyPipe:'IND'}}</td>
+        </tr>
+        <tr>
+            <td>EUROPE</td>
+            <td>{{123 | currencyPipe:'EUR'}}</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<p class="text-danger">Gender Pipe</p>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let person of Person_Details">
+            <td>{{person.Id}}</td>
+            <td>{{person.Name | gender: person.Gender}}</td>
+            <td>{{person.Gender}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- <button (click)="onClick()">Click</button> -->

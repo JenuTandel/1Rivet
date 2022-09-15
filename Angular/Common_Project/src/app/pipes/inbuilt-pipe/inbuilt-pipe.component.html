@@ -1,0 +1,38 @@
+<h3>Inbuilt-Pipes</h3>
+
+<p class="text-danger">Currency Pipe</p>
+<ul>
+    <li>US: {{123 | currency:'CAD':"symbol-narrow" }}</li>
+</ul>
+
+<p class="text-danger">Lowercase Pipe</p>
+<ul>
+    <li>JINAL: {{"JINAL" | lowercase }}</li>
+</ul>
+
+<p class="text-danger">Uppercase Pipe</p>
+<ul>
+    <li>jinal: {{"jinal" | uppercase }}</li>
+</ul>
+
+<p class="text-danger">Titlecase Pipe</p>
+<ul>
+    <li>JINAL TANDEL: {{"JINAL TANDEL" | titlecase }}</li>
+</ul>
+
+<p class="text-danger">Date Pipe</p>
+<ul>
+    <li>Date: {{todayDate}}</li>
+    <li>{{todayDate | date:'short':'IST'}}</li>
+    <li>{{todayDate | date:'medium'}}</li>
+    <li>{{todayDate | date:'long'}}</li>
+    <li>{{todayDate | date:'full'}}</li>
+    <li>{{todayDate | date:'shortDate'}}</li>
+    <li>{{todayDate | date:'mediumDate'}}</li>
+    <li>{{todayDate | date:'longDate'}}</li>
+    <li>{{todayDate | date:'fullDate'}}</li>
+    <li>{{todayDate | date:'shortTime'}}</li>
+    <li>{{todayDate | date:'mediumTime'}}</li>
+    <li>{{todayDate | date:'longTime'}}</li>
+    <li>{{todayDate | date:'fullTime'}}</li>
+</ul>

@@ -9,14 +9,18 @@
         <a class="nav-link" routerLink="home">Home</a>
     </li>
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">Directives</a>
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" routerLink="directives">Directives</a>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" routerLink="attribute">Attribute Component</a></li>
-            <li><a class="dropdown-item" routerLink="structure">Structure Component</a></li>
+            <li><a class="dropdown-item" routerLink="directives/attribute">Attribute Component</a></li>
+            <li><a class="dropdown-item" routerLink="directives/structure">Structure Component</a></li>
         </ul>
     </li>
-    <li class="nav-item">
-        <a class="nav-link">Pipes</a>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">Pipes</a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="inbuiltpipe">Inbuilt Pipes</a></li>
+            <li><a class="dropdown-item" routerLink="custompipe">Custom Pipes</a></li>
+        </ul>
     </li>
     <li class="nav-item">
         <a class="nav-link">Link</a>
