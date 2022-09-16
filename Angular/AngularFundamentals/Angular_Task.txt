@@ -74,3 +74,20 @@
 
 9.  Differece between Angular 13 and 14
     Have doubts in this. Don't understand the exact difference between them.
+
+
+
+Directives:
+
+Directives are classes that add additional behavior to elements in your Angular applications. 
+Angular's built-in directives are used to manage forms, lists, styles, and what users see.
+
+The different types of Angular directives are as follows:
+
+Components: Used with a template. This type of directive is the most common directive type.
+
+Attribute directives: Change the appearance or behavior of an element, component, or another directive.
+Built-in attribute directives: ngClass, ngStyle, ngModel
+
+Structural directives: Change the DOM layout by adding and removing DOM elements.
+ngFor, ngIf, ngSwitch
