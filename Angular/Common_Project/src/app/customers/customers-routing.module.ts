@@ -23,7 +23,7 @@ const routes: Routes = [
         component: CustomerFormComponent
       },
       {
-        path: "edit",
+        path: "edit/:customerId",
         component: CustomerFormComponent
       }
     ]

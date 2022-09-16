@@ -1,1 +1,22 @@
 <p>customer-list works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let person of Person_Details">
+            <td>{{person.id}}</td>
+            <td>{{person.name}}</td>
+            <td>{{person.gender}}</td>
+            <td><button [routerLink]="['../edit',person.id]" [queryParams]="{name:person.name}" [fragment]="person.gender" (click)="onEdit()">Edit</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<button (click)="onAdd()">Add</button>
+

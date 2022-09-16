@@ -8,7 +8,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class CurrencyPipe implements PipeTransform {
 
   transform(value: number, countryCode: string): any {
-    debugger
+    // debugger
     let newValue;
     if (countryCode === 'EUR') {
       newValue = "€" + value;
