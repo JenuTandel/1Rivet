@@ -1,6 +1,9 @@
 export class Customers{
-    firstname: string = "";
-    lastname: string = "";
-    email: string = "";
-    mobilenumber: string = ""
+    constructor(
+        public firstname: string,
+    public lastname: string,
+    public email: string,
+    public mobilenumber: string
+    ){
+    }
 }

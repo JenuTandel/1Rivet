@@ -5,6 +5,7 @@ import { CustomersRoutingModule } from './customers-routing.module';
 import { CustomersComponent } from './customers.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { CustomerFormComponent } from './customer-form/customer-form.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { CustomerFormComponent } from './customer-form/customer-form.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     CustomersRoutingModule
   ]
 })

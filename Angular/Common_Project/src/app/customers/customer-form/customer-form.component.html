@@ -5,22 +5,38 @@
 <p class="text-primary">{{title}}</p>
 
 
-<form>
+<form #customerform="ngForm" (ngSubmit)="onSubmit(customerform)">
     <div class="mb-3">
         <label for="" class="form-label">FirstName</label>
-        <input type="text" class="form-control" name="firstname">
+        <input type="text" class="form-control" name="firstname" placeholder="Enter the Firstname"
+            [(ngModel)]="customers.firstname" #firstname="ngModel" required>
+        <div *ngIf="isSubmitted && firstname.invalid && !firstname.touched">
+            <p class="text-danger">Enter the firstname</p>
+        </div>
     </div>
     <div class="mb-3">
         <label for="" class="form-label">LastName</label>
-        <input type="text" class="form-control" name="lastname">
+        <input type="text" class="form-control" name="lastname" placeholder="Enter the lastname"
+            [(ngModel)]="customers.lastname" #lastname="ngModel" required>
+        <div *ngIf="isSubmitted && lastname.invalid && !lastname.touched">
+            <p class="text-danger">Enter the lastname</p>
+        </div>
     </div>
     <div class="mb-3">
         <label for="" class="form-label">Email ID</label>
-        <input type="text" class="form-control" name="email">
+        <input type="text" class="form-control" name="email" placeholder="Enter the Email ID"
+            [(ngModel)]="customers.email" #email="ngModel" required>
+        <div *ngIf="isSubmitted && email.invalid && !email.touched">
+            <p class="text-danger">Enter the emailid</p>
+        </div>
     </div>
     <div class="mb-3">
         <label for="" class="form-label">Mobile Number</label>
-        <input type="text" class="form-control" name="mobilenumber">
+        <input type="text" class="form-control" name="mobilenumber" placeholder="Enter the Mobile number"
+            [(ngModel)]="customers.mobilenumber" #mobilenumber="ngModel" required>
+        <div *ngIf="isSubmitted && mobilenumber.invalid && !mobilenumber.touched">
+            <p class="text-danger">Enter the mobile number</p>
+        </div>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
