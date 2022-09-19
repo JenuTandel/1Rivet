@@ -36,6 +36,7 @@ const routes: Routes = [
 
   { path: 'directives', loadChildren: () => import('./directives/directives.module').then(m => m.DirectivesModule) },
   { path: 'customers', loadChildren: () => import('./customers/customers.module').then(m => m.CustomersModule) },
+  { path: 'forms', loadChildren: () => import('./forms/forms.module').then(m => m.FormsModule) },
   
   {
     path: '**',

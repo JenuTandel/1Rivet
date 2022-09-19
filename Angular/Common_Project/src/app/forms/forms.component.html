@@ -1,0 +1,22 @@
+<h2>Rective Form</h2>
+<br>
+<h4>User From</h4>
+<form [formGroup]="userform">
+    <input type="text" class="form-control" placeholder="Enter the FirstName" formControlName="firstname">
+    <div *ngIf="(userform.controls['firstname'].invalid && userform.controls['firstname'].touched) || (isSubmitted && userform.controls['firstname'].errors?.['required'] && !userform.controls['firstname'].touched && !userform.controls['firstname'].dirty)">
+        <p class="text-danger">Enter the FirstName</p>
+    </div>
+    <input type="text" class="form-control" placeholder="Enter the LastName" formControlName="lastname">
+    <div *ngIf="(userform.controls['lastname'].invalid && userform.controls['lastname'].touched) || (isSubmitted && userform.controls['lastname'].errors?.['required'] && !userform.controls['lastname'].touched && !userform.controls['lastname'].dirty)">
+        <p class="text-danger">Enter the FirstName</p>
+    </div>
+    <input type="text" class="form-control" placeholder="Enter the Email ID" formControlName="email">
+    <div *ngIf="(userform.controls['email'].invalid && userform.controls['email'].touched) || (isSubmitted && userform.controls['email'].errors?.['required'] && !userform.controls['email'].touched && !userform.controls['email'].dirty)">
+        <p class="text-danger">Enter the FirstName</p>
+    </div>
+    <input type="text" class="form-control" placeholder="Enter the Mobile Number" formControlName="mobilenumber">
+    <div *ngIf="(userform.controls['mobilenumber'].invalid && userform.controls['mobilenumber'].touched) || (isSubmitted && userform.controls['mobilenumber'].errors?.['required'] && !userform.controls['mobilenumber'].touched && !userform.controls['mobilenumber'].dirty)">
+        <p class="text-danger">Enter the FirstName</p>
+    </div>
+    <button type="submit" class="btn-success" (click)="onSubmit()">Submit</button>
+</form>

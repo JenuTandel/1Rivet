@@ -36,3 +36,31 @@
     <li>{{todayDate | date:'longTime'}}</li>
     <li>{{todayDate | date:'fullTime'}}</li>
 </ul>
+
+<!-- ”{minIntegerDigits}. {minFractionDigits}-{maxFractionDigits}” -->
+<p class="text-danger">Decimal Pipe</p>
+<ul>
+    <li>{{ 3.14159265 | number: '3.1-2' }}</li>
+    <li>{{ 3.14159265 | number: '1.4-4' }}</li>
+    <li>{{ 112.34678 | number: '4.2-2'}}</li>
+</ul>
+
+<p class="text-danger">Percentage Pipe</p>
+<ul>
+    <li>{{ 0.123456 | percent }}</li>
+    <li>{{ 0.123456 | percent: '2.1-2' }}</li>
+    <li>{{ 0.123456 | percent : "5.4-4" }}</li>
+</ul>
+
+<p class="text-danger">Slice Pipe</p>
+<ul>
+    <li>{{ [1,2,3,4,5,6] | slice:1:3 }}</li>
+    <li>{{ [1,2,3,4,5,6] | slice:2 }}</li>
+    <li>{{ [1,2,3,4,5,6] | slice:2:-1 }}</li>
+</ul>
+<p class="text-danger">use ngFor with Slice Pipe</p>
+<ul>
+    <li *ngFor="let v of [1,2,3,4,5,6] | slice:2:-1">
+        {{v}}
+    </li>
+</ul>
