@@ -2,13 +2,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'currencyPipe',
-  pure:true
+  pure: true
 })
 
 export class CurrencyPipe implements PipeTransform {
 
   transform(value: number, countryCode: string): any {
-    // debugger
+    debugger
     let newValue;
     if (countryCode === 'EUR') {
       newValue = "€" + value;

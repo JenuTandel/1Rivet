@@ -42,6 +42,7 @@ export class CustomerFormComponent implements OnInit {
   onSubmit(customerForm) {
     this.isSubmitted = true;
     console.log(customerForm);
+    
     // console.log(customerForm.form.controls.firstname.errors['required']);
 
     //console.log(customerForm.form.value);

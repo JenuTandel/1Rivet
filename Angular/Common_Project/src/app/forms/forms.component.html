@@ -1,22 +1,85 @@
 <h2>Rective Form</h2>
 <br>
-<h4>User From</h4>
 <form [formGroup]="userform">
-    <input type="text" class="form-control" placeholder="Enter the FirstName" formControlName="firstname">
-    <div *ngIf="(userform.controls['firstname'].invalid && userform.controls['firstname'].touched) || (isSubmitted && userform.controls['firstname'].errors?.['required'] && !userform.controls['firstname'].touched && !userform.controls['firstname'].dirty)">
-        <p class="text-danger">Enter the FirstName</p>
+    <h4 class="text-center">User Registraion Form</h4>
+    <input type="text" class="form-control" placeholder="Enter the FirstName" formControlName="firstname"
+        [ngClass]="{'is-invalid': userform.controls['firstname'].invalid && (isSubmitted || userform.controls['firstname'].touched || userform.controls['firstname'].dirty), 
+    'is-valid':userform.controls['firstname'].valid && (isSubmitted || userform.controls['firstname'].touched || userform.controls['firstname'].dirty)}">
+    <div
+        *ngIf="userform.controls['firstname'].invalid && (isSubmitted || userform.controls['firstname'].touched || userform.controls['firstname'].dirty)">
+        <span class="text-danger" *ngIf="userform.controls['firstname'].errors?.['required']">Enter your
+            firstname</span>
+        <span class="text-danger" *ngIf="userform.controls['firstname'].errors?.['maxlength']">Maximum length should be
+            7
+            characters</span>
     </div>
-    <input type="text" class="form-control" placeholder="Enter the LastName" formControlName="lastname">
-    <div *ngIf="(userform.controls['lastname'].invalid && userform.controls['lastname'].touched) || (isSubmitted && userform.controls['lastname'].errors?.['required'] && !userform.controls['lastname'].touched && !userform.controls['lastname'].dirty)">
-        <p class="text-danger">Enter the FirstName</p>
+    <br>
+    <input type="text" class="form-control" placeholder="Enter the LastName" formControlName="lastname"
+        [ngClass]="{'is-invalid': userform.controls['lastname'].invalid && (isSubmitted || userform.controls['lastname'].touched || userform.controls['lastname'].dirty), 
+    'is-valid':userform.controls['lastname'].valid && (isSubmitted || userform.controls['lastname'].touched || userform.controls['lastname'].dirty)}">
+    <div
+        *ngIf="userform.controls['lastname'].invalid && (isSubmitted || userform.controls['lastname'].touched || userform.controls['lastname'].dirty)">
+        <span class="text-danger" *ngIf="userform.controls['lastname'].errors?.['required']">Enter your LastName</span>
+        <span class="text-danger" *ngIf="userform.controls['lastname'].errors?.['minlength']">Minimum length should be 5
+            characters</span>
     </div>
-    <input type="text" class="form-control" placeholder="Enter the Email ID" formControlName="email">
-    <div *ngIf="(userform.controls['email'].invalid && userform.controls['email'].touched) || (isSubmitted && userform.controls['email'].errors?.['required'] && !userform.controls['email'].touched && !userform.controls['email'].dirty)">
-        <p class="text-danger">Enter the FirstName</p>
+    <br>
+
+    <input type="text" class="form-control" placeholder="Enter the Email ID" formControlName="email"
+        [ngClass]="{'is-invalid': userform.controls['email'].invalid && (isSubmitted || userform.controls['email'].touched || userform.controls['email'].dirty), 
+    'is-valid':userform.controls['email'].valid && (isSubmitted || userform.controls['email'].touched || userform.controls['email'].dirty)}">
+    <div
+        *ngIf="userform.controls['email'].invalid && (isSubmitted || userform.controls['email'].touched || userform.controls['email'].dirty)">
+        <span class="text-danger" *ngIf="userform.controls['email'].errors?.['required']">Enter your Email ID</span>
+        <span class="text-danger" *ngIf="userform.controls['email'].errors?.['pattern']">Writedown proper mail ID</span>
     </div>
-    <input type="text" class="form-control" placeholder="Enter the Mobile Number" formControlName="mobilenumber">
-    <div *ngIf="(userform.controls['mobilenumber'].invalid && userform.controls['mobilenumber'].touched) || (isSubmitted && userform.controls['mobilenumber'].errors?.['required'] && !userform.controls['mobilenumber'].touched && !userform.controls['mobilenumber'].dirty)">
-        <p class="text-danger">Enter the FirstName</p>
+    <br>
+
+    <input type="text" class="form-control" placeholder="Enter the Mobile Number" formControlName="mobilenumber"
+        [ngClass]="{'is-invalid': userform.controls['mobilenumber'].invalid && (isSubmitted || userform.controls['mobilenumber'].touched || userform.controls['mobilenumber'].dirty), 
+    'is-valid':userform.controls['mobilenumber'].valid && (isSubmitted || userform.controls['mobilenumber'].touched || userform.controls['mobilenumber'].dirty)}">
+    <div
+        *ngIf="userform.controls['mobilenumber'].invalid && (isSubmitted || userform.controls['mobilenumber'].touched || userform.controls['mobilenumber'].dirty)">
+        <span *ngIf="userform.controls['mobilenumber'].errors?.['required']" class="text-danger">Enter the Mobile Number
+        </span>
+        <span class="text-danger" *ngIf="userform.controls['mobilenumber'].errors?.['pattern']">Phone number must be
+            number
+            & it should have 10 characters</span>
     </div>
-    <button type="submit" class="btn-success" (click)="onSubmit()">Submit</button>
+    <br>
+
+    <div formGroupName="address">
+        <input type="text" class="form-control" placeholder="Enter your city name" formControlName="city"
+            [ngClass]="{'is-invalid': userform.controls['address'].get('city')?.invalid && (isSubmitted || userform.controls['address'].get('city')?.touched || userform.controls['address'].get('city')?.dirty),
+            'is-valid':userform.controls['address'].get('city')?.valid && (isSubmitted || userform.controls['address'].get('city')?.touched || userform.controls['address'].get('city')?.dirty) }">
+        <div
+            *ngIf="userform.controls['address'].get('city')?.invalid && (isSubmitted || userform.controls['address'].get('city')?.touched || userform.controls['address'].get('city')?.dirty)">
+            <span *ngIf="userform.controls['address'].get('city')?.errors?.['required']" class="text-danger">Enter your
+                City name</span>
+        </div>
+        <br>
+        <input type="text" class="form-control" placeholder="Enter your state name" formControlName="state"
+            [ngClass]="{'is-invalid':userform.controls['address'].get('state')?.invalid && (isSubmitted || userform.controls['address'].get('state')?.touched || userform.controls['address'].get('state')?.dirty),
+        'is-valid':userform.controls['address'].get('state')?.valid && (isSubmitted || userform.controls['address'].get('state')?.touched || userform.controls['address'].get('state')?.dirty)}">
+        <div
+            *ngIf="userform.controls['address'].get('state')?.invalid && (isSubmitted || userform.controls['address'].get('state')?.touched || userform.controls['address'].get('state')?.dirty)">
+            <span *ngIf="userform.controls['address'].get('state')?.errors?.['required']" class="text-danger">Enter your
+                State name</span>
+        </div>
+        <br>
+        <input type="text" class="form-control" placeholder="Enter the zipcode" formControlName="zipcode"
+            [ngClass]="{'is-invalid':userform.controls['address'].get('zipcode')?.invalid && (isSubmitted || userform.controls['address'].get('zipcode')?.touched || userform.controls['address'].get('zipcode')?.dirty) , 
+        'is-valid':userform.controls['address'].get('zipcode')?.valid && (isSubmitted || userform.controls['address'].get('zipcode')?.touched || userform.controls['address'].get('zipcode')?.dirty)}">
+        <div
+            *ngIf="userform.controls['address'].get('zipcode')?.invalid && (isSubmitted || userform.controls['address'].get('zipcode')?.touched || userform.controls['address'].get('zipcode')?.dirty)">
+            <span class="text-danger" *ngIf="userform.controls['address'].get('zipcode')?.errors?.['required']">
+                Enter your city zipcode
+            </span>
+            <span class="text-danger" *ngIf="userform.controls['address'].get('zipcode')?.errors?.['pattern']">
+                Zipcode must be 6 characters long
+            </span>
+        </div>
+        <br>
+    </div>
+    <button type="submit" class="btn-custom" (click)="onSubmit()">Submit</button>
 </form>
