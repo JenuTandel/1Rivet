@@ -5,14 +5,18 @@
 
     -webkit-box-shadow: 79px -40px 20px -68px rgba(240, 244, 247, 1);
     -moz-box-shadow: 79px -40px 20px -68px rgba(240, 244, 247, 1);
-    box-shadow: 79px -40px 20px -68px rgba(240, 244, 247, 1);
+    box-shadow: 79px -40px 20px -68px rgb(27, 165, 150,0.04);
 
     .brand-logo {
         height: $header-height;
     }
 
+    .nav-item {
+        width: 100%;
+    }
+
     .nav-link {
-        position: relative;
+        // position: relative;
 
         &.active,
         &:hover {

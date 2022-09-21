@@ -1,0 +1,26 @@
+<h2 class="text-center">Employee List</h2>
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>D.O.B</th>
+            <th>Salary</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employeeList">
+            <td>{{employee.Name | titlecase}}</td>
+            <td>{{employee.Gender | uppercase}}</td>
+            <td>{{employee.DOB | date : 'mediumDate'}}</td>
+            <td>{{employee.Salary | indianCurrency}}</td>
+            <td><button class="btn-danger me-2" type="text" (click)="onDelete(employee)">Delete</button>
+                <button class="btn-success me-2" type="text" (click)="onEdit(employee)" [routerLink]="['../add']">Edit</button>
+                <!-- <button class="btn-primary me-2" type="text" [routerLink]="['../details']" [queryParams]="{Name:employee.Name, Gender: employee.Gender, DOB: employee.DOB, Salary: employee.Salary}">Details</button></td> -->
+                <button class="btn-primary me-2" type="text" [routerLink]="['../details']" [queryParams]="employee">Details</button></td>
+        </tr>
+    </tbody>
+</table>
+

@@ -1,7 +1,49 @@
-figure{
-    margin-bottom:0;
+figure {
+    margin-bottom: 0;
 }
 
-p, h1,h2,h3,h4, h5,h6{
-    margin-bottom:0;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.card {
+    padding: 0;
+}
+
+@media (max-width:992px) {
+    .para {
+        width: 150px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .secondcard{
+        margin-top:20px;
+    }
+}
+
+@media (max-width:576px){
+    .para {
+        width: 150px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .secondcard{
+        margin-top:20px;
+    }
+
+    .sidebar{
+        flex: 0 0 50px;
+        max-width: 50px;
+    }
 }

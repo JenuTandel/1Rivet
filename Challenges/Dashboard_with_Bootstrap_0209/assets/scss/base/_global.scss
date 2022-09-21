@@ -1,13 +1,29 @@
-*{
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
     height: 100%;
 }
 
 body {
     font-family: $font-family-base;
+}
+
+.sc1::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+}
+
+.sc1::-webkit-scrollbar-track {
+    background-color: #dfdfdf;
+    border-radius: 10px;
+}
+
+.sc1::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
 }

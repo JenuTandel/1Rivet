@@ -1,0 +1,60 @@
+<form [formGroup]="employeeform" class="border">
+    <h3>{{title}} Employee</h3>
+    <br>
+    <input type="text" class="form-control" placeholder="Enter the Name" formControlName="Name"
+        [ngClass]="{'is-invalid': employeeform.controls['Name'].invalid && (isSubmitted || employeeform.controls['Name'].touched || employeeform.controls['Name'].dirty),
+    'is-valid':employeeform.controls['Name'].valid && (isSubmitted || employeeform.controls['Name'].touched || employeeform.controls['Name'].dirty)}">
+    <div
+        *ngIf="employeeform.controls['Name'].invalid && (isSubmitted || employeeform.controls['Name'].touched || employeeform.controls['Name'].dirty)">
+        <span class="text-danger" *ngIf="employeeform.controls['Name'].errors?.['required']">
+            Enter your Name
+        </span>
+        <span class="text-danger" *ngIf="employeeform.controls['Name'].errors?.['minlength']">
+            Name should have atleast 3 characters
+        </span>
+    </div>
+    <br>
+    <input type="text" class="form-control" placeholder="Gender" formControlName="Gender"
+        [ngClass]="{'is-invalid': employeeform.controls['Gender'].invalid && (isSubmitted || employeeform.controls['Gender'].touched || employeeform.controls['Gender'].dirty),
+    'is-valid':employeeform.controls['Gender'].valid && (isSubmitted || employeeform.controls['Gender'].touched || employeeform.controls['Gender'].dirty)}">
+    <div
+        *ngIf="employeeform.controls['Gender'].invalid && (isSubmitted || employeeform.controls['Gender'].touched || employeeform.controls['Gender'].dirty)">
+        <span class="text-danger" *ngIf="employeeform.controls['Gender'].errors?.['required']">
+            Write your Gender
+        </span>
+        <span class="text-danger" *ngIf="employeeform.controls['Gender'].errors?.['pattern']">
+            It contains only characters
+        </span>
+    </div>
+    <br>
+    <input type="date" class="form-control" placeholder="Enter your BirthDate" formControlName="DOB"
+        [ngClass]="{'is-invalid': employeeform.controls['DOB'].invalid && (isSubmitted || employeeform.controls['DOB'].touched || employeeform.controls['DOB'].dirty),
+    'is-valid':employeeform.controls['DOB'].valid && (isSubmitted || employeeform.controls['DOB'].touched || employeeform.controls['DOB'].dirty)}">
+    <div
+        *ngIf="employeeform.controls['DOB'].invalid && (isSubmitted || employeeform.controls['DOB'].touched || employeeform.controls['DOB'].dirty)">
+        <span class="text-danger" *ngIf="employeeform.controls['DOB'].errors?.['required']">
+            Enter your Date of Birth
+        </span>
+    </div>
+    <br>
+    <input type="text" class="form-control" placeholder="Enter your Salary" formControlName="Salary"
+        [ngClass]="{'is-invalid': employeeform.controls['Salary'].invalid && (isSubmitted || employeeform.controls['Salary'].touched || employeeform.controls['Salary'].dirty),
+    'is-valid':employeeform.controls['Salary'].valid && (isSubmitted || employeeform.controls['Salary'].touched || employeeform.controls['Salary'].dirty)}">
+    <div
+        *ngIf="employeeform.controls['Salary'].invalid && (isSubmitted || employeeform.controls['Salary'].touched || employeeform.controls['Salary'].dirty)">
+        <span class="text-danger" *ngIf="employeeform.controls['Salary'].errors?.['required']">
+            Enter your Salary
+        </span>
+        <span class="text-danger" *ngIf="employeeform.controls['Salary'].errors?.['pattern']">
+            Salary contains only numbers
+        </span>
+    </div>
+<br>
+    <button class="btn btn-success me-4" type="submit" (click)="onSubmit()">Save</button>
+    <button class="btn btn-light" type="button" (click)="onReset()">Reset</button>
+</form>
+
+<br><br>
+<app-employee-list [employeeList]="employeeData" (addData)="EditEmployee($event)" (deleteData) = "DeleteEmployee($event)"></app-employee-list>
+
+
