@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AttributeComponent } from './attribute/attribute.component';
+import { CustomComponent } from './custom/custom.component';
 import { DirectivesComponent } from './directives.component';
 import { StructureComponent } from './structure/structure.component';
 
@@ -22,6 +23,10 @@ const routes: Routes = [
       {
         path:'structure',
         component:StructureComponent
+      },
+      {
+        path:'custom',
+        component: CustomComponent
       }
     ]
   }

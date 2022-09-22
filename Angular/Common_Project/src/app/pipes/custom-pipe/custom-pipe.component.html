@@ -34,7 +34,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor = "let person of Person_Details">
+        <tr *ngFor="let person of Person_Details">
             <td>{{person.Id}}</td>
             <td>{{person.Name | gender: person.Gender}}</td>
             <td>{{person.Gender}}</td>
@@ -42,8 +42,18 @@
     </tbody>
 </table>
 
+<br>
+<p class="text-danger">Name Logo Pipe</p>
+<span>Jinal Tandel</span>
+<div class="logo-wrapper d-flex justify-content-center align-items-center">
+    <span class="text-center"> {{"Jinal tandel" | nameLogo }}</span>
+</div>
 
-    <p>{{"Jinal Tandel"}}</p>
+<br>
+<span>Kiran Gandhi</span>
+<div class="logo-wrapper d-flex justify-content-center align-items-center">
+    <span class="text-center"> {{"kiran gandhi" | nameLogo }}</span>
+</div>
 
 
 <!-- <button (click)="onClick()">Click</button> -->

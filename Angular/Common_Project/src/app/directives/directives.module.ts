@@ -5,18 +5,22 @@ import { DirectivesComponent } from './directives.component';
 import { StructureComponent } from './structure/structure.component';
 import { AttributeComponent } from './attribute/attribute.component';
 import { FormsModule } from '@angular/forms';
+import { FontStyleDirective } from '../shared/directives/directive-style/font-style.directive';
+import { SharedModule } from '../shared/shared.module';
+import { CustomComponent } from './custom/custom.component';
 
 @NgModule({
   declarations: [
     DirectivesComponent,
     StructureComponent,
     AttributeComponent,
+    CustomComponent,
   ],
   imports: [
     CommonModule,
     DirectivesRoutingModule,
-    FormsModule
-    
+    FormsModule,
+    SharedModule
   ],
   // exports:[
   //   StructureComponent,
