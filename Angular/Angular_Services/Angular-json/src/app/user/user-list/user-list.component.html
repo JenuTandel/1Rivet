@@ -1,0 +1,23 @@
+<!-- <div>{{userList|json}}</div> -->
+
+<button class="btn btn-success" routerLink="../add">Add User</button>
+
+<table>
+    <thead>
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Age</th>
+            <th>Contact Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of userList">
+            <td>{{user.firstname}}</td>
+            <td>{{user.lastname}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.contactNumber}}</td>
+            <td><button class="btn btn-success">Edit</button></td>
+        </tr>
+    </tbody>
+</table>

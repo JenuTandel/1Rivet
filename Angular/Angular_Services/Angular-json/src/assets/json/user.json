@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstname": "Jinal",
+      "lastname": "Tandel",
+      "age": "25",
+      "contactNumber": "9898989898"
+    },
+    {
+      "id": 2,
+      "firstname": "Jinal",
+      "lastname": "sss",
+      "age": "ss",
+      "contactNumber": "ss"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+<form [formGroup]="userform">
+    <h3>Add Employee</h3>
+    <br>
+    <input type="text" class="form-control" placeholder="Enter your Firstname" formControlName="firstname"
+        [ngClass]="{'is-invalid': userform.controls['firstname'].invalid && (isSubmitted || userform.controls['firstname'].touched || userform.controls['firstname'].dirty),
+    'is-valid':userform.controls['firstname'].valid && (isSubmitted || userform.controls['firstname'].touched || userform.controls['firstname'].dirty)}">
+    <div
+        *ngIf="userform.controls['firstname'].invalid && (isSubmitted || userform.controls['firstname'].touched || userform.controls['firstname'].dirty)">
+        <span class="text-danger" *ngIf="userform.controls['firstname'].errors?.['required']">
+            Enter your Firstname
+        </span>
+    </div>
+    <br>
+    <input type="text" class="form-control" placeholder="Enter your Lastname" formControlName="lastname"
+        [ngClass]="{'is-invalid': userform.controls['lastname'].invalid && (isSubmitted || userform.controls['lastname'].touched || userform.controls['lastname'].dirty),
+    'is-valid':userform.controls['lastname'].valid && (isSubmitted || userform.controls['lastname'].touched || userform.controls['lastname'].dirty)}">
+    <div
+        *ngIf="userform.controls['lastname'].invalid && (isSubmitted || userform.controls['lastname'].touched || userform.controls['lastname'].dirty)">
+        <span class="text-danger" *ngIf="userform.controls['lastname'].errors?.['required']">
+            Write your Lastname
+        </span>
+    </div>
+    <br>
+    <input type="text" class="form-control" placeholder="Enter your Age" formControlName="age"
+        [ngClass]="{'is-invalid': userform.controls['age'].invalid && (isSubmitted || userform.controls['age'].touched || userform.controls['age'].dirty),
+    'is-valid':userform.controls['age'].valid && (isSubmitted || userform.controls['age'].touched || userform.controls['age'].dirty)}">
+    <div
+        *ngIf="userform.controls['age'].invalid && (isSubmitted || userform.controls['age'].touched || userform.controls['age'].dirty)">
+        <span class="text-danger" *ngIf="userform.controls['age'].errors?.['required']">
+            Enter your Age
+        </span>
+    </div>
+    <br>
+    <input type="text" class="form-control" placeholder="Enter your contactNumber" formControlName="contactNumber"
+        [ngClass]="{'is-invalid': userform.controls['contactNumber'].invalid && (isSubmitted || userform.controls['contactNumber'].touched || userform.controls['contactNumber'].dirty),
+    'is-valid':userform.controls['contactNumber'].valid && (isSubmitted || userform.controls['contactNumber'].touched || userform.controls['contactNumber'].dirty)}">
+    <div
+        *ngIf="userform.controls['contactNumber'].invalid && (isSubmitted || userform.controls['contactNumber'].touched || userform.controls['contactNumber'].dirty)">
+        <span class="text-danger" *ngIf="userform.controls['contactNumber'].errors?.['required']">
+            Enter your contactNumber
+        </span>
+    </div>
+<br>
+    <button class="btn btn-success me-4" type="submit" (click)="onSubmit()">Save</button>
+    <!-- <button class="btn btn-light" type="button" (click)="onReset()">Reset</button> -->
+</form>
+
+<br><br>
+
