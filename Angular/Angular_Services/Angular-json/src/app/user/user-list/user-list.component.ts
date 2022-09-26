@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Users } from '../user.model';
 import { UserService } from '../user.service';
@@ -13,20 +14,31 @@ export class UserListComponent implements OnInit {
 
   public userList: Users[];
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService,
+    private router: Router) {
     this.userList = [];
-    
   }
 
   ngOnInit(): void {
     this.getUserData();
   }
 
-  getUserData(){
-    this.userService.getUsers().subscribe((data)=>{
+  getUserData() {
+    this.userService.getUsers().subscribe((data) => {
       this.userList = data;
-
       console.log(this.userList)
     })
+  }
+
+  onEdit(user: any) {
+    this.router.navigate(['user/edit', user.id]);
+  }
+
+  onDelete(userId: any) {
+    if (confirm('Are you sure to delete this item?')) {
+      this.userService.deleteUser(userId).subscribe(x => {
+        this.getUserData();
+      })
+    }
   }
 }

@@ -1,5 +1,5 @@
 <form [formGroup]="userform">
-    <h3>Add Employee</h3>
+    <h3>{{title}} Employee</h3>
     <br>
     <input type="text" class="form-control" placeholder="Enter your Firstname" formControlName="firstname"
         [ngClass]="{'is-invalid': userform.controls['firstname'].invalid && (isSubmitted || userform.controls['firstname'].touched || userform.controls['firstname'].dirty),

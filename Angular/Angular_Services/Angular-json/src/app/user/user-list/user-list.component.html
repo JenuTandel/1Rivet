@@ -1,7 +1,8 @@
 <!-- <div>{{userList|json}}</div> -->
 
 <button class="btn btn-success" routerLink="../add">Add User</button>
-
+<br>
+<br>
 <table>
     <thead>
         <tr>
@@ -17,7 +18,8 @@
             <td>{{user.lastname}}</td>
             <td>{{user.age}}</td>
             <td>{{user.contactNumber}}</td>
-            <td><button class="btn btn-success">Edit</button></td>
+            <td><button class="btn btn-success" (click)="onEdit(user)">Edit</button></td>
+            <td><button class="btn btn-danger" (click)="onDelete(user.id)">Delete</button></td>
         </tr>
     </tbody>
 </table>
