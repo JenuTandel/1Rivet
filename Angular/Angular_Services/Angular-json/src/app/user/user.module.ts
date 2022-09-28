@@ -9,6 +9,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { core } from '@angular/compiler';
 import { CoreModule } from '../core/core.module';
 import { HttpClientModule } from '@angular/common/http';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 
 
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     UserComponent,
     UserFormComponent,
-    UserListComponent
+    UserListComponent,
+    UserDetailsComponent
   ],
   imports: [
     CommonModule,

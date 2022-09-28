@@ -1,25 +1,29 @@
 <!-- <div>{{userList|json}}</div> -->
 
-<button class="btn btn-success" routerLink="../add">Add User</button>
-<br>
-<br>
-<table>
-    <thead>
+<button class="btn btn-success my-3" routerLink="../add">Add User</button>
+
+<table class="table table-striped mb-3">
+    <thead class="border text-center p-2">
         <tr>
             <th>FirstName</th>
             <th>LastName</th>
             <th>Age</th>
+            <th>Gender</th>
             <th>Contact Number</th>
+            <th>Actions</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody class="text-center" scope="row">
         <tr *ngFor = "let user of userList">
             <td>{{user.firstname}}</td>
             <td>{{user.lastname}}</td>
             <td>{{user.age}}</td>
+            <td>{{user.gender}}</td>
             <td>{{user.contactNumber}}</td>
-            <td><button class="btn btn-success" (click)="onEdit(user)">Edit</button></td>
-            <td><button class="btn btn-danger" (click)="onDelete(user.id)">Delete</button></td>
+            <td><button class="btn btn-success me-2" (click)="onEdit(user)">Edit</button>
+            <button class="btn btn-danger me-2" (click)="onDelete(user.id)">Delete</button>
+            <button class="btn btn-primary me-2" (click)="onDetails(user)">Details</button></td>
         </tr>
     </tbody>
 </table>
+<app-user-details [userDetails] = "particularuser"></app-user-details>

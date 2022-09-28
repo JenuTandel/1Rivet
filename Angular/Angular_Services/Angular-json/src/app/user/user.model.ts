@@ -3,5 +3,6 @@ export class Users{
     firstname?:string;
     lastname?:string;
     age?:string;
+    gender?:string;
     contactNumber?:string;
 }

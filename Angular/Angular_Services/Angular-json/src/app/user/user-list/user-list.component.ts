@@ -14,9 +14,12 @@ export class UserListComponent implements OnInit {
 
   public userList: Users[];
 
+  public particularuser:any;
+
   constructor(private userService: UserService,
     private router: Router) {
     this.userList = [];
+    this.particularuser={}
   }
 
   ngOnInit(): void {
@@ -40,5 +43,11 @@ export class UserListComponent implements OnInit {
         this.getUserData();
       })
     }
+  }
+
+  onDetails(user:any){
+    this.userService.getUserById(user.id).subscribe(userdata=>{
+      this.particularuser=userdata;
+    })
   }
 }

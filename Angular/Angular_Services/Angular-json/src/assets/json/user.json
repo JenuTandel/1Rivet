@@ -5,14 +5,32 @@
       "firstname": "Jinal",
       "lastname": "Tandel",
       "age": "25",
-      "contactNumber": "9039828233"
+      "gender": "Female",
+      "contactNumber": "9039828235"
     },
     {
       "id": 2,
-      "firstname": "Vini",
+      "firstname": "Vinay",
       "lastname": "Patel",
       "age": "33",
-      "contactNumber": "1234566"
+      "gender": "Male",
+      "contactNumber": "9904258338"
+    },
+    {
+      "id": 3,
+      "firstname": "Kiran",
+      "lastname": "Gandhi",
+      "age": "20",
+      "gender": "Female",
+      "contactNumber": "9044567891"
+    },
+    {
+      "id": 4,
+      "firstname": "Hetal",
+      "lastname": "Tandel",
+      "age": "22",
+      "gender": "Female",
+      "contactNumber": "1234567890"
     }
   ]
 }

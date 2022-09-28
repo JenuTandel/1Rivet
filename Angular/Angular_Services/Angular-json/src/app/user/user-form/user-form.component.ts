@@ -26,6 +26,7 @@ export class UserFormComponent implements OnInit {
     this.userid = "";
     this.userform = new FormGroup('');
     console.log(activatedRoute);
+    
     activatedRoute.params.subscribe((params) => {
       this.id = params['userId']
       this.getUserDetails();
@@ -41,6 +42,7 @@ export class UserFormComponent implements OnInit {
         firstname: ['', Validators.required],
         lastname: ['', Validators.required],
         age: ['', Validators.required],
+        gender: [''],
         contactNumber: ['', Validators.required]
       }
     )

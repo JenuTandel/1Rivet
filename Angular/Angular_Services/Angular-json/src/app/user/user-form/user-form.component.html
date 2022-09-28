@@ -1,7 +1,8 @@
-<form [formGroup]="userform">
-    <h3>{{title}} Employee</h3>
-    <br>
-    <input type="text" class="form-control" placeholder="Enter your Firstname" formControlName="firstname"
+<h3 class="text-center">User Form</h3>
+<form [formGroup]="userform" class="border p-3 m-auto">
+    <h4 class="mb-3">{{title}} User</h4>
+    <!-- Input : Firstname -->
+    <input type="text" class="form-control mb-3" placeholder="Enter your Firstname" formControlName="firstname"
         [ngClass]="{'is-invalid': userform.controls['firstname'].invalid && (isSubmitted || userform.controls['firstname'].touched || userform.controls['firstname'].dirty),
     'is-valid':userform.controls['firstname'].valid && (isSubmitted || userform.controls['firstname'].touched || userform.controls['firstname'].dirty)}">
     <div
@@ -10,8 +11,8 @@
             Enter your Firstname
         </span>
     </div>
-    <br>
-    <input type="text" class="form-control" placeholder="Enter your Lastname" formControlName="lastname"
+    <!-- Input : Lastname -->
+    <input type="text" class="form-control mb-3" placeholder="Enter your Lastname" formControlName="lastname"
         [ngClass]="{'is-invalid': userform.controls['lastname'].invalid && (isSubmitted || userform.controls['lastname'].touched || userform.controls['lastname'].dirty),
     'is-valid':userform.controls['lastname'].valid && (isSubmitted || userform.controls['lastname'].touched || userform.controls['lastname'].dirty)}">
     <div
@@ -20,8 +21,8 @@
             Write your Lastname
         </span>
     </div>
-    <br>
-    <input type="text" class="form-control" placeholder="Enter your Age" formControlName="age"
+    <!-- Input : Age -->
+    <input type="text" class="form-control mb-3" placeholder="Enter your Age" formControlName="age"
         [ngClass]="{'is-invalid': userform.controls['age'].invalid && (isSubmitted || userform.controls['age'].touched || userform.controls['age'].dirty),
     'is-valid':userform.controls['age'].valid && (isSubmitted || userform.controls['age'].touched || userform.controls['age'].dirty)}">
     <div
@@ -30,8 +31,26 @@
             Enter your Age
         </span>
     </div>
-    <br>
-    <input type="text" class="form-control" placeholder="Enter your contactNumber" formControlName="contactNumber"
+    <!-- Input : Gender -->
+    <div class="form-control mb-3">
+        <label for="gender">Select the Gender</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="male" value="Male"
+                formControlName="gender">
+            <label class="form-check-label" for="male">
+                Male
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="female" value="Female"
+                formControlName="gender">
+            <label class="form-check-label" for="female">
+                Female
+            </label>
+        </div>
+    </div>
+    <!-- Input : ContactNumber -->
+    <input type="text" class="form-control mb-3" placeholder="Enter your contactNumber" formControlName="contactNumber"
         [ngClass]="{'is-invalid': userform.controls['contactNumber'].invalid && (isSubmitted || userform.controls['contactNumber'].touched || userform.controls['contactNumber'].dirty),
     'is-valid':userform.controls['contactNumber'].valid && (isSubmitted || userform.controls['contactNumber'].touched || userform.controls['contactNumber'].dirty)}">
     <div
@@ -40,10 +59,6 @@
             Enter your contactNumber
         </span>
     </div>
-<br>
+    <!-- Submit button -->
     <button class="btn btn-success me-4" type="submit" (click)="onSubmit()">Save</button>
-    <!-- <button class="btn btn-light" type="button" (click)="onReset()">Reset</button> -->
 </form>
-
-<br><br>
-
