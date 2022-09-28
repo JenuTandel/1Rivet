@@ -3,7 +3,7 @@ const person_details = [
     { firstname: "Shweta", lastname: "Sutariya", age: 32, dob: "30-10-1991" },
     { firstname: "Arpan", lastname: "Tandel", age: 20, dob: "14-4-2002" },
     { firstname: "Dvs", lastname: "Tandel", age: 33, dob: "28-2-1990" },
-    { firstname: "Aishwarya", lastname: "Somani", age: 33, dob: "28-2-1990"},
+    { firstname: "Aishwarya", lastname: "Somani", age: 33, dob: "28-2-1990" },
 ]
 
 
@@ -31,15 +31,15 @@ function getData(arr) {
     setTimeout(() => {
         arr.forEach((data) => {
             const tr = document.createElement('tr');
-            console.log(tr);
+            // console.log(tr);
             for (i in data) {
                 const td = document.createElement('td');
                 td.textContent = data[i];
                 tr.appendChild(td);
-                console.log(tr);
+                // console.log(tr);
             }
             tdata.appendChild(tr);
-            console.log(tdata);
+            // console.log(tdata);
         })
     })
 }
@@ -58,20 +58,20 @@ function searchData() {
 
     const norecord = document.querySelector('.no-record');
     var inp = document.getElementById("username");
-    var uname = inp.value.toLowerCase();
-    console.log(uname);
+    var input = inp.value.toLowerCase();
+    // console.log(input);
     tdata.textContent = '';
     let filterdata = [];
 
-    if (uname !== '') {
+    if (input !== '') {
         filterdata = person_details.filter((item) => {
-            return item.firstname.toLowerCase().includes(uname);
+            return item.firstname.toLowerCase().includes(input) || item.lastname.toLowerCase().includes(input);
         })
     }
     else {
         filterdata = person_details;
     }
-    console.log(filterdata);
+    // console.log(filterdata);
 
     if (!filterdata.length) {
         table.classList.add(['d-none']);
@@ -98,9 +98,70 @@ function addUser() {
     const p = { firstname: fname, lastname: lname, age: age, dob: dob };
 
     addData(p).then(function () {
-        tdata.textContent="";
+        tdata.textContent = "";
         getData(person_details);
     }).catch(function () {
         console.log("Rejected");
     })
+}
+
+function filterTable() {
+    let dropdown, rows, switching, filter;
+    dropdown = document.getElementById("person_data");
+    rows = table.rows;
+    filter = dropdown.value;
+    switching = true;
+
+    while (switching) {
+        switching = false;
+        rows = table.rows;
+        var storedate = [];
+        for (i = 1; i < (rows.length - 1); i++) {
+            shouldSwitch = false;
+            if (filter == "FirstName") {
+                x = rows[i].getElementsByTagName("td")[0];
+                y = rows[i + 1].getElementsByTagName("td")[0];
+                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                }
+            }
+            if (filter == "LastName") {
+                x = rows[i].getElementsByTagName("td")[1];
+                y = rows[i + 1].getElementsByTagName("td")[1];
+                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                }
+            }
+            if (filter == "Age") {
+                x = rows[i].getElementsByTagName("td")[2];
+                y = rows[i + 1].getElementsByTagName("td")[2];
+                if (x.innerHTML > y.innerHTML) {
+                    shouldSwitch = true;
+                    break;
+                }
+            }
+            // if (filter == "BirthDate") {
+
+            //     x = rows[i].getElementsByTagName("td")[3];
+            //     y = rows[i + 1].getElementsByTagName("td")[3];
+
+            //     // console.log(x, y);
+
+            //     storedate.sort(function(x, y) {
+            //         return x - y;
+            //     });
+
+            //     if (x - y) {
+            //         shouldSwitch = true;
+            //         break;
+            //     }
+            // }
+        }
+        if (shouldSwitch) {
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+        }
+    }
 }

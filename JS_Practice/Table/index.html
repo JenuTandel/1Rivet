@@ -17,6 +17,17 @@
     <div class="search-wrapper">
         <input type="text" id="username" placeholder="Search Here" onkeyup="searchData()">
         <button id="searchbtn" class="bg-primary">Search</button>
+
+        <select class="bg-primary" name="person_data" id="person_data" oninput="filterTable()">
+            <option value="">Select Any One</option>
+            <option value="FirstName">FirstName</option>
+            <option value="LastName">LastName</option>
+            <option value="Age">Age</option>
+            <option value="BirthDate">BirthDate</option>
+        </select>
+
+        <!-- <button onclick="sortTable()">Sort</button> -->
+        
     </div>
 
     <div class="no-record d-none">No Record Found</div>
@@ -51,6 +62,7 @@
     </div>
 
     <script src="promise.js"></script>
+
 </body>
 
 </html>

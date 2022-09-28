@@ -34,6 +34,11 @@ tbody>tr:nth-child(even) {
     height: 30px;
 }
 
+.search-wrapper select{
+    margin-left: 20px;
+    color: white;
+}
+
 .search-wrapper>input {
     border: none;
     padding: 10px;
