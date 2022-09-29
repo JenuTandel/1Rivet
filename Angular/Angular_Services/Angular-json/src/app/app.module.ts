@@ -5,13 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { HomeComponent } from './home/home.component';
+import { ObservableComponent } from './observable/observable.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SubjectComponent } from './subject/subject.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SubjectComponent,
+    ObservableComponent
   ],
   imports: [
     BrowserModule,
