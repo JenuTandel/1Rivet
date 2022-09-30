@@ -51,7 +51,7 @@ export class UserFormComponent implements OnInit {
   onSubmit() {
     this.isSubmitted = true;
     if (this.userform.valid) {
-      this.isSubmitted = false;
+      // this.isSubmitted = false;???
       if (this.id) {
         console.log(this.id);
         this.userService.editUsers(this.userform.value, this.id).subscribe(() => {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as Rx from 'rxjs';
 
 @Component({
   selector: 'app-directives',
@@ -10,6 +11,7 @@ export class DirectivesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(Rx);
   }
 
 }

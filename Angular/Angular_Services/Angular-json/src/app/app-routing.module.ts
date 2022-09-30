@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './home/auth.guard';
 import { HomeComponent } from './home/home.component';
 import { ObservableComponent } from './observable/observable.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
