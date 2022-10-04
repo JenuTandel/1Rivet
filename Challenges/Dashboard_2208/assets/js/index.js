@@ -98,7 +98,7 @@ function searchItem() {
 
     if (ptype !== '') {
         filterdata = product_item.filter((item) => {
-            return item.type.toLowerCase().includes(ptype) || item.pname.toLowerCase().includes(ptype) || item.list.toLowerCase().includes(ptype);
+            return item.type.toLowerCase().includes(ptype) || item.pname.toLowerCase().includes(ptype) || item.list.includes(ptype);
         })
     }
     else {
