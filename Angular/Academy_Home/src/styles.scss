@@ -1,7 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* global */
+//bootstrap min css file
+@import "~bootstrap/dist/css/bootstrap.min.css";
 
+//base files
+@import "../src/assets/scss/base/index";
+@import "../src/assets/scss/vendor/index";
+
+/* global */
 *{
     padding: 0px;
     margin: 0px;
@@ -11,4 +17,5 @@
 html,body{
     height: 100%;
     width: 100%;
+    font-family: $font-family-base;
 }
