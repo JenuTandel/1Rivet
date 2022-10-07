@@ -142,22 +142,22 @@ function filterTable() {
                     break;
                 }
             }
-            // if (filter == "BirthDate") {
+            if (filter == "BirthDate") {
 
-            //     x = rows[i].getElementsByTagName("td")[3];
-            //     y = rows[i + 1].getElementsByTagName("td")[3];
+                x = rows[i].getElementsByTagName("td")[3];
+                y = rows[i + 1].getElementsByTagName("td")[3];
 
-            //     // console.log(x, y);
+                console.log(x, y);
 
-            //     storedate.sort(function(x, y) {
-            //         return x - y;
-            //     });
+                // storedate.sort(function(x, y) {
+                //     return x - y;
+                // });
 
-            //     if (x - y) {
-            //         shouldSwitch = true;
-            //         break;
-            //     }
-            // }
+                // if (x - y) {
+                //     shouldSwitch = true;
+                //     break;
+                // }
+            }
         }
         if (shouldSwitch) {
             rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
