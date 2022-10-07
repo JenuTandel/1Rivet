@@ -8,6 +8,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CoreModule } from './core/core.module';
+import {NgxWebstorageModule} from 'ngx-webstorage';  
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CoreModule } from './core/core.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    NgxWebstorageModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

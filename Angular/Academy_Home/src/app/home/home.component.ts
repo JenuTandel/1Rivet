@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalStorageService } from 'ngx-webstorage';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  private user= document.getElementById("user_home");
 
-  constructor() { }
-
+  constructor(private localStorage: LocalStorageService) {
+  }
+  
+  
   ngOnInit(): void {
+    this.localStorage.store('isAuthenticated', false);
   }
 
 }

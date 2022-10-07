@@ -3,9 +3,16 @@
 //bootstrap min css file
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
-//base files
+@import '/node_modules/bootstrap-icons/font/bootstrap-icons';
+
+//base index files
 @import "../src/assets/scss/base/index";
+
+//vendor index file
 @import "../src/assets/scss/vendor/index";
+
+//utilities index file
+@import "../src/assets/scss/utilities/index";
 
 /* global */
 *{

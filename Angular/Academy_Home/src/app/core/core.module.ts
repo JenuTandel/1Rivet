@@ -4,6 +4,7 @@ import { HeaderComponent } from './navbar/header/header.component';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './authentication/login/login.component';
 import { RegistrationComponent } from './authentication/registration/registration.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,8 @@ import { RegistrationComponent } from './authentication/registration/registratio
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,

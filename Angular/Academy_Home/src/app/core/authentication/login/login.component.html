@@ -1,1 +1,25 @@
-<p>login works!</p>
+<div class="d-flex h-100 w-100 bg-light">
+    <img src="../../../../assets/images/login_bg.png" height="100%" width="50%">
+    <div class="d-flex flex-column w-100 p-4 align-items-center justify-content-center">
+        <img class="logo" src="../../../../assets/images/logo1.png">
+        <div>
+            <form class="rounded border p-3">
+                <h4 class="text-white text-center mb-3">Login</h4>
+                <input type="text" class="form-control mb-3" placeholder="Email">
+                <input type="password" class="form-control mb-3" placeholder="Password">
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label text-white" for="exampleCheck1">Keep me Login</label>
+                </div>
+                <button class="form-control bg-secondary text-white mb-3 border-0" (click)="onLogin()" type="button">LOGIN</button>
+                <div class="text-center text-white">
+                    Not Regitered???
+                    <a routerLink="../registration" class="text-danger">Click Here</a>
+                </div>
+                <div class="text-center">
+                    <a class="text-white" routerLink="">Forgot password???</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
