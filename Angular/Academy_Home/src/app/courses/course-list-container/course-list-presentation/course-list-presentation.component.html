@@ -1,0 +1,32 @@
+<div class="container my-5">
+    <div>
+      <button class="btn btn-primary float-right mb-3" [routerLink]="['/courses/add']"><i
+          class="fas fa-plus"></i>&nbsp;Make New Course</button>
+      <table class="table table-stripede border border-secondary ">
+        <thead class="thead-light">
+          <th>Course Name</th>
+          <th>Course Details<th>
+          <th>Course Duration</th>
+          <th class="text-center">Action</th>
+        </thead>
+        <tbody>
+  
+          <tr *ngFor="let course of baseResponse">
+            <!-- <td>{{course.id}}</td> -->
+            <td>{{course.course_name}}</td>
+            <td>{{course.course_details}}</td>
+            <td>{{course.course_duration}}</td>
+            <td class="text-center">
+              <button class="btn btn-outline-primary m-1" data-toggle="tooltip" data-placement="right" title="Edit"
+                [routerLink]="['/courses/edit/'+course.id]">
+                <i class="far fa-edit"></i>
+              </button>
+              <button class="btn btn-outline-danger m-1" data-toggle="tooltip" data-placement="right" title="Delete" (click)="deleteCourse(course.id)">
+                <i class="far fa-trash-alt"></i>
+              </button>
+            </td>
+          </tr>
+  
+        </tbody>
+      </table>
+    </div>

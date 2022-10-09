@@ -9,6 +9,9 @@ import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CoreModule } from './core/core.module';
 import {NgxWebstorageModule} from 'ngx-webstorage';  
+import { CourseService } from './courses/course.service';
+import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import {NgxWebstorageModule} from 'ngx-webstorage';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    NgxWebstorageModule.forRoot()
+    HttpClientModule,
+    NgxWebstorageModule.forRoot(),
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

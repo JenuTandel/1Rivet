@@ -34,7 +34,8 @@ const routes: Routes = [
     path: 'registration',
     component: RegistrationComponent
   },
-  { path: 'courses', loadChildren: () => import('./courses/courses.module').then(m => m.CoursesModule), canActivate: [AuthGuard], },
+  { path: 'courses', loadChildren: () => import('./courses/courses.module').then(m => m.CoursesModule) },
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
   {
     path: '**',
     component: PageNotFoundComponent

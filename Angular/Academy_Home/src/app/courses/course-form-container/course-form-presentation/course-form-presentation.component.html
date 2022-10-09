@@ -1,0 +1,25 @@
+<div class="d-flex w-100 flex-column align-items-center justify-content-center">
+    <h3 class="mt-3">Course Form</h3>
+    <form class="border rounded p-3" [formGroup]="courseForm" (ngSubmit)="courseForm.valid && course()">
+        <input type="text" class="form-control mb-3" placeholder="Enter the Course Name" formControlName="courseName"
+            [ngClass]="{'is-invalid':this.courseForm.controls['courseName'].touched && this.courseForm.controls['courseName'].invalid}">
+        <div *ngIf="this.courseForm.controls['courseName'].touched && this.courseForm.controls['courseName'].invalid">
+            <div *ngIf="this.courseForm.controls['courseName'].errors?.['required']">Course Name is required</div>
+        </div>
+        <textarea rows="5" class="form-control mb-3" placeholder="Enter the Course Details"
+            formControlName="courseDetails"
+            [ngClass]="{'is-invalid':this.courseForm.controls['courseDetails'].touched && this.courseForm.controls['courseDetails'].invalid}"></textarea>
+        <div
+            *ngIf="this.courseForm.controls['courseDetails'].touched && this.courseForm.controls['courseDetails'].invalid">
+            <div *ngIf="this.courseForm.controls['courseDetails'].errors?.['required']">Course Details are required</div>
+        </div>
+        <input type="time" class="form-control mb-3" formControlName="courseDuration"
+            [ngClass]="{'is-invalid':this.courseForm.controls['courseDuration'].touched && this.courseForm.controls['courseDuration'].invalid}">
+        <div
+            *ngIf="this.courseForm.controls['courseDuration'].touched && this.courseForm.controls['courseDuration'].invalid">
+            <div *ngIf="this.courseForm.controls['courseDuration'].errors?.['required']">Course Duration is required</div>
+        </div>
+        <button type="submit" class="btn btn-success me-2">Submit</button>
+        <button type="button" class="btn btn-warning">Reset</button>
+    </form>
+</div>
