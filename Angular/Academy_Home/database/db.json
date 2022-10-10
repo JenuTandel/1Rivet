@@ -1,3 +1,16 @@
 {
-    "courseDetails":[]
+  "courseDetails": [
+    {
+      "id": 1,
+      "course_name": "Python Programming",
+      "course_details": "It is the popular programming language.",
+      "course_duration": "2hrs"
+    },
+    {
+      "id": 2,
+      "courseName": "Java",
+      "courseDetails": "Programming language",
+      "courseDuration": "21:14"
+    }
+  ]
 }

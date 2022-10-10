@@ -31,9 +31,8 @@ export class CourseFormPresenterService {
 
   public saveCourse(courseForm: FormGroup): void {
     if (courseForm.valid) {
-      let course: Course = new Course();
-      course = courseForm.getRawValue();
-      this.add.next(course);
+      
+      this.add.next(courseForm.value);
     } else {
     }
   }

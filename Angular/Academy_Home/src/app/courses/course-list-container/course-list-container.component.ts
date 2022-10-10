@@ -10,7 +10,7 @@ import { CourseService } from '../course.service';
 })
 export class CourseListContainerComponent implements OnInit {
 
-  public orderDataList$: Observable<Course[]> = this.courseService.getCourses();
+  public orderDataList$!: Observable<Course[]>;
 
   public message: Subject<string> = new Subject();
 
@@ -24,6 +24,7 @@ export class CourseListContainerComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.orderDataList$= this.courseService.getCourses();
   }
   public deleteCourse(courseId: number): void {
     this.courseService.deleteCourse(courseId).subscribe(response => {

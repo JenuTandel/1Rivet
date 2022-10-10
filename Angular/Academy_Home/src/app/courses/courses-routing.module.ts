@@ -23,7 +23,7 @@ const routes: Routes = [
         component:CourseFormContainerComponent
       },
       {
-        path:'edit:id',
+        path:'edit/:id',
         component:CourseFormContainerComponent
       },
     ]

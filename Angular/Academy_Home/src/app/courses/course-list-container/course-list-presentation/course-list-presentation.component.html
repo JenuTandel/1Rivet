@@ -12,7 +12,7 @@
         <tbody>
   
           <tr *ngFor="let course of baseResponse">
-            <!-- <td>{{course.id}}</td> -->
+            <td>{{course.id}}</td>
             <td>{{course.course_name}}</td>
             <td>{{course.course_details}}</td>
             <td>{{course.course_duration}}</td>
@@ -20,9 +20,11 @@
               <button class="btn btn-outline-primary m-1" data-toggle="tooltip" data-placement="right" title="Edit"
                 [routerLink]="['/courses/edit/'+course.id]">
                 <i class="far fa-edit"></i>
+                Edit
               </button>
               <button class="btn btn-outline-danger m-1" data-toggle="tooltip" data-placement="right" title="Delete" (click)="deleteCourse(course.id)">
                 <i class="far fa-trash-alt"></i>
+                Delete
               </button>
             </td>
           </tr>

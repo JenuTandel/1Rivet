@@ -16,18 +16,18 @@ import { CourseFormPresenterService } from '../course-form-presenter/course-form
 export class CourseFormPresentationComponent implements OnInit {
 
   public courseForm: FormGroup;
-  private _courseData: Course;
+  private _courseData!: Course;
   @Output() add: EventEmitter<Course>;
   @Output() update: EventEmitter<Course>;
   private destroy: Subject<void>;
 
-  @Input() set courseDetails(value: Course) {
+  @Input() set courseDetails(value: Course | null) {
 
-    this._courseData = value;
+    // this._courseData = value;
     if (value) {
       this.courseForm = this.coursePresenter.
         bindControlValue(this.courseForm,
-          this._courseData);
+          value);
     }
   }
 
@@ -37,7 +37,6 @@ export class CourseFormPresentationComponent implements OnInit {
 
   constructor(private coursePresenter: CourseFormPresenterService, private toastr: ToastrService,
     private courseContainer: CourseFormContainerComponent, private router: Router) {
-    this._courseData = new Course();
     this.destroy = new Subject();
     this.add = new EventEmitter();
     this.update = new EventEmitter();

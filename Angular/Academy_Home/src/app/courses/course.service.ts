@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { Course } from './course.model';
 
 @Injectable({
@@ -10,7 +10,7 @@ export class CourseService {
 
   public serviceUrl = 'http://localhost:3000/';
 
-  public updateData: BehaviorSubject<Course> = new BehaviorSubject<Course>(new Course());
+  public updateData: Subject<Course> = new Subject<Course>();
 
   constructor(
     private http: HttpClient
