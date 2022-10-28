@@ -1,34 +1,43 @@
-<div class="container my-5">
-    <div>
-      <button class="btn btn-primary float-right mb-3" [routerLink]="['/courses/add']"><i
-          class="fas fa-plus"></i>&nbsp;Make New Course</button>
-      <table class="table table-stripede border border-secondary ">
-        <thead class="thead-light">
-          <th>Course Name</th>
-          <th>Course Details<th>
-          <th>Course Duration</th>
-          <th class="text-center">Action</th>
-        </thead>
-        <tbody>
-  
-          <tr *ngFor="let course of baseResponse">
-            <td>{{course.id}}</td>
-            <td>{{course.course_name}}</td>
-            <td>{{course.course_details}}</td>
-            <td>{{course.course_duration}}</td>
-            <td class="text-center">
-              <button class="btn btn-outline-primary m-1" data-toggle="tooltip" data-placement="right" title="Edit"
-                [routerLink]="['/courses/edit/'+course.id]">
-                <i class="far fa-edit"></i>
-                Edit
-              </button>
-              <button class="btn btn-outline-danger m-1" data-toggle="tooltip" data-placement="right" title="Delete" (click)="deleteCourse(course.id)">
-                <i class="far fa-trash-alt"></i>
-                Delete
-              </button>
-            </td>
-          </tr>
-  
-        </tbody>
-      </table>
+<div class="container my-3 d-flex flex-column">
+  <div class="w-100" *ngIf="course">
+    <button class="btn btn-primary float-right mb-3" [routerLink]="['/courses/add']"><i
+        class="fas fa-plus"></i>&nbsp;Make New Course</button>
+    <table class="table table-stripede border border-secondary ">
+      <thead>
+        <th>Sr.No.</th>
+        <th>Course Name</th>
+        <th>Course Details</th>
+        <th>Course Duration</th>
+        <th class="text-center">Action</th>
+      </thead>
+      <tbody class="border">
+
+        <tr *ngFor="let course of baseResponse">
+          <td>{{course.id}}</td>
+          <td>{{course.courseName}}</td>
+          <td>{{course.courseDetails}}</td>
+          <td>{{course.courseDuration}}</td>
+          <td class="text-center">
+            <button class="btn btn-outline-primary m-1" [routerLink]="['/courses/edit/'+course.id]">
+              Edit
+            </button>
+            <button class="btn btn-outline-danger m-1" (click)="deleteCourse(course.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="d-flex" *ngIf="!course">
+    <div class="card m-2" style="width: 18rem;" *ngFor="let course of baseResponse">
+      <div class="card-body">
+        <h5 class="card-title">{{course.courseName}}</h5>
+        <p class="card-text mb-2">{{course.courseDetails}}</p>
+        <p class="card-text mb-2">{{course.courseDuration}}</p>
+        <button type="button" class="btn btn-primary">Enroll Now</button>
+      </div>
     </div>
+  </div>
+</div>

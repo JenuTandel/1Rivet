@@ -9,9 +9,11 @@ import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CoreModule } from './core/core.module';
 import {NgxWebstorageModule} from 'ngx-webstorage';  
-import { CourseService } from './courses/course.service';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UserListComponent } from './admin/user-list/user-list.component';
+
 
 @NgModule({
   declarations: [
@@ -19,11 +21,13 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     AboutusComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     CoreModule,
     HttpClientModule,
     NgxWebstorageModule.forRoot(),

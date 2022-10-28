@@ -1,16 +1,36 @@
 {
   "courseDetails": [
     {
-      "id": 1,
-      "course_name": "Python Programming",
-      "course_details": "It is the popular programming language.",
-      "course_duration": "2hrs"
+      "id": 3,
+      "courseName": "Jbkjsnvd",
+      "courseDetails": "sdvsdv",
+      "courseDuration": "13:17"
     },
     {
-      "id": 2,
-      "courseName": "Java",
-      "courseDetails": "Programming language",
-      "courseDuration": "21:14"
+      "id": 4
+    }
+  ],
+  "registrationData": [
+    {
+      "firstname": "Jinal",
+      "lastname": "Tandel",
+      "emailId": "jinaltandel06@gmail.com",
+      "password": "12345678",
+      "id": 1
+    },
+    {
+      "firstname": "Hetal",
+      "lastname": "Tandel",
+      "emailId": "hetaltandel@gmail.com",
+      "password": "1234567890",
+      "id": 2
+    },
+    {
+      "firstname": "Vini",
+      "lastname": "Patel",
+      "emailId": "vini4196@gmail.com",
+      "password": "vini4196",
+      "id": 3
     }
   ]
 }

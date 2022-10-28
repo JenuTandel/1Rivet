@@ -40,6 +40,8 @@ export class CourseFormContainerComponent implements OnInit {
   public updateCourse(course: Course): void {
 
     this.courseService.updateCourse(course).subscribe(response => {
+      console.log("Res"+response);
+      
       if (response) {
         this.message.next('update');
       }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { UserListComponent } from './admin/user-list/user-list.component';
 import { ContactComponent } from './contact/contact.component';
 import { AuthGuard } from './core/authentication/auth.guard';
 import { LoginComponent } from './core/authentication/login/login.component';
@@ -34,8 +35,14 @@ const routes: Routes = [
     path: 'registration',
     component: RegistrationComponent
   },
-  { path: 'courses', loadChildren: () => import('./courses/courses.module').then(m => m.CoursesModule) },
-  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
+  {
+    path: 'courses', loadChildren: () => import('./courses/courses.module').then(m => m.CoursesModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path:'users',
+    component: UserListComponent
+  },
   {
     path: '**',
     component: PageNotFoundComponent

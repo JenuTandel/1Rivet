@@ -1,0 +1,21 @@
+<div class="m-3">
+    <h3>Registered Users List</h3>
+    <table class="table table-stripede border border-secondary ">
+        <thead>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email ID</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody class="border">
+            <tr *ngFor="let user of userList">
+                <td>{{user.firstname}}</td>
+                <td>{{user.lastname}}</td>
+                <td>{{user.emailId}}</td>
+                <td>{{user.password}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

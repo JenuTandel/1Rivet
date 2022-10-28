@@ -22,15 +22,13 @@ export class CourseFormPresentationComponent implements OnInit {
   private destroy: Subject<void>;
 
   @Input() set courseDetails(value: Course | null) {
-
-    // this._courseData = value;
     if (value) {
+      this._courseData = value;
       this.courseForm = this.coursePresenter.
         bindControlValue(this.courseForm,
-          value);
+          this._courseData);
     }
   }
-
   get courseDetails(): Course {
     return this._courseData;
   }

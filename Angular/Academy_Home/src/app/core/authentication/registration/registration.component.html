@@ -3,12 +3,12 @@
     <div class="d-flex flex-column w-100 p-4 align-items-center justify-content-center">
         <img class="logo" src="../../../../assets/images/logo1.png">
         <div>
-            <form class="rounded border p-3">
+            <form class="rounded border p-3" [formGroup]="registrationForm">
                 <h4 class="text-white text-center font-weight-normal mb-3">Create Account</h4>
-                <input type="text" class="form-control mb-3" placeholder="Firstname">
-                <input type="text" class="form-control mb-3" placeholder="Lastname">
-                <input type="text" class="form-control mb-3" placeholder="Email">
-                <input type="password" class="form-control mb-3" placeholder="Password">
+                <input type="text" class="form-control mb-3" placeholder="Firstname" formControlName="firstname">
+                <input type="text" class="form-control mb-3" placeholder="Lastname" formControlName="lastname">
+                <input type="text" class="form-control mb-3" placeholder="Email" formControlName="emailId">
+                <input type="password" class="form-control mb-3" placeholder="Password" formControlName="password">
                 <button class="form-control bg-secondary text-white mb-3 border-0" type="button" (click)="onRegister()">Create Account</button>
                 <div class="text-center text-white">
                     Already Logged In???

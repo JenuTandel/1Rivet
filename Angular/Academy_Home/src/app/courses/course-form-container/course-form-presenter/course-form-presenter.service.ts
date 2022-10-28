@@ -31,7 +31,6 @@ export class CourseFormPresenterService {
 
   public saveCourse(courseForm: FormGroup): void {
     if (courseForm.valid) {
-      
       this.add.next(courseForm.value);
     } else {
     }

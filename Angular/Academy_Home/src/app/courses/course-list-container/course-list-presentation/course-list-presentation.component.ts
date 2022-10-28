@@ -1,6 +1,7 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AfterContentChecked, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/core/authentication/auth.service';
 import { Course } from '../../course.model';
 import { CourseListPresenterService } from '../course-list-presenter/course-list-presenter.service';
 
@@ -10,20 +11,21 @@ import { CourseListPresenterService } from '../course-list-presenter/course-list
   viewProviders:[CourseListPresenterService],
   styleUrls: ['./course-list-presentation.component.scss']
 })
-export class CourseListPresentationComponent implements OnInit {
+export class CourseListPresentationComponent implements OnInit, AfterContentChecked {
 
-  /** This property is used for get data from container component */
+  
+
   @Input() public set baseResponse(baseResponse: Course[]|null) {
     if (baseResponse) {
       this._baseResponse = baseResponse;
     }
     console.log(this.baseResponse);
-    
   }
   public get baseResponse(): Course[] {
     return this._baseResponse;
   }
   private _baseResponse: Course[];
+  public course:boolean = false;
 
   @Output() public deleteEvent: EventEmitter<number> = new EventEmitter<number>();
 
@@ -32,10 +34,19 @@ export class CourseListPresentationComponent implements OnInit {
     private toastr: ToastrService, private router: Router) {
     this._baseResponse = [];
   }
+  ngAfterContentChecked(): void {
+    const role = localStorage.getItem('role');
+    if(role == "admin"){
+      this.course = true;
+    }
+    else{
+      this.course = false;
+    }
+  }
 
   ngOnInit() {
   }
-  public deleteCourse(deleteId: number): void {
+  public deleteCourse(deleteId?: number): void {
     this.deleteEvent.emit(deleteId);
     // this.courseContainer.message$.subscribe((response) => {
     //   if (response.toLowerCase() === 'delete') {
@@ -44,5 +55,7 @@ export class CourseListPresentationComponent implements OnInit {
     //   this.router.navigate(['/courses/list']);
     // });
   }
+
+
 
 }
