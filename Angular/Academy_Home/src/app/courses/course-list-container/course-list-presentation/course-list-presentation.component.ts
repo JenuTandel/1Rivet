@@ -2,6 +2,8 @@ import { AfterContentChecked, Component, EventEmitter, Input, OnInit, Output } f
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/core/authentication/auth.service';
+import { DialogService } from 'src/app/shared/dialog.service';
+import { CourseFormContainerComponent } from '../../course-form-container/course-form-container.component';
 import { Course } from '../../course.model';
 import { CourseListPresenterService } from '../course-list-presenter/course-list-presenter.service';
 
@@ -30,6 +32,7 @@ export class CourseListPresentationComponent implements OnInit, AfterContentChec
   @Output() public deleteEvent: EventEmitter<number> = new EventEmitter<number>();
 
   constructor(
+    private dialogService:DialogService,
     private courseListPresenterService:CourseListPresenterService,
     private toastr: ToastrService, private router: Router) {
     this._baseResponse = [];
@@ -56,6 +59,9 @@ export class CourseListPresentationComponent implements OnInit, AfterContentChec
     // });
   }
 
+  AddNewCourse(){
+    this.dialogService.openDialog(CourseFormContainerComponent)
+  }
 
 
 }

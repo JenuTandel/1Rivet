@@ -7,7 +7,49 @@
       "courseDuration": "13:17"
     },
     {
-      "id": 4
+      "id": 5,
+      "courseName": "Python",
+      "courseDetails": "Programming",
+      "courseDuration": "09:00",
+      "courseImage": "C:\\fakepath\\google.jpg",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 6,
+      "courseName": "Python",
+      "courseDetails": "Programming",
+      "courseDuration": "09:00",
+      "courseImage": "C:\\fakepath\\google.jpg",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 7,
+      "courseName": "cvc",
+      "courseDetails": "cvc",
+      "courseDuration": "11:01",
+      "courseImage": "C:\\fakepath\\m.jpeg",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 8,
+      "courseName": "sdasd",
+      "courseDetails": "sadasd",
+      "courseDuration": "11:00",
+      "courseImage": "C:\\fakepath\\m.jpeg",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 9,
+      "courseName": "vxva",
+      "courseDetails": "asdvasv",
+      "courseDuration": "11:11",
+      "courseImage": "C:\\fakepath\\1rivet.jfif",
+      "courseImageName": "",
+      "courseImageString": ""
     }
   ],
   "registrationData": [
@@ -31,6 +73,13 @@
       "emailId": "vini4196@gmail.com",
       "password": "vini4196",
       "id": 3
+    },
+    {
+      "firstname": "Arpan",
+      "lastname": "Tandel",
+      "emailId": "arpantandel@gmail.com",
+      "password": "Arpan@123",
+      "id": 4
     }
   ]
 }

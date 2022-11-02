@@ -13,8 +13,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserListComponent } from './admin/user-list/user-list.component';
-
-
+import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,13 +21,14 @@ import { UserListComponent } from './admin/user-list/user-list.component';
     AboutusComponent,
     ContactComponent,
     PageNotFoundComponent,
-    UserListComponent
+    UserListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule,
+    SharedModule,
     HttpClientModule,
     NgxWebstorageModule.forRoot(),
     ToastrModule.forRoot()

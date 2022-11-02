@@ -1,11 +1,17 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, tap } from 'rxjs';
+import { LoginService } from './login.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  constructor() {
+  private _isLoggedIn$ = new BehaviorSubject<boolean>(false);
+  isLoggedIn$ = this._isLoggedIn$.asObservable();
+
+  constructor(private loginService:LoginService) {
+    const token = localStorage.getItem('profanis_auth');
+    this._isLoggedIn$.next(!!token);
   }
 
   public userIsLogin(): boolean {
@@ -16,5 +22,13 @@ export class AuthService {
       return false;
     }
 
+  }
+  login(email: string, password: string) {
+    return this.loginService.login(email, password).pipe(
+      tap((response: any) => {
+        this._isLoggedIn$.next(true);
+        localStorage.setItem('profanis_auth', response.token);
+      })
+    );
   }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { AuthService } from '../auth.service';
 import { RegistrationService } from '../registration.service';
 import { RegistrationData } from '../registrationData.model';
 
@@ -20,7 +21,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private formBuilder: FormBuilder,
-    private registrationService: RegistrationService
+    private registrationService: RegistrationService,
+    private authService: AuthService
   ) {
     this.loginForm = new FormGroup('');
     this.userIsLoginSubject = new BehaviorSubject(true);
@@ -37,7 +39,7 @@ export class LoginComponent implements OnInit {
   onLogin() {
     if (this.loginForm.controls['email'].value == 'admin@gmail.com' && this.loginForm.controls['password'].value == 'admin123') {
       localStorage.setItem('isAuthenticated', 'true')
-      localStorage.setItem('role','admin');
+      localStorage.setItem('role', 'admin');
       this.router.navigateByUrl('admin')
     }
     else {

@@ -19,6 +19,9 @@ export class CourseFormPresenterService {
       courseName: ['', [Validators.required]],
       courseDetails: ['', [Validators.required]],
       courseDuration: ['', [Validators.required]],
+      courseImage:['',Validators.required],
+      courseImageName:[''],
+      courseImageString:['']
     });
   }
 

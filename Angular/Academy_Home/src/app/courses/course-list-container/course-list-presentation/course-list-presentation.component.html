@@ -1,7 +1,9 @@
 <div class="container my-3 d-flex flex-column">
   <div class="w-100" *ngIf="course">
-    <button class="btn btn-primary float-right mb-3" [routerLink]="['/courses/add']"><i
-        class="fas fa-plus"></i>&nbsp;Make New Course</button>
+    <!-- <button class="btn btn-primary float-right mb-3" [routerLink]="['/courses/add']"><i
+        class="fas fa-plus"></i>&nbsp;Make New Course</button> -->
+        <button class="btn btn-primary float-right mb-3" (click)="AddNewCourse()"><i
+          class="fas fa-plus"></i>&nbsp;Make New Course</button>
     <table class="table table-stripede border border-secondary ">
       <thead>
         <th>Sr.No.</th>
