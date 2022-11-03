@@ -50,6 +50,204 @@
       "courseImage": "C:\\fakepath\\1rivet.jfif",
       "courseImageName": "",
       "courseImageString": ""
+    },
+    {
+      "id": 10,
+      "courseName": "csdcs",
+      "courseDetails": "sds",
+      "courseDuration": "11:11",
+      "courseImage": "C:\\fakepath\\google.jpg",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 11,
+      "courseName": "cscds",
+      "courseDetails": "dscdsc",
+      "courseDuration": "11:11",
+      "courseImage": "C:\\fakepath\\m.jpeg",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 12,
+      "courseName": "dsdc",
+      "courseDetails": "sdcsdc",
+      "courseDuration": "11:01",
+      "courseImage": "C:\\fakepath\\google.jpg",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 13,
+      "courseName": "dwvcsd",
+      "courseDetails": "csdcsdc",
+      "courseDuration": "11:11",
+      "courseImage": "C:\\fakepath\\google.jpg",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 14,
+      "courseName": "csddcsd",
+      "courseDetails": "csdc",
+      "courseDuration": "11:11",
+      "courseImage": "C:\\fakepath\\apple_Logo.webp",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 15,
+      "courseName": "q",
+      "courseDetails": "dss",
+      "courseDuration": "01:11",
+      "courseImage": "C:\\fakepath\\m.jpeg",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 16,
+      "courseName": "dcd",
+      "courseDetails": "ddd",
+      "courseDuration": "11:01",
+      "courseImage": "C:\\fakepath\\google.jpg",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 17,
+      "courseName": "www",
+      "courseDetails": "www",
+      "courseDuration": "11:11",
+      "courseImage": "C:\\fakepath\\m.jpeg",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 18,
+      "courseName": "sdsd",
+      "courseDetails": "dsds",
+      "courseDuration": "11:01",
+      "courseImage": "C:\\fakepath\\google.jpg",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 19,
+      "courseName": "sss",
+      "courseDetails": "sss",
+      "courseDuration": "11:11",
+      "courseImage": "C:\\fakepath\\apple_Logo.webp",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 20,
+      "courseName": "sss",
+      "courseDetails": "sss",
+      "courseDuration": "11:11",
+      "courseImage": "C:\\fakepath\\apple_Logo.webp",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 21,
+      "courseName": "sss",
+      "courseDetails": "sss",
+      "courseDuration": "11:11",
+      "courseImage": "C:\\fakepath\\apple_Logo.webp",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 22,
+      "courseName": "sss",
+      "courseDetails": "sss",
+      "courseDuration": "11:11",
+      "courseImage": "C:\\fakepath\\apple_Logo.webp",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 23,
+      "courseName": "sss",
+      "courseDetails": "sss",
+      "courseDuration": "11:11",
+      "courseImage": "C:\\fakepath\\apple_Logo.webp",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 24,
+      "courseName": "sss",
+      "courseDetails": "sss",
+      "courseDuration": "11:11",
+      "courseImage": "C:\\fakepath\\apple_Logo.webp",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 25,
+      "courseName": "sss",
+      "courseDetails": "sss",
+      "courseDuration": "11:11",
+      "courseImage": "C:\\fakepath\\apple_Logo.webp",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 26,
+      "courseName": "sss",
+      "courseDetails": "sss",
+      "courseDuration": "11:11",
+      "courseImage": "C:\\fakepath\\apple_Logo.webp",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 27,
+      "courseName": "sss",
+      "courseDetails": "sss",
+      "courseDuration": "11:11",
+      "courseImage": "C:\\fakepath\\apple_Logo.webp",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 28,
+      "courseName": "sss",
+      "courseDetails": "sss",
+      "courseDuration": "11:11",
+      "courseImage": "C:\\fakepath\\apple_Logo.webp",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 29,
+      "courseName": "sss",
+      "courseDetails": "sss",
+      "courseDuration": "11:11",
+      "courseImage": "C:\\fakepath\\apple_Logo.webp",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 30,
+      "courseName": "sss",
+      "courseDetails": "sss",
+      "courseDuration": "11:11",
+      "courseImage": "C:\\fakepath\\apple_Logo.webp",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 31,
+      "courseName": "rffsd",
+      "courseDetails": "sdgvsd",
+      "courseDuration": "11:11",
+      "courseImage": "C:\\fakepath\\google.jpg",
+      "courseImageName": "",
+      "courseImageString": ""
     }
   ],
   "registrationData": [
@@ -80,6 +278,76 @@
       "emailId": "arpantandel@gmail.com",
       "password": "Arpan@123",
       "id": 4
+    },
+    {
+      "firstname": "",
+      "lastname": "",
+      "emailId": "",
+      "password": "",
+      "country": "India",
+      "state": "Gujarat",
+      "city": "Ahmedabad",
+      "id": 5
+    }
+  ],
+  "countries": [
+    {
+      "id": 1,
+      "name": "India"
+    }
+  ],
+  "states": [
+    {
+      "id": 1,
+      "name": "Gujarat",
+      "country": "India"
+    },
+    {
+      "id": 2,
+      "name": "Maharashtra",
+      "country": "India"
+    },
+    {
+      "id": 3,
+      "name": "Rajasthan",
+      "country": "India"
+    }
+  ],
+  "cities": [
+    {
+      "id": 1,
+      "name": "Ahmedabad",
+      "state": "Gujarat"
+    },
+    {
+      "id": 2,
+      "name": "Rajkot",
+      "state": "Gujarat"
+    },
+    {
+      "id": 3,
+      "name": "Gandhinagar",
+      "state": "Gujarat"
+    },
+    {
+      "id": 4,
+      "name": "Mumbai",
+      "state": "Maharashtra"
+    },
+    {
+      "id": 5,
+      "name": "Pune",
+      "state": "Maharashtra"
+    },
+    {
+      "id": 6,
+      "name": "Udaipur",
+      "state": "Rajasthan"
+    },
+    {
+      "id": 7,
+      "name": "Jaipur",
+      "state": "Rajasthan"
     }
   ]
 }

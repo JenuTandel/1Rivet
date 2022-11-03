@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
-import { Course } from './course.model';
+import { BehaviorSubject, map, Observable, Subject } from 'rxjs';
+import { Course, Pagination } from './course.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +16,13 @@ export class CourseService {
     private http: HttpClient
   ) { }
 
-  public getCourses(): Observable<Course[]> {
-    return this.http.get<Course[]>(this.serviceUrl + 'courseDetails');
+  public getCourses(page: any): Observable<any> {
+    return this.http.get(`${this.serviceUrl}courseDetails?_page=${page.pageNumber}&_limit=${page.pageSize}`);
+    // const url = '//hn.algolia.com/api/v1/search';
+    // return this.http.get(url,page).pipe(map((data:any)=>{
+    //   debugger
+    //   return data.hits
+    // }));
   }
   public sendData(data: Course): void {
     this.updateData.next(data);

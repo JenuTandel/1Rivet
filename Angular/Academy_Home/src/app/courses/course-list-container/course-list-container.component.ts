@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { Course } from '../course.model';
+import { Course, Pagination } from '../course.model';
 import { CourseService } from '../course.service';
 
 @Component({
@@ -10,28 +10,41 @@ import { CourseService } from '../course.service';
 })
 export class CourseListContainerComponent implements OnInit {
 
+  // throttle = 0;
+  // distance = 2;
+  // page = 1;
+  // pageSize = 10;
+
   public orderDataList$!: Observable<Course[]>;
 
   public message: Subject<string> = new Subject();
 
   public message$: Observable<string>;
-
+  public tableProperty:Pagination;
 
   constructor(
     private courseService: CourseService
   ) {
     this.message$ = this.message.asObservable();
+    this.tableProperty = new Pagination();
   }
 
   ngOnInit() {
-    this.orderDataList$= this.courseService.getCourses();
+    // this.getOrderDtails();
   }
   public deleteCourse(courseId: number): void {
     this.courseService.deleteCourse(courseId).subscribe(response => {
       if (response) {
         this.message.next('delete');
-        this.orderDataList$ = this.courseService.getCourses();
+        this.orderDataList$ = this.courseService.getCourses(this.tableProperty);
       }
     });
   }
+
+  getCourseDetails(tableProperty:Pagination){
+    this.tableProperty = tableProperty;
+    this.orderDataList$= this.courseService.getCourses(tableProperty);
+
+  }
+ 
 }

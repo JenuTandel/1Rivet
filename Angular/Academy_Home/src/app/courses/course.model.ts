@@ -5,4 +5,9 @@ export class Course {
     public courseDuration?: string;
     public courseImageString?:string;
     public courseImageName?:string;
+    public hits?:any[];
+}
+export class Pagination{
+    public pageSize!:number;
+    public pageNumber!:number;
 }

@@ -9,7 +9,7 @@ import { CourseListContainerComponent } from './course-list-container/course-lis
 import { CourseFormPresentationComponent } from './course-form-container/course-form-presentation/course-form-presentation.component';
 import { CourseListPresentationComponent } from './course-list-container/course-list-presentation/course-list-presentation.component';
 import { CourseService } from './course.service';
-import { SharedModule } from '../shared/shared.module';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -23,6 +23,7 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     CoursesRoutingModule,
     ReactiveFormsModule,
+    InfiniteScrollModule
   ],
   providers:[CourseService]
 })

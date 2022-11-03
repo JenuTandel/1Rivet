@@ -9,7 +9,28 @@
                 <input type="text" class="form-control mb-3" placeholder="Lastname" formControlName="lastname">
                 <input type="text" class="form-control mb-3" placeholder="Email" formControlName="emailId">
                 <input type="password" class="form-control mb-3" placeholder="Password" formControlName="password">
-                <button class="form-control bg-secondary text-white mb-3 border-0" type="button" (click)="onRegister()">Create Account</button>
+                
+                <label class="textwhite">Country</label>
+                <select placeholder="Phantasyland" formControlName="country" (change)="selectCountry($event)">
+                    <option value="">Select Country</option>
+                    <option *ngFor="let country of countryList">{{country.name}} </option>
+                </select>
+                <br>
+                <label class="textwhite">State</label>
+                <select placeholder="Phantasyland" formControlName="state" (change)="selectState($event)">
+                    <option value="">Select State</option>
+                    <option *ngFor="let state of stateList">{{state.name}} </option>
+                </select>
+                <br>
+                <label class="textwhite">City</label>
+                <select placeholder="Anycity" formControlName="city" class="mb-3">
+                    <option value="">Select City</option>
+                    <option *ngFor="let city of cityList">{{city.name}} </option>
+                </select>
+
+
+                <button class="form-control bg-secondary text-white mb-3 border-0" type="button"
+                    (click)="onRegister()">Create Account</button>
                 <div class="text-center text-white">
                     Already Logged In???
                     <a routerLink="../login" class="text-danger">Click Here</a>
