@@ -17,13 +17,14 @@ import { CourseFormPresenterService } from '../course-form-presenter/course-form
 export class CourseFormPresentationComponent implements OnInit {
 
   public courseForm: FormGroup;
-  private _courseData!: Course;
+ 
   @Output() add: EventEmitter<Course>;
   @Output() update: EventEmitter<Course>;
   private destroy: Subject<void>;
   public imageFile!:File;
   public base64:any;
   public image:any;
+  private _courseData!: Course;
 
   @Input() set courseDetails(value: Course | null) {
     if (value) {
@@ -36,6 +37,7 @@ export class CourseFormPresentationComponent implements OnInit {
   get courseDetails(): Course {
     return this._courseData;
   }
+
 
   constructor(private coursePresenter: CourseFormPresenterService, private toastr: ToastrService,
     private courseContainer: CourseFormContainerComponent, private router: Router,

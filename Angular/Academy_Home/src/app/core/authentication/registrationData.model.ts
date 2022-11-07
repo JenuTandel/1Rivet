@@ -7,7 +7,14 @@ export class RegistrationData{
     country!:string;
     state!:string;
     city!:string;
+    fullname!:string;
+    skills!:Skills[]
 }
+
+export class Skills {
+    skill!: string;
+}
+
 export class Country{
     id!:number;
     name!:string;
@@ -16,9 +23,11 @@ export class Country{
 export class State{
     id!:number;
     name!:string;
+    country!:string;
 }
 
 export class City{
     id!:number;
     name!:string;
+    state!:string;
 }

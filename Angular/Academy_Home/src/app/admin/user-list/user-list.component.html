@@ -3,18 +3,25 @@
     <table class="table table-stripede border border-secondary ">
         <thead>
             <tr>
-                <th>FirstName</th>
-                <th>LastName</th>
+                <th>FullName</th>
+                <!-- <th>FirstName</th>
+                <th>LastName</th> -->
                 <th>Email ID</th>
-                <th>Password</th>
+                <!-- <th>Password</th> -->
+                <th>Country</th>
+                <th>State</th>
+                <th>City</th>
             </tr>
         </thead>
         <tbody class="border">
             <tr *ngFor="let user of userList">
-                <td>{{user.firstname}}</td>
-                <td>{{user.lastname}}</td>
+                <td>{{user.fullname}}</td>
+                <!-- <td>{{user.lastname}}</td> -->
                 <td>{{user.emailId}}</td>
-                <td>{{user.password}}</td>
+                <!-- <td>{{user.password}}</td> -->
+                <td>{{user.country}}</td>
+                <td>{{user.state}}</td>
+                <td>{{user.city}}</td>
             </tr>
         </tbody>
     </table>

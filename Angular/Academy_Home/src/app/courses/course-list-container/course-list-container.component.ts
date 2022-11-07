@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
+import { CourseFormPresenterService } from '../course-form-container/course-form-presenter/course-form-presenter.service';
 import { Course, Pagination } from '../course.model';
 import { CourseService } from '../course.service';
 
@@ -10,6 +11,8 @@ import { CourseService } from '../course.service';
 })
 export class CourseListContainerComponent implements OnInit {
 
+  public patchdata$: Observable<Course>;
+  private patchdata: Subject<Course> = new Subject();
   // throttle = 0;
   // distance = 2;
   // page = 1;
@@ -20,13 +23,15 @@ export class CourseListContainerComponent implements OnInit {
   public message: Subject<string> = new Subject();
 
   public message$: Observable<string>;
-  public tableProperty:Pagination;
+  public tableProperty: Pagination;
 
   constructor(
-    private courseService: CourseService
+    private courseService: CourseService,
+    // private courseFormPresenterService:CourseFormPresenterService
   ) {
     this.message$ = this.message.asObservable();
     this.tableProperty = new Pagination();
+    this.patchdata$ = this.patchdata.asObservable();
   }
 
   ngOnInit() {
@@ -41,10 +46,16 @@ export class CourseListContainerComponent implements OnInit {
     });
   }
 
-  getCourseDetails(tableProperty:Pagination){
+  getCourseDetails(tableProperty: Pagination) {
     this.tableProperty = tableProperty;
-    this.orderDataList$= this.courseService.getCourses(tableProperty);
-
+    this.orderDataList$ = this.courseService.getCourses(tableProperty);
   }
- 
+
+  public getCourseById(courseId: number): void {
+    this.courseService.getCoursesById(courseId).subscribe((res) => {
+      if (res) {
+        this.patchdata.next(res)
+      }
+    });
+  }
 }

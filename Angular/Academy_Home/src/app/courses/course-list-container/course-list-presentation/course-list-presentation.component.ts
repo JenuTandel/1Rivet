@@ -18,7 +18,6 @@ export class CourseListPresentationComponent implements OnInit, AfterContentChec
     if (baseResponse) {
       // this._baseResponse.map((item)=>{
       //   console.log(item.hits);
-        
       // })
       debugger
       this._baseResponse = this._baseResponse.concat(baseResponse);
@@ -36,7 +35,9 @@ export class CourseListPresentationComponent implements OnInit, AfterContentChec
 
   @Output() public deleteEvent: EventEmitter<number> = new EventEmitter<number>();
 
-  @Output() public getCourseDetails:EventEmitter<Pagination>;
+  @Output() public getCourseDetails: EventEmitter<Pagination>;
+
+  @Output() public courseId: EventEmitter<number> = new EventEmitter<number>();
   constructor(
     private dialogService: DialogService,
     private courseListPresenterService: CourseListPresenterService,
@@ -62,21 +63,21 @@ export class CourseListPresentationComponent implements OnInit, AfterContentChec
   }
   public deleteCourse(deleteId?: number): void {
     this.deleteEvent.emit(deleteId);
-    // this.courseContainer.message$.subscribe((response) => {
-    //   if (response.toLowerCase() === 'delete') {
-    //     this.toastr.success('Course delete successfully', 'Success');
-    //   }
-    //   this.router.navigate(['/courses/list']);
-    // });
+  }
+
+  public updateCourse(courseId?: any): void {
+    this.courseId.emit(courseId);
+    // this.courseListPresenterService.getCourseById(courseId);
+    // this.dialogService.openDialog(CourseFormContainerComponent);
   }
 
   AddNewCourse() {
     this.dialogService.openDialog(CourseFormContainerComponent)
   }
 
-  onScroll(){
+  onScroll() {
     this.tableProperty.pageNumber++;
     this.getCourseDetails.emit(this.tableProperty);
-    
+
   }
 }

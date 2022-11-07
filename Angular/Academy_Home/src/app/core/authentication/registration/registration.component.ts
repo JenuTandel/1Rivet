@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { __values } from 'tslib';
 import { RegistrationService } from '../registration.service';
 import { City, Country, RegistrationData, State } from '../registrationData.model';
+import * as CryptoJS from 'crypto-js';
 
 @Component({
   selector: 'app-registration',
@@ -28,10 +29,7 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit(): void {
     this.registrationService.getCountries().subscribe((res)=>{
-      console.log(res);
       this.countryList = res;
-      console.log(this.countryList);
-      
     })
     this.registrationForm = this.formBuilder.group(
       {
@@ -41,11 +39,15 @@ export class RegistrationComponent implements OnInit {
         password: [''],
         country:[''],
         state:[''],
-        city:['']
+        city:[''],
+        skills:this.formBuilder.array([this.skillField])
       }
     )
   }
   onRegister() {
+    this.registrationForm.controls['password'].setValue(CryptoJS.AES.encrypt(JSON.stringify(this.registrationForm.controls['password'].value),'password').toString())
+    // console.log(CryptoJS.AES.encrypt(this.registrationForm.controls['password'].value,'password').toString());
+    
     if(this.registrationForm.valid){
       this.registrationService.AddUser(this.registrationForm.value).subscribe((res)=>{
       })
@@ -68,6 +70,25 @@ export class RegistrationComponent implements OnInit {
     this.registrationService.getCitiesByState().subscribe((res)=>{
       this.cityList = res.filter((i: any) => i.state == this.value)
     })
-    
+  }
+
+  skillField(): FormGroup {
+    return this.formBuilder.group({
+      skill: [''],
+    })
+  }
+
+  get skill() {
+    return this.registrationForm.controls['skills'] as FormArray;
+  }
+
+  addSkills() {
+    this.skill.push(this.skillField())
+  }
+
+  deleteSkills(index:number){
+    if(this.skill.length !=1){
+      this.skill.removeAt(index)
+    }
   }
 }

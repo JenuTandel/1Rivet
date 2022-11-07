@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserListComponent } from './admin/user-list/user-list.component';
 import { SharedModule } from './shared/shared.module';
+import { RegistrationService } from './core/authentication/registration.service';
 @NgModule({
   declarations: [
     AppComponent,

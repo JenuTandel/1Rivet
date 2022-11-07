@@ -255,39 +255,59 @@
       "firstname": "Jinal",
       "lastname": "Tandel",
       "emailId": "jinaltandel06@gmail.com",
-      "password": "12345678",
+      "password": "U2FsdGVkX18g3jAnMPbuPXuxIXYO9xoDEDXhfhbLrmQ=",
+      "country": "India",
+      "state": "Gujarat",
+      "city": "Ahmedabad",
       "id": 1
     },
     {
       "firstname": "Hetal",
       "lastname": "Tandel",
       "emailId": "hetaltandel@gmail.com",
-      "password": "1234567890",
+      "password": "U2FsdGVkX1+SX9ahtjReUxH9kkEVhFLW+UXYqnLd80k=",
+      "country": "India",
+      "state": "Rajasthan",
+      "city": "Udaipur",
       "id": 2
-    },
-    {
-      "firstname": "Vini",
-      "lastname": "Patel",
-      "emailId": "vini4196@gmail.com",
-      "password": "vini4196",
-      "id": 3
     },
     {
       "firstname": "Arpan",
       "lastname": "Tandel",
       "emailId": "arpantandel@gmail.com",
-      "password": "Arpan@123",
-      "id": 4
+      "password": "U2FsdGVkX1/EqJV05qVKYfrbMjwQSfcdX63H76NWm3Y=",
+      "country": "India",
+      "state": "Maharashtra",
+      "city": "Pune",
+      "id": 3
     },
     {
       "firstname": "",
       "lastname": "",
       "emailId": "",
-      "password": "",
-      "country": "India",
-      "state": "Gujarat",
-      "city": "Ahmedabad",
-      "id": 5
+      "password": "U2FsdGVkX18gEuxe+XWRAidm3ZETcSRnRLlXNj0oASo=",
+      "country": "",
+      "state": "",
+      "city": "",
+      "skills": [
+        null,
+        {
+          "skill": ""
+        },
+        {
+          "skill": ""
+        },
+        {
+          "skill": ""
+        },
+        {
+          "skill": ""
+        },
+        {
+          "skill": ""
+        }
+      ],
+      "id": 4
     }
   ],
   "countries": [

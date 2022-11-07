@@ -6,6 +6,8 @@ import { LoginComponent } from './authentication/login/login.component';
 import { RegistrationComponent } from './authentication/registration/registration.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RegistrationService } from './authentication/registration.service';
+import { UserDataAdapter } from './authentication/userdata.adapter';
 
 @NgModule({
   declarations: [
@@ -24,5 +26,6 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     RegistrationComponent,
   ],
+  providers:[RegistrationService, UserDataAdapter]
 })
 export class CoreModule { }

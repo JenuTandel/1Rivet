@@ -25,7 +25,10 @@
           <td>{{course.courseDetails}}</td>
           <td>{{course.courseDuration}}</td>
           <td class="text-center">
-            <button class="btn btn-outline-primary m-1" [routerLink]="['/courses/edit/'+course.id]">
+            <!-- <button class="btn btn-outline-primary m-1" [routerLink]="['/courses/edit/'+course.id]">
+              Edit
+            </button> -->
+            <button class="btn btn-outline-primary m-1" (click)="updateCourse(course.id)">
               Edit
             </button>
             <button class="btn btn-outline-danger m-1" (click)="deleteCourse(course.id)">
