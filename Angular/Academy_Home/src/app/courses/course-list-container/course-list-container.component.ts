@@ -11,7 +11,7 @@ import { CourseService } from '../course.service';
 })
 export class CourseListContainerComponent implements OnInit {
 
-  public patchdata$: Observable<Course>;
+  public patchdata$: Observable<any>;
   private patchdata: Subject<Course> = new Subject();
   // throttle = 0;
   // distance = 2;
@@ -51,11 +51,7 @@ export class CourseListContainerComponent implements OnInit {
     this.orderDataList$ = this.courseService.getCourses(tableProperty);
   }
 
-  public getCourseById(courseId: number): void {
-    this.courseService.getCoursesById(courseId).subscribe((res) => {
-      if (res) {
-        this.patchdata.next(res)
-      }
-    });
+  public getCourseById(course: any): void {
+    this.patchdata$ = this.courseService.getCoursesById(course.id);
   }
 }

@@ -15,6 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserListComponent } from './admin/user-list/user-list.component';
 import { SharedModule } from './shared/shared.module';
 import { RegistrationService } from './core/authentication/registration.service';
+import { CourseListPresenterService } from './courses/course-list-container/course-list-presenter/course-list-presenter.service';
+import { CoursesModule } from './courses/courses.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,7 @@ import { RegistrationService } from './core/authentication/registration.service'
     SharedModule,
     HttpClientModule,
     NgxWebstorageModule.forRoot(),
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

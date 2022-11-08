@@ -27,8 +27,9 @@
             <div *ngIf="this.courseForm.controls['courseImage'].errors?.['required']">Course Image File is required
             </div>
         </div>
-        <img [src]="base64" height="100px" width="100px">
+        <img [src]="base64" height="100px" width="100px" class="mb-2"><br>
         <button type="submit" class="btn btn-success me-2">Submit</button>
-        <button type="button" class="btn btn-warning">Reset</button>
+        <button type="button" class="btn btn-warning me-2">Reset</button>
+        <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancel</button>
     </form>
 </div>

@@ -6,6 +6,7 @@ import { Subject } from 'rxjs';
 @Injectable()
 export class DialogService {
   public closeDialog: Subject<boolean>;
+  public instance:any;
 
   constructor(private overlay: Overlay) {
     this.closeDialog = new Subject();
@@ -26,17 +27,19 @@ export class DialogService {
     });
 
     const portal = new ComponentPortal(component);
-   const instance = overlayRef.attach(portal);
+    this.instance = overlayRef.attach(portal);
 
     // Close the dialog using backdropClick()
     overlayRef.backdropClick().subscribe(() => {
       overlayRef.detach()
     })
 
-    this.closeDialog.subscribe(() => {
-      overlayRef.detach();
+    this.closeDialog.subscribe((res) => {
+      if(res == true){
+        overlayRef.detach();
+      }
     })
 
-    return instance;
+    return this.instance;
   }
 }

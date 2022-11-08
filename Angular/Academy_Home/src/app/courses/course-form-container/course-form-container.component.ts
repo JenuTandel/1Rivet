@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { filter, Observable, Subject, switchMap } from 'rxjs';
 import { Course } from '../course.model';
@@ -21,12 +21,13 @@ export class CourseFormContainerComponent implements OnInit {
   public message: Subject<string> = new Subject();
 
   public message$: Observable<string>;
-
   constructor(private courseService: CourseService, private activatedRoute: ActivatedRoute) {
     this.message$ = this.message.asObservable();
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    // this.patchData();
+  }
 
   public addCourse(course: Course): void {
 
@@ -47,6 +48,12 @@ export class CourseFormContainerComponent implements OnInit {
       }
     });
   }
+
+  // public patchData(): void {
+  //   this.courseListPresenterService.patchdata$.subscribe((res) => {
+  //     console.log(res);
+  //   })
+  // }
 
 
 }

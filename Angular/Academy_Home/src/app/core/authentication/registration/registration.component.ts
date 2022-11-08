@@ -40,7 +40,7 @@ export class RegistrationComponent implements OnInit {
         country:[''],
         state:[''],
         city:[''],
-        skills:this.formBuilder.array([this.skillField])
+        skills:this.formBuilder.array([this.skillField()])
       }
     )
   }

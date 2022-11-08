@@ -12,7 +12,7 @@ import { CourseFormPresenterService } from '../course-form-presenter/course-form
   selector: 'app-course-form-presentation',
   templateUrl: './course-form-presentation.component.html',
   styleUrls: ['./course-form-presentation.component.scss'],
-  viewProviders: [CourseFormPresenterService]
+  viewProviders:[CourseFormPresenterService]
 })
 export class CourseFormPresentationComponent implements OnInit {
 
@@ -38,6 +38,9 @@ export class CourseFormPresentationComponent implements OnInit {
     return this._courseData;
   }
 
+  // @Input() set patchData(){
+
+  // }
 
   constructor(private coursePresenter: CourseFormPresenterService, private toastr: ToastrService,
     private courseContainer: CourseFormContainerComponent, private router: Router,
@@ -86,5 +89,9 @@ export class CourseFormPresentationComponent implements OnInit {
     reader.onload = () => {
       this.base64 = String(reader.result);
     }
+  }
+
+  onCancel(){
+    this.dialogService.closeDialog.next(true);
   }
 }

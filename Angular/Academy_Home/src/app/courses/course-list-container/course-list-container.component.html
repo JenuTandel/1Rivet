@@ -2,7 +2,13 @@
 [infiniteScrollDistance]="distance"
 [infiniteScrollThrottle]="throttle"
 (scrolled)="onScroll()"> -->
-<app-course-list-presentation [baseResponse]="orderDataList$ | async" (deleteEvent)="deleteCourse($event)"
+<app-course-list-presentation [baseResponse]="orderDataList$ | async"
+[patchData]="patchdata$ | async"
+ (deleteEvent)="deleteCourse($event)"
     (getCourseDetails)="getCourseDetails($event)" (courseId)="getCourseById($event)">
 </app-course-list-presentation>
+
+<!-- <app-course-list-presentation [baseResponse]="orderDataList$ | async" (deleteEvent)="deleteCourse($event)"
+    (getCourseDetails)="getCourseDetails($event)">
+</app-course-list-presentation> -->
 <!-- </div> -->

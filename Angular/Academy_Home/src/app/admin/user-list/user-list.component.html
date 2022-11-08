@@ -11,6 +11,7 @@
                 <th>Country</th>
                 <th>State</th>
                 <th>City</th>
+                <th>Skills</th>
             </tr>
         </thead>
         <tbody class="border">
@@ -22,6 +23,11 @@
                 <td>{{user.country}}</td>
                 <td>{{user.state}}</td>
                 <td>{{user.city}}</td>
+                <!-- <td>{{user.skills}}</td> -->
+                <!-- <div *ngFor="let i for user.skills">
+                    <td>{{i.skill}}</td>
+                </div> -->
+                <td *ngFor="let i of user?.skills">{{i?.skill}}</td>
             </tr>
         </tbody>
     </table>

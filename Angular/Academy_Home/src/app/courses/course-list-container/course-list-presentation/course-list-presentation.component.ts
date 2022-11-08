@@ -4,6 +4,8 @@ import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/core/authentication/auth.service';
 import { DialogService } from 'src/app/shared/dialog.service';
 import { CourseFormContainerComponent } from '../../course-form-container/course-form-container.component';
+import { CourseFormPresentationComponent } from '../../course-form-container/course-form-presentation/course-form-presentation.component';
+import { CourseFormPresenterService } from '../../course-form-container/course-form-presenter/course-form-presenter.service';
 import { Course, Pagination } from '../../course.model';
 import { CourseListPresenterService } from '../course-list-presenter/course-list-presenter.service';
 
@@ -27,7 +29,25 @@ export class CourseListPresentationComponent implements OnInit, AfterContentChec
   public get baseResponse(): Course[] {
     return this._baseResponse;
   }
+
+  @Input() public set patchData(baseResponse: Course | null) {
+    if (baseResponse) {
+      this._patchData = baseResponse
+      setTimeout(() => {
+        const patchData = this.dialogService.openDialog(CourseFormContainerComponent);
+        console.log(patchData.instance);
+        patchData.instance.courseForm.patchValue(this._patchData) 
+
+      }, 500);
+      console.log(this._patchData);
+    }
+  }
+  public get patchData(): Course {
+    return this._patchData;
+  }
   private _baseResponse: Course[];
+  private _patchData!: Course;
+
   public course: boolean = false;
   public tableProperty: Pagination;
   distance = 2;
@@ -65,10 +85,13 @@ export class CourseListPresentationComponent implements OnInit, AfterContentChec
     this.deleteEvent.emit(deleteId);
   }
 
-  public updateCourse(courseId?: any): void {
-    this.courseId.emit(courseId);
-    // this.courseListPresenterService.getCourseById(courseId);
-    // this.dialogService.openDialog(CourseFormContainerComponent);
+  public EditCourse(course: any): void {
+    debugger
+    this.courseId.emit(course);
+    // this.courseListPresenterService.getCourseById(course.id);
+   
+    // patchData.instance.updateCourse(course);
+    // patchData.instance.courseForm.patchValue(course) 
   }
 
   AddNewCourse() {

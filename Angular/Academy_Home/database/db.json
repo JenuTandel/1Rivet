@@ -1,10 +1,7 @@
 {
   "courseDetails": [
     {
-      "id": 3,
-      "courseName": "Jbkjsnvd",
-      "courseDetails": "sdvsdv",
-      "courseDuration": "13:17"
+      "id": 3
     },
     {
       "id": 5,
@@ -242,10 +239,19 @@
     },
     {
       "id": 31,
-      "courseName": "rffsd",
-      "courseDetails": "sdgvsd",
-      "courseDuration": "11:11",
+      "courseName": "asdcass",
+      "courseDetails": "sss",
+      "courseDuration": "11:01",
       "courseImage": "C:\\fakepath\\google.jpg",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 32,
+      "courseName": "csdc",
+      "courseDetails": "dcsd",
+      "courseDuration": "11:22",
+      "courseImage": "C:\\fakepath\\apple_Logo.webp",
       "courseImageName": "",
       "courseImageString": ""
     }
@@ -282,32 +288,38 @@
       "id": 3
     },
     {
-      "firstname": "",
-      "lastname": "",
-      "emailId": "",
-      "password": "U2FsdGVkX18gEuxe+XWRAidm3ZETcSRnRLlXNj0oASo=",
-      "country": "",
-      "state": "",
-      "city": "",
+      "firstname": "Kiran",
+      "lastname": "Gandhi",
+      "emailId": "kiran@gmail.com",
+      "password": "U2FsdGVkX18sW4jf29dUDvvaGJpBqBL7MPNLXQUM+pY=",
+      "country": "India",
+      "state": "Maharashtra",
+      "city": "Mumbai",
       "skills": [
         null,
         {
-          "skill": ""
-        },
-        {
-          "skill": ""
-        },
-        {
-          "skill": ""
-        },
-        {
-          "skill": ""
-        },
-        {
-          "skill": ""
+          "skill": "Reading"
         }
       ],
       "id": 4
+    },
+    {
+      "firstname": "Kiran",
+      "lastname": "Gandhi",
+      "emailId": "kiran@gmail.com",
+      "password": "U2FsdGVkX1+AiARK8cqrOvsknrPrHO2b3A6rNQaTKPw=",
+      "country": "India",
+      "state": "Maharashtra",
+      "city": "Pune",
+      "skills": [
+        {
+          "skill": "aaa"
+        },
+        {
+          "skill": "aaab"
+        }
+      ],
+      "id": 5
     }
   ],
   "countries": [
