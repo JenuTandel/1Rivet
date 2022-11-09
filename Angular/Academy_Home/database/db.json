@@ -261,65 +261,20 @@
       "firstname": "Jinal",
       "lastname": "Tandel",
       "emailId": "jinaltandel06@gmail.com",
-      "password": "U2FsdGVkX18g3jAnMPbuPXuxIXYO9xoDEDXhfhbLrmQ=",
+      "password": "U2FsdGVkX1+BUuE/nn7SVmkRCMeZjc/2esgEqSkQ3jA=",
       "country": "India",
       "state": "Gujarat",
       "city": "Ahmedabad",
-      "id": 1
-    },
-    {
-      "firstname": "Hetal",
-      "lastname": "Tandel",
-      "emailId": "hetaltandel@gmail.com",
-      "password": "U2FsdGVkX1+SX9ahtjReUxH9kkEVhFLW+UXYqnLd80k=",
-      "country": "India",
-      "state": "Rajasthan",
-      "city": "Udaipur",
-      "id": 2
-    },
-    {
-      "firstname": "Arpan",
-      "lastname": "Tandel",
-      "emailId": "arpantandel@gmail.com",
-      "password": "U2FsdGVkX1/EqJV05qVKYfrbMjwQSfcdX63H76NWm3Y=",
-      "country": "India",
-      "state": "Maharashtra",
-      "city": "Pune",
-      "id": 3
-    },
-    {
-      "firstname": "Kiran",
-      "lastname": "Gandhi",
-      "emailId": "kiran@gmail.com",
-      "password": "U2FsdGVkX18sW4jf29dUDvvaGJpBqBL7MPNLXQUM+pY=",
-      "country": "India",
-      "state": "Maharashtra",
-      "city": "Mumbai",
-      "skills": [
-        null,
-        {
-          "skill": "Reading"
-        }
-      ],
-      "id": 4
-    },
-    {
-      "firstname": "Kiran",
-      "lastname": "Gandhi",
-      "emailId": "kiran@gmail.com",
-      "password": "U2FsdGVkX1+AiARK8cqrOvsknrPrHO2b3A6rNQaTKPw=",
-      "country": "India",
-      "state": "Maharashtra",
-      "city": "Pune",
+      "phoneno": "(903) (398) (2833)3",
       "skills": [
         {
-          "skill": "aaa"
+          "skill": "Art and Craft"
         },
         {
-          "skill": "aaab"
+          "skill": "Dancing"
         }
       ],
-      "id": 5
+      "id": 1
     }
   ],
   "countries": [

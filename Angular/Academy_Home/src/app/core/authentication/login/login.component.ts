@@ -45,10 +45,11 @@ export class LoginComponent implements OnInit {
     }
     else {
       this.registrationService.getUser().subscribe((res) => {
+        console.log(this.loginForm.controls['email'].value);
         console.log(this.loginForm.controls['password'].value);
-        // res.find((data)=> console.log(((CryptoJS.AES.decrypt(data.password,'password')).toString(CryptoJS.enc.Utf8)).replace(/['"]+/g, '')))
         let user = res.find((data) => data.emailId === this.loginForm.controls['email'].value && ((CryptoJS.AES.decrypt(data.password,'password')).toString(CryptoJS.enc.Utf8)).replace(/['"]+/g, '') === this.loginForm.controls['password'].value);
         if (user) {
+          debugger
           localStorage.setItem('isAuthenticated', 'true')
           localStorage.setItem('user', JSON.stringify(user))
           this.router.navigateByUrl('courses');

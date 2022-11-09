@@ -1,16 +1,27 @@
-.logo{
-    height:100px;
-    width:200px
+.logo {
+    height: 100px;
+    width: 200px
 }
-form{
-    width:400px;
-    height:400px
+
+form {
+    width: 400px;
+    height: 600px
 }
-.bi-plus-circle-fill{
+
+.bi-plus-circle-fill {
     font-size: 30px;
     cursor: pointer;
 }
-.bi-x-circle-fill{
+
+.bi-x-circle-fill {
     font-size: 30px;
     cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
 }

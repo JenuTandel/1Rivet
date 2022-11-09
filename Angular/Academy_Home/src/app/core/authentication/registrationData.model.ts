@@ -8,6 +8,7 @@ export class RegistrationData{
     state!:string;
     city!:string;
     fullname!:string;
+    phoneno!:number;
     skills!:Skills[]
 }
 

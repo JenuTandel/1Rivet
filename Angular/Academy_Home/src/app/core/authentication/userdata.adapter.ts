@@ -10,6 +10,7 @@ export class UserDataAdapter{
         userdata.country = item.country;
         userdata.state = item.state;
         userdata.city = item.city;
+        userdata.phoneno = item.phoneno;
         userdata.skills = item.skills;
         userdata.fullname = item.firstname.concat(" "+item.lastname)
         

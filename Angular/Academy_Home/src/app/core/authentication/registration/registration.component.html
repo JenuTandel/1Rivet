@@ -10,29 +10,42 @@
                 <input type="text" class="form-control mb-3" placeholder="Email" formControlName="emailId">
                 <input type="password" class="form-control mb-3" placeholder="Password" formControlName="password">
 
-                <label class="textwhite">Country</label>
-                <select formControlName="country" (change)="selectCountry($event)">
-                    <option value="">Select Country</option>
-                    <option *ngFor="let country of countryList">{{country.name}} </option>
-                </select>
-                <br>
-                <label class="textwhite">State</label>
-                <select formControlName="state" (change)="selectState($event)">
-                    <option value="">Select State</option>
-                    <option *ngFor="let state of stateList">{{state.name}} </option>
-                </select>
-                <br>
-                <label class="textwhite">City</label>
-                <select formControlName="city" class="mb-3">
-                    <option value="">Select City</option>
-                    <option *ngFor="let city of cityList">{{city.name}} </option>
-                </select>
+                <table class="mb-3">
+                    <tr>
+                        <td><label class="text-white me-2">Country</label></td>
+                        <td><span class="text-white me-2">:</span><select formControlName="country" (change)="selectCountry($event)">
+                                <option value="">Select Country</option>
+                                <option *ngFor="let country of countryList">{{country.name}} </option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td><label class="text-white me-2">State</label></td>
+                        <td><span class="text-white me-2">:</span><select formControlName="state" (change)="selectState($event)">
+                                <option value="">Select State</option>
+                                <option *ngFor="let state of stateList">{{state.name}} </option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td><label class="text-white me-2">City</label></td>
+                        <td><span class="text-white me-2">:</span><select formControlName="city">
+                                <option value="">Select City</option>
+                                <option *ngFor="let city of cityList">{{city.name}} </option>
+                            </select></td>
+                    </tr>
+                </table>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">+91</span>
+                    <input type="text" class="form-control" placeholder="Mobile Number" formControlName="phoneno"
+                        appPhonemask>
+                </div>
 
                 <div formArrayName="skills" *ngFor="let skill of skill.controls; let i = index">
                     <div [formGroupName]="i">
-                        <input type="text" class="form-control" formControlName="skill" placeholder="Add your skill here" />
+                        <input type="text" class="form-control" formControlName="skill"
+                            placeholder="Add your skill here" />
                         <span class="bi bi-plus-circle-fill me-3 text-white" (click)="addSkills()"></span>
-                        <span *ngIf="registrationForm.value.skills.length > 1" class="bi bi-x-circle-fill text-danger" (click)="deleteSkills(i)"></span>
+                        <span *ngIf="registrationForm.value.skills.length > 1" class="bi bi-x-circle-fill text-danger"
+                            (click)="deleteSkills(i)"></span>
                     </div>
                 </div>
                 <button class="form-control bg-secondary text-white mb-3 border-0" type="button"

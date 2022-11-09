@@ -4,10 +4,11 @@ import { HeaderComponent } from './navbar/header/header.component';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './authentication/login/login.component';
 import { RegistrationComponent } from './authentication/registration/registration.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegistrationService } from './authentication/registration.service';
 import { UserDataAdapter } from './authentication/userdata.adapter';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { UserDataAdapter } from './authentication/userdata.adapter';
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule,
   ],
   exports: [
     HeaderComponent,
