@@ -23,9 +23,11 @@ export class AuthService {
     return this.userSubject.value;
   }
 
+  // loginpost(data:User):Observable<string>{
+  //   return this.http.post<string>(`${this.loginURL}`,data);
+  // }
   login(emailId: string, password: string) {
     return this.http.post<any>(`${this.loginURL}users/authenticate`, { emailId, password }).pipe(map((userData:User)=>{
-      userData.expirationTime = new Date((new Date().getTime())*60);
       userData.tokenId = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImppbmFsdGFuZGVsMDZAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0NTY3OCJ9.9vQp76GvDP0sh1BXA7hdyhDbXdQumzqsPuh-EemG0Vg";
       localStorage.setItem('user', JSON.stringify(userData));
       this.userSubject.next(userData);

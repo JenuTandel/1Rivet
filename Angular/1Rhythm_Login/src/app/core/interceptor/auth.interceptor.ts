@@ -6,7 +6,6 @@ import {
   HttpInterceptor
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { DatePipe } from '@angular/common';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
@@ -18,7 +17,6 @@ export class AuthInterceptor implements HttpInterceptor {
    }
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-
     // add authorization header with basic auth credentials if available
 
     let currentUser = JSON.parse(localStorage.getItem('user')!);

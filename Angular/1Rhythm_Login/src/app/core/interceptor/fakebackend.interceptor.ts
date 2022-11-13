@@ -7,7 +7,7 @@ import {
   HttpResponse,
   HTTP_INTERCEPTORS
 } from '@angular/common/http';
-import { mergeMap, Observable, of, throwError } from 'rxjs';
+import { Observable, of, throwError } from 'rxjs';
 
 @Injectable()
 export class FakebackendInterceptor implements HttpInterceptor {
@@ -19,7 +19,7 @@ export class FakebackendInterceptor implements HttpInterceptor {
     let testUser = { id: 1, emailId: 'jinaltandel06@gmail.com', password: '12345678' };
 
     // wrap in delayed observable to simulate server api call
-    return of(null).pipe(mergeMap(() => {
+    // return of(null).pipe(mergeMap(() => {
 
       // authenticate
       if (request.url.endsWith('/users/authenticate') && request.method === 'POST') {
@@ -36,8 +36,8 @@ export class FakebackendInterceptor implements HttpInterceptor {
         }
       }
       return next.handle(request);
-    })
-    )
+    // })
+    // )
   }
 }
 

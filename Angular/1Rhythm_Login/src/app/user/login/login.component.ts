@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { first } from 'rxjs';
 import { AuthService } from 'src/app/core/auth/auth.service';
 
 @Component({
@@ -23,6 +22,9 @@ export class LoginComponent implements OnInit {
     });
   }
   onSubmit() {
+    // this.authService.loginpost(this.loginForm.value).subscribe((response:string)=>{
+    //   console.log(response);
+    // })
     this.authService.login(this.loginForm.controls['emailId'].value, this.loginForm.controls['password'].value).subscribe((data)=>{
       this.router.navigateByUrl("home");
     });
