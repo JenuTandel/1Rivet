@@ -21,7 +21,6 @@ export class CourseListPresentationComponent implements OnInit, AfterContentChec
       // this._baseResponse.map((item)=>{
       //   console.log(item.hits);
       // })
-      debugger
       this._baseResponse = this._baseResponse.concat(baseResponse);
       // this._baseResponse.push(...baseResponse);
     }
@@ -65,7 +64,7 @@ export class CourseListPresentationComponent implements OnInit, AfterContentChec
     this._baseResponse = [];
     this.tableProperty = new Pagination();
     this.tableProperty.pageNumber = 1;
-    this.tableProperty.pageSize = 20;
+    this.tableProperty.pageSize = 15;
     this.getCourseDetails = new EventEmitter<Pagination>();
   }
   ngAfterContentChecked(): void {

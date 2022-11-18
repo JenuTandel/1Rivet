@@ -1,36 +1,6 @@
 {
   "courseDetails": [
     {
-      "id": 3
-    },
-    {
-      "id": 5,
-      "courseName": "Python",
-      "courseDetails": "Programming",
-      "courseDuration": "09:00",
-      "courseImage": "C:\\fakepath\\google.jpg",
-      "courseImageName": "",
-      "courseImageString": ""
-    },
-    {
-      "id": 6,
-      "courseName": "Python",
-      "courseDetails": "Programming",
-      "courseDuration": "09:00",
-      "courseImage": "C:\\fakepath\\google.jpg",
-      "courseImageName": "",
-      "courseImageString": ""
-    },
-    {
-      "id": 7,
-      "courseName": "cvc",
-      "courseDetails": "cvc",
-      "courseDuration": "11:01",
-      "courseImage": "C:\\fakepath\\m.jpeg",
-      "courseImageName": "",
-      "courseImageString": ""
-    },
-    {
       "id": 8,
       "courseName": "sdasd",
       "courseDetails": "sadasd",
@@ -252,6 +222,42 @@
       "courseDetails": "dcsd",
       "courseDuration": "11:22",
       "courseImage": "C:\\fakepath\\apple_Logo.webp",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 33,
+      "courseName": "ascscc",
+      "courseDetails": "sasasc",
+      "courseDuration": "00:11",
+      "courseImage": "C:\\fakepath\\m.jpeg",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 34,
+      "courseName": "sacasasc",
+      "courseDetails": "ascascasc",
+      "courseDuration": "11:22",
+      "courseImage": "C:\\fakepath\\m.jpeg",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 35,
+      "courseName": "sdcsdc",
+      "courseDetails": "sdcsdc",
+      "courseDuration": "11:11",
+      "courseImage": "C:\\fakepath\\google.jpg",
+      "courseImageName": "",
+      "courseImageString": ""
+    },
+    {
+      "id": 36,
+      "courseName": "aaaa",
+      "courseDetails": "asass",
+      "courseDuration": "11:11",
+      "courseImage": "C:\\fakepath\\1rivet.jfif",
       "courseImageName": "",
       "courseImageString": ""
     }

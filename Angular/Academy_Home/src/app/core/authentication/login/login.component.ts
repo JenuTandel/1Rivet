@@ -41,13 +41,16 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.controls['email'].value == 'admin@gmail.com' && this.loginForm.controls['password'].value == 'admin123') {
       localStorage.setItem('isAuthenticated', 'true')
       localStorage.setItem('role', 'admin');
-      this.router.navigateByUrl('admin')
+      this.router.navigateByUrl('home')
     }
     else {
+      // console.log("Hello");
+      
       this.registrationService.getUser().subscribe((res) => {
-        console.log(this.loginForm.controls['email'].value);
-        console.log(this.loginForm.controls['password'].value);
+       
         let user = res.find((data) => data.emailId === this.loginForm.controls['email'].value && ((CryptoJS.AES.decrypt(data.password,'password')).toString(CryptoJS.enc.Utf8)).replace(/['"]+/g, '') === this.loginForm.controls['password'].value);
+        console.log(user);
+        
         if (user) {
           debugger
           localStorage.setItem('isAuthenticated', 'true')

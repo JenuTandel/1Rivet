@@ -19,7 +19,7 @@ export class UserListComponent implements OnInit {
   ngOnInit(): void {
     this.registrationService.getUser().subscribe((res: any) => {
       this.userList = res;
-      console.log(res);
+      // console.log(res);
     })
   }
 }
