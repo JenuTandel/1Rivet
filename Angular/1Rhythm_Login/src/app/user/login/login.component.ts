@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { catchError } from 'rxjs';
 import { AuthService } from 'src/app/core/auth/auth.service';
-import { LoaderService } from 'src/app/shared/services/loader.service';
+import { LoaderService } from 'src/app/core/services/loader.service';
 import { ToastrMessageService } from 'src/app/shared/services/toastrMessage.service';
 
 @Component({

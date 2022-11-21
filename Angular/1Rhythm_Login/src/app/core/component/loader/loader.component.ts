@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { LoaderService } from 'src/app/shared/services/loader.service';
+import { AfterContentChecked, AfterViewChecked, AfterViewInit, Component, DoCheck, OnChanges, OnInit } from '@angular/core';
+import { LoaderService } from 'src/app/core/services/loader.service';
 
 @Component({
   selector: 'app-loader',
@@ -8,15 +8,30 @@ import { LoaderService } from 'src/app/shared/services/loader.service';
 })
 export class LoaderComponent implements OnInit {
 
-  public loaderValue:boolean;
-  constructor(private loaderService: LoaderService) { 
-    this.loaderValue = false;
-  }
-
-  ngOnInit(): void {
-      this.loaderService.status.subscribe((value)=>{
+  public loaderValue!: boolean;
+  constructor(private loaderService: LoaderService) {
+    // this.loaderValue = false;
+    this.loaderService.status$.subscribe((value) => {
+      console.log(value);
+      
       this.loaderValue = value;
     })
   }
 
+  ngOnInit(): void {
+
+  }
+
+  // ngOnChanges():void{
+  //   this.loaderService.status$.subscribe((value)=>{
+  //     this.loaderValue = value;
+  //   })
+  // }
+
+
+  // ngDoCheck(): void {
+  //   this.loaderService.status.subscribe((res) => {
+  //     this.loaderValue = res;
+  //   })
+  // }
 }

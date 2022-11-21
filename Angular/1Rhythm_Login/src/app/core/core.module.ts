@@ -8,6 +8,7 @@ import { MasterComponent } from './component/master/master.component';
 import { RouterModule } from '@angular/router';
 import { fakeBackendProvider } from './interceptor/fakebackend.interceptor';
 import { LoaderComponent } from './component/loader/loader.component';
+import { LoaderService } from './services/loader.service';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { LoaderComponent } from './component/loader/loader.component';
     HttpClientModule,
     RouterModule,
   ],
-  providers:[AuthService,AuthGuard, 
+  providers:[AuthService,AuthGuard, LoaderService,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     fakeBackendProvider
   ],

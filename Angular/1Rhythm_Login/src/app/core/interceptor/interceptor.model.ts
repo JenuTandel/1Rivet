@@ -8,13 +8,6 @@ export enum Messages {
     MessageForInternalServerError = "Internal Server Error",
     /** message for token expired */
     MessageForUnauthorizedToken = 'Session Expired. Please login again.',
+    /** For invalid input */
+    MessageForInvalidInput = 'Invalid Input'
 }
-
-// export enum MessageTitles {
-//     /** Susscess title for success toaster */
-//     Success = 'Success!',
-//     /** error title for error toaster */
-//     Error = 'Error!',
-//     /** warning title for warning toaster */
-//     Warning = 'Warning!',
-// }
