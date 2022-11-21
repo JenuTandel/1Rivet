@@ -34,9 +34,9 @@ export class LoginComponent implements OnInit{
     //   console.log(response);
     // })
     // console.log(this.loaderValue);
-    // this.loaderService.status.subscribe((value)=>{
-    //   this.loaderValue = value;
-    // })
+    this.loaderService.status.subscribe((value)=>{
+      this.loaderValue = value;
+    })
     
     if(this.loginForm.valid){
       
@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit{
         },
         error:(err)=>{
           // this.loaderValue = false;
-          this.toastrService.showError(err);
+          // this.toastrService.showError(err);
         }
       })
     }

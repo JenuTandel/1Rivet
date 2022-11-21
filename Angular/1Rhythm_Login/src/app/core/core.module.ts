@@ -7,11 +7,13 @@ import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { MasterComponent } from './component/master/master.component';
 import { RouterModule } from '@angular/router';
 import { fakeBackendProvider } from './interceptor/fakebackend.interceptor';
+import { LoaderComponent } from './component/loader/loader.component';
 
 
 @NgModule({
   declarations: [
-    MasterComponent
+    MasterComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
@@ -21,6 +23,7 @@ import { fakeBackendProvider } from './interceptor/fakebackend.interceptor';
   providers:[AuthService,AuthGuard, 
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     fakeBackendProvider
-  ]
+  ],
+  exports:[LoaderComponent]
 })
 export class CoreModule { }
