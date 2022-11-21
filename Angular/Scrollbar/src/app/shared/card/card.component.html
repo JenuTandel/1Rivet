@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-wrapper">
+        <div class="image-wrapper overflow-hidden" *ngFor="let item of data.img">
+            <img src="{{item.img1}}" alt="...">
+        </div>
+        <div class="card-body p-0">
+            <h5 class="card-title">{{data.eventLocation}}</h5>
+            <p class="card-text mb-0 truncate-overflow" title="{{data.eventDescription}}"
+                [ngClass]="sta? 'text-dark' : 'text-danger'">{{message}}</p>
+
+            <!-- {{data.eventDescription}}
+            {{data.artistDescription}} -->
+            <a href="#" class="btn btn-outline-secondary d-flex align-items-center justify-content-center">View
+                Details</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,364 @@
+{
+    "studios": [
+        {
+            "StudioId": 1,
+            "StudioName": "Creative Studio",
+            "StudioDescription": "Having All the Instruments",
+            "StudioAddress": "Valsad, 396375",
+            "HardwareAndEquipment": "Microphones",
+            "CountryId": 1,
+            "Country": "India",
+            "StateId": 1,
+            "State": "Gujarat",
+            "CityId": 1,
+            "City": "Valsad",
+            "StudioDays": "Monday to Friday",
+            "StudioHours": "10:00 to 8:00",
+            "Status": "Available",
+            "StudioServiceTypeId": 1,
+            "StudioServiceType": "Recording",
+            "EventRates": [
+                "Jam:2000, Record:4000"
+            ],
+            "StudioImages": [
+                "string"
+            ]
+        },
+        {
+            "StudioId": 2,
+            "StudioName": "Creative Studio",
+            "StudioDescription": "Having All the Instruments",
+            "StudioAddress": "Valsad, 396375",
+            "HardwareAndEquipment": "Microphones",
+            "CountryId": 1,
+            "Country": "India",
+            "StateId": 1,
+            "State": "Gujarat",
+            "CityId": 1,
+            "City": "Valsad",
+            "StudioDays": "Monday to Friday",
+            "StudioHours": "10:00 to 8:00",
+            "Status": "Available",
+            "StudioServiceTypeId": 1,
+            "StudioServiceType": "Recording",
+            "EventRates": [
+                "Jam:2000, Record:4000"
+            ],
+            "StudioImages": [
+                "string"
+            ]
+        },
+        {
+            "StudioId": 3,
+            "StudioName": "Creative Studio",
+            "StudioDescription": "Having All the Instruments",
+            "StudioAddress": "Valsad, 396375",
+            "HardwareAndEquipment": "Microphones",
+            "CountryId": 1,
+            "Country": "India",
+            "StateId": 1,
+            "State": "Gujarat",
+            "CityId": 1,
+            "City": "Valsad",
+            "StudioDays": "Monday to Friday",
+            "StudioHours": "10:00 to 8:00",
+            "Status": "Available",
+            "StudioServiceTypeId": 1,
+            "StudioServiceType": "Recording",
+            "EventRates": [
+                "Jam:2000, Record:4000"
+            ],
+            "StudioImages": [
+                "string"
+            ]
+        },
+        {
+            "StudioId": 4,
+            "StudioName": "Creative Studio",
+            "StudioDescription": "Having All the Instruments",
+            "StudioAddress": "Valsad, 396375",
+            "HardwareAndEquipment": "Microphones",
+            "CountryId": 1,
+            "Country": "India",
+            "StateId": 1,
+            "State": "Gujarat",
+            "CityId": 1,
+            "City": "Valsad",
+            "StudioDays": "Monday to Friday",
+            "StudioHours": "10:00 to 8:00",
+            "Status": "Available",
+            "StudioServiceTypeId": 1,
+            "StudioServiceType": "Recording",
+            "EventRates": [
+                "Jam:2000, Record:4000"
+            ],
+            "StudioImages": [
+                "string"
+            ]
+        },
+        {
+            "StudioId": 5,
+            "StudioName": "Creative Studio",
+            "StudioDescription": "Having All the Instruments",
+            "StudioAddress": "Valsad, 396375",
+            "HardwareAndEquipment": "Microphones",
+            "CountryId": 1,
+            "Country": "India",
+            "StateId": 1,
+            "State": "Gujarat",
+            "CityId": 1,
+            "City": "Valsad",
+            "StudioDays": "Monday to Friday",
+            "StudioHours": "10:00 to 8:00",
+            "Status": "Available",
+            "StudioServiceTypeId": 1,
+            "StudioServiceType": "Recording",
+            "EventRates": [
+                "Jam:2000, Record:4000"
+            ],
+            "StudioImages": [
+                "string"
+            ]
+        },
+        {
+            "StudioId": 6,
+            "StudioName": "Creative Studio",
+            "StudioDescription": "Having All the Instruments",
+            "StudioAddress": "Valsad, 396375",
+            "HardwareAndEquipment": "Microphones",
+            "CountryId": 1,
+            "Country": "India",
+            "StateId": 1,
+            "State": "Gujarat",
+            "CityId": 1,
+            "City": "Valsad",
+            "StudioDays": "Monday to Friday",
+            "StudioHours": "10:00 to 8:00",
+            "Status": "Available",
+            "StudioServiceTypeId": 1,
+            "StudioServiceType": "Recording",
+            "EventRates": [
+                "Jam:2000, Record:4000"
+            ],
+            "StudioImages": [
+                "string"
+            ]
+        },
+        {
+            "StudioId": 7,
+            "StudioName": "Creative Studio",
+            "StudioDescription": "Having All the Instruments",
+            "StudioAddress": "Valsad, 396375",
+            "HardwareAndEquipment": "Microphones",
+            "CountryId": 1,
+            "Country": "India",
+            "StateId": 1,
+            "State": "Gujarat",
+            "CityId": 1,
+            "City": "Valsad",
+            "StudioDays": "Monday to Friday",
+            "StudioHours": "10:00 to 8:00",
+            "Status": "Available",
+            "StudioServiceTypeId": 1,
+            "StudioServiceType": "Recording",
+            "EventRates": [
+                "Jam:2000, Record:4000"
+            ],
+            "StudioImages": [
+                "string"
+            ]
+        },
+        {
+            "StudioId": 8,
+            "StudioName": "Creative Studio",
+            "StudioDescription": "Having All the Instruments",
+            "StudioAddress": "Valsad, 396375",
+            "HardwareAndEquipment": "Microphones",
+            "CountryId": 1,
+            "Country": "India",
+            "StateId": 1,
+            "State": "Gujarat",
+            "CityId": 1,
+            "City": "Valsad",
+            "StudioDays": "Monday to Friday",
+            "StudioHours": "10:00 to 8:00",
+            "Status": "Available",
+            "StudioServiceTypeId": 1,
+            "StudioServiceType": "Recording",
+            "EventRates": [
+                "Jam:2000, Record:4000"
+            ],
+            "StudioImages": [
+                "string"
+            ]
+        },
+        {
+            "StudioId": 9,
+            "StudioName": "Creative Studio",
+            "StudioDescription": "Having All the Instruments",
+            "StudioAddress": "Valsad, 396375",
+            "HardwareAndEquipment": "Microphones",
+            "CountryId": 1,
+            "Country": "India",
+            "StateId": 1,
+            "State": "Gujarat",
+            "CityId": 1,
+            "City": "Valsad",
+            "StudioDays": "Monday to Friday",
+            "StudioHours": "10:00 to 8:00",
+            "Status": "Available",
+            "StudioServiceTypeId": 1,
+            "StudioServiceType": "Recording",
+            "EventRates": [
+                "Jam:2000, Record:4000"
+            ],
+            "StudioImages": [
+                "string"
+            ]
+        },
+        {
+            "StudioId": 10,
+            "StudioName": "Creative Studio",
+            "StudioDescription": "Having All the Instruments",
+            "StudioAddress": "Valsad, 396375",
+            "HardwareAndEquipment": "Microphones",
+            "CountryId": 1,
+            "Country": "India",
+            "StateId": 1,
+            "State": "Gujarat",
+            "CityId": 1,
+            "City": "Valsad",
+            "StudioDays": "Monday to Friday",
+            "StudioHours": "10:00 to 8:00",
+            "Status": "Available",
+            "StudioServiceTypeId": 1,
+            "StudioServiceType": "Recording",
+            "EventRates": [
+                "Jam:2000, Record:4000"
+            ],
+            "StudioImages": [
+                "string"
+            ]
+        },
+        {
+            "StudioId": 11,
+            "StudioName": "Creative Studio",
+            "StudioDescription": "Having All the Instruments",
+            "StudioAddress": "Valsad, 396375",
+            "HardwareAndEquipment": "Microphones",
+            "CountryId": 1,
+            "Country": "India",
+            "StateId": 1,
+            "State": "Gujarat",
+            "CityId": 1,
+            "City": "Valsad",
+            "StudioDays": "Monday to Friday",
+            "StudioHours": "10:00 to 8:00",
+            "Status": "Available",
+            "StudioServiceTypeId": 1,
+            "StudioServiceType": "Recording",
+            "EventRates": [
+                "Jam:2000, Record:4000"
+            ],
+            "StudioImages": [
+                "string"
+            ]
+        },
+        {
+            "StudioId": 12,
+            "StudioName": "Creative Studio",
+            "StudioDescription": "Having All the Instruments",
+            "StudioAddress": "Valsad, 396375",
+            "HardwareAndEquipment": "Microphones",
+            "CountryId": 1,
+            "Country": "India",
+            "StateId": 1,
+            "State": "Gujarat",
+            "CityId": 1,
+            "City": "Valsad",
+            "StudioDays": "Monday to Friday",
+            "StudioHours": "10:00 to 8:00",
+            "Status": "Available",
+            "StudioServiceTypeId": 1,
+            "StudioServiceType": "Recording",
+            "EventRates": [
+                "Jam:2000, Record:4000"
+            ],
+            "StudioImages": [
+                "string"
+            ]
+        },
+        {
+            "StudioId": 13,
+            "StudioName": "Creative Studio",
+            "StudioDescription": "Having All the Instruments",
+            "StudioAddress": "Valsad, 396375",
+            "HardwareAndEquipment": "Microphones",
+            "CountryId": 1,
+            "Country": "India",
+            "StateId": 1,
+            "State": "Gujarat",
+            "CityId": 1,
+            "City": "Valsad",
+            "StudioDays": "Monday to Friday",
+            "StudioHours": "10:00 to 8:00",
+            "Status": "Available",
+            "StudioServiceTypeId": 1,
+            "StudioServiceType": "Recording",
+            "EventRates": [
+                "Jam:2000, Record:4000"
+            ],
+            "StudioImages": [
+                "string"
+            ]
+        },
+        {
+            "StudioId": 14,
+            "StudioName": "Creative Studio",
+            "StudioDescription": "Having All the Instruments",
+            "StudioAddress": "Valsad, 396375",
+            "HardwareAndEquipment": "Microphones",
+            "CountryId": 1,
+            "Country": "India",
+            "StateId": 1,
+            "State": "Gujarat",
+            "CityId": 1,
+            "City": "Valsad",
+            "StudioDays": "Monday to Friday",
+            "StudioHours": "10:00 to 8:00",
+            "Status": "Available",
+            "StudioServiceTypeId": 1,
+            "StudioServiceType": "Recording",
+            "EventRates": [
+                "Jam:2000, Record:4000"
+            ],
+            "StudioImages": [
+                "string"
+            ]
+        },
+        {
+            "StudioId": 15,
+            "StudioName": "Creative Studio",
+            "StudioDescription": "Having All the Instruments",
+            "StudioAddress": "Valsad, 396375",
+            "HardwareAndEquipment": "Microphones",
+            "CountryId": 1,
+            "Country": "India",
+            "StateId": 1,
+            "State": "Gujarat",
+            "CityId": 1,
+            "City": "Valsad",
+            "StudioDays": "Monday to Friday",
+            "StudioHours": "10:00 to 8:00",
+            "Status": "Available",
+            "StudioServiceTypeId": 1,
+            "StudioServiceType": "Recording",
+            "EventRates": [
+                "Jam:2000, Record:4000"
+            ],
+            "StudioImages": [
+                "string"
+            ]
+        }
+    ]
+}
