@@ -1,9 +1,5 @@
-<div class="Explore-studio row gx-0 d-flex justify-content-between" infinite-scroll
-[infiniteScrollDistance]="distance"
-[infiniteScrollThrottle]="throttle"
-(scrolled)="onScroll()">
-    <div class="col-xxl-2 col-xl-3 col-lg-6 col-md-6 col-xs-12 cards"
-        *ngFor="let studio of studioList">
-        <app-card [studioResponse] = "studioList$ |async"></app-card>
-    </div>
+<div infinite-scroll [infiniteScrollDistance]="distance" (scrolled)="onScroll()">
+    <app-card [studioResponse]="studioList$ |async"></app-card>
 </div>
+
+<button type="button">Get Artist Names</button>

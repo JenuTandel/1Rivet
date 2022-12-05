@@ -23,7 +23,7 @@ import { LoaderService } from './services/loader.service';
   ],
   providers:[AuthService,AuthGuard, LoaderService,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
-    fakeBackendProvider
+    // fakeBackendProvider
   ],
   exports:[LoaderComponent]
 })

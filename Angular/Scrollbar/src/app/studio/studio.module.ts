@@ -22,6 +22,7 @@ import { StudioService } from './services/studio.service';
     SharedModule,
     InfiniteScrollModule
   ],
+  exports:[StudioListComponent],
   providers:[StudioService]
 })
 export class StudioModule { }

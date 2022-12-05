@@ -11,9 +11,8 @@ export class LoaderComponent implements OnInit {
   public loaderValue!: boolean;
   constructor(private loaderService: LoaderService) {
     // this.loaderValue = false;
-    this.loaderService.status$.subscribe((value) => {
+    this.loaderService.status.subscribe((value) => {
       console.log(value);
-      
       this.loaderValue = value;
     })
   }

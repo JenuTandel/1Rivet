@@ -8,34 +8,25 @@ import { studio } from 'src/app/studio/studio.model';
 })
 export class CardComponent implements OnInit {
 
+  /**
+   * @author Jinal Tandel
+   * @description "Setter Getter method for studioList"
+   */
   @Input() public set studioResponse(studioResponse: studio[] | null) {
     if (studioResponse) {
-      // this._baseResponse.map((item)=>{
-      //   console.log(item.hits);
-      // })
-      this._studioResponse = this._studioResponse.concat(studioResponse);
-      // this._studioResponse.push(...studioResponse);
+      this._studioResponse = this._studioResponse.concat(studioResponse)
     }
   }
   public get studioResponse(): studio[] {
     return this._studioResponse;
   }
+  private _studioResponse: studio[];
 
-  private _studioResponse!: studio[];
-
-  @Input() data: any;
-  message: string;
-  sta: boolean;
-
-  public id: number;
   constructor() {
-    this.data = [];
-    this.id = 1;
-    this.message = "temperory closed";
-    this.sta = false;
+    this._studioResponse = []
+    console.log(this.studioResponse);
   }
-
   ngOnInit(): void {
-   
+    
   }
 }

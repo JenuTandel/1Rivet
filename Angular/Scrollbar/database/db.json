@@ -360,5 +360,21 @@
                 "string"
             ]
         }
+    ],
+
+    "artists":[
+        {
+            "artistData":[
+                {
+                    "id":1,
+                    "name":"Jinal"
+                },
+                {
+                    "id":2,
+                    "name":"Hetal"
+                }
+            ],
+            "artistAddress":"Valsad"
+        }
     ]
 }

@@ -37,9 +37,10 @@ export class AuthInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
 
     this.requests.push(request);
-
+    this.loaderService.status.next(true);
     console.log("No of requests--->" + this.requests.length);
-    this.loaderService.showLoader(true)
+
+    // this.loaderService.showLoader(true)
     // add authorization header with basic auth credentials if available
     let currentUser = JSON.parse(localStorage.getItem('user')!);
     if (!request.url.endsWith('login' || 'user' || 'refresh')) {
@@ -76,14 +77,15 @@ export class AuthInterceptor implements HttpInterceptor {
     //     });
     //   }
     // }
+    // return next.handle(request)
     return next.handle(request).pipe(
       catchError((errorResponse: HttpErrorResponse) => {
-        console.log("Error" + errorResponse, errorResponse.error);
+        // console.log("Error" + errorResponse, errorResponse.error);
         if (errorResponse && errorResponse.error instanceof ErrorEvent) {
           this.removeRequest(request);
-          console.log("Error in if" + errorResponse, errorResponse.error);
+          // console.log("Error in if" + errorResponse, errorResponse.error);
           this.message = `Error: ${errorResponse && errorResponse.error}`;
-          console.log(errorResponse.status);
+          // console.log(errorResponse.status);
 
           switch (errorResponse.status) {
             case 400:
@@ -104,7 +106,7 @@ export class AuthInterceptor implements HttpInterceptor {
         return throwError(() => new Error(this.message));
       }),
       finalize(() => {
-        this.loaderService.showLoader(false)
+        this.loaderService.status.next(false);
         this.removeRequest(request);
       })
     );

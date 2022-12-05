@@ -10,7 +10,7 @@ export class studio {
     State!: string;
     CityId!: number;
     City!: string;
-StudioDays!: string;
+    StudioDays!: string;
     StudioHours!: string;
     Status!: string;
     StudioServiceTypeId!: number;
@@ -20,7 +20,7 @@ StudioDays!: string;
 }
 
 
-export class Pagination{
-    public pageSize!:number;
-    public pageNumber!:number;
+export class Pagination {
+    public pageSize!: number;
+    public pageNumber!: number;
 }

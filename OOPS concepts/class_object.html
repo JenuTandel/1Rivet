@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person_Info{
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+                // console.log(this);
+            }
+
+            person_data(fname,age){
+                // this.name = fname;
+                // this.age = age;
+                console.log("Name: "+ this.name);
+                console.log("Age: "+this.age);
+            }
+            static StaticFunction(){
+                console.log("Static function");
+            }
+        }
+
+        // let obj1 = new Person_Info();
+        // obj1.person_data("Jinal",26);
+        let obj1 = new Person_Info("Jinal",26);
+        let obj2 = new Person_Info("Radhika",27);
+        obj1.person_data();
+        obj2.person_data();
+        Person_Info.StaticFunction();
+
+    </script>
+</body>
+</html>

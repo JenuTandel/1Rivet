@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MasterComponent } from './core/component/master/master.component';
+import { AuthGuard } from './core/guard/auth.guard';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
     path:'',
     component:MasterComponent,
+    canActivate:[AuthGuard],
     children:[
       {
         path:'',
@@ -15,7 +17,7 @@ const routes: Routes = [
       },
       {
         path:'home',
-        component:HomeComponent
+        component:HomeComponent,
       }
     ]
   },

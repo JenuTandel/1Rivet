@@ -5,18 +5,20 @@ import { catchError } from 'rxjs';
 import { AuthService } from 'src/app/core/auth/auth.service';
 import { LoaderService } from 'src/app/core/services/loader.service';
 import { ToastrMessageService } from 'src/app/shared/services/toastrMessage.service';
+import jwt_decode from "jwt-decode";
+import { User } from './user.model';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit{
+export class LoginComponent implements OnInit {
   public loginForm: FormGroup;
-  public loaderValue:boolean;
+  public loaderValue: boolean;
 
   constructor(private formBuilder: FormBuilder,
-    private authService: AuthService, private router: Router, private loaderService: LoaderService, private toastrService:ToastrMessageService) {
+    private authService: AuthService, private router: Router, private loaderService: LoaderService, private toastrService: ToastrMessageService) {
     this.loginForm = new FormGroup('');
     this.loaderValue = false;
   }
@@ -26,37 +28,26 @@ export class LoginComponent implements OnInit{
       emailId: [''],
       password: ['']
     });
-
-
+  }
+  /**
+   * @author Jinal Tandel
+   * @param token 
+   * @returns decoded token
+   */
+  DecodeToken(token: string): string {
+    return jwt_decode(token)
   }
   onSubmit() {
-    // this.authService.loginpost(this.loginForm.value).subscribe((response:string)=>{
-    //   console.log(response);
+    // this.loaderService.status.subscribe((value) => {
+    //   this.loaderValue = value;
     // })
-    // console.log(this.loaderValue);
-    this.loaderService.status.subscribe((value)=>{
-      this.loaderValue = value;
-    })
-    
-    if(this.loginForm.valid){
-      
-      this.authService.login(this.loginForm.controls['emailId'].value, this.loginForm.controls['password'].value).subscribe({
-        next:()=>{
-          // setTimeout(() => {  
-            this.router.navigateByUrl("/home");
-          // }, 3000);
-        },
-        error:(err)=>{
-          // this.loaderValue = false;
-          // this.toastrService.showError(err);
-        }
+
+    if (this.loginForm.valid) {
+      this.authService.login(this.loginForm.value).subscribe((res: string) => {
+        const token = this.DecodeToken(res);
+        localStorage.setItem('user', token);
+        this.router.navigateByUrl("/home");
       })
     }
   }
-
-  // ngAfterViewInit(): void {
-  //   this.loaderService.status.subscribe((res) => {
-  //     this.loaderValue = res;
-  //   })
-  // }
 }

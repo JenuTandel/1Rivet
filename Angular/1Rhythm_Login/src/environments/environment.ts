@@ -4,8 +4,8 @@
 
 export const environment = {
   baseUrl:"http://localhost:3000/",
-  loginUrl:"http://localhost:3000/",
-  production: false
+  loginUrl:"http://172.16.1.230:5050/api/user/login",
+  production: false 
 };
 
 /*

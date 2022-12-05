@@ -10,31 +10,33 @@ import { Pagination, studio } from '../studio.model';
 })
 export class StudioListComponent implements OnInit {
   public studioList$!: Observable<studio[]>;
-
   public tableProperty: Pagination;
+  public distance: number = 2;
 
-  distance = 2;
-  throttle = 0;
-  public studioList:studio[];
-  constructor(private studioService:StudioService) { 
-    this.studioList = [];
+  constructor(private studioService: StudioService) {
     this.tableProperty = new Pagination();
     this.tableProperty.pageNumber = 1;
     this.tableProperty.pageSize = 10;
   }
 
-
   ngOnInit(): void {
+    this.getAllStudios(this.tableProperty);
   }
-  
-  getAllStudios(tableProperty: Pagination){
+
+  /**
+   * @author Jinal Tandel
+   * @description "method for get all studios"
+   * @param tableProperty 
+   */
+  getAllStudios(tableProperty: Pagination) {
     this.tableProperty = tableProperty;
-    // this.studioService.getAllStudios().subscribe((res:studio[])=>{
-    //   this.studioList = res
-    // });
     this.studioList$ = this.studioService.getAllStudios(tableProperty);
   }
 
+  /**
+   * @author Jinal Tandel
+   * @description "method for scrolling studio page"
+   */
   onScroll() {
     this.tableProperty.pageNumber++;
     this.getAllStudios(this.tableProperty);
